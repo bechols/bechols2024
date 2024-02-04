@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Ben Echols",
   description: "Ben's personal site",
+  icons: ["/williams-favicon-32x32.png"],
 };
 
 export default function RootLayout({

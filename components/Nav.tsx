@@ -12,6 +12,8 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
+import { Mail, LinkedinIcon, TwitterIcon, GithubIcon } from "lucide-react";
+
 export default function Nav() {
   return (
     <div className="flex justify-end pt-4">
@@ -20,7 +22,7 @@ export default function Nav() {
           <NavigationMenuItem>
             <NavigationMenuLink
               className={navigationMenuTriggerStyle()}
-              href="https://github.com/bechols"
+              href="/"
             >
               Home
             </NavigationMenuLink>
@@ -28,7 +30,15 @@ export default function Nav() {
           <NavigationMenuItem>
             <NavigationMenuLink
               className={navigationMenuTriggerStyle()}
-              href="https://github.com/bechols"
+              href="/about"
+            >
+              About
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              className={navigationMenuTriggerStyle()}
+              href="/books"
             >
               Books
             </NavigationMenuLink>
@@ -36,9 +46,34 @@ export default function Nav() {
           <NavigationMenuItem>
             <NavigationMenuLink
               className={navigationMenuTriggerStyle()}
-              href="https://github.com/bechols"
+              href="/interesting"
             >
-              About Me
+              Interesting
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              className={navigationMenuTriggerStyle()}
+              href="mailto:benjamin.echols@gmail.com"
+            >
+              <Mail />
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              className={navigationMenuTriggerStyle()}
+              href="https://linkedin.com/in/benechols"
+            >
+              <LinkedinIcon />
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              className={navigationMenuTriggerStyle()}
+              href="https://twitter.com/bechols"
+            >
+              <TwitterIcon />
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
@@ -46,7 +81,7 @@ export default function Nav() {
               className={navigationMenuTriggerStyle()}
               href="https://github.com/bechols"
             >
-              Interesting
+              <GithubIcon />
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>

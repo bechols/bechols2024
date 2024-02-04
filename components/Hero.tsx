@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { AspectRatio } from "./ui/aspect-ratio";
+import { LibraryBig, Lightbulb } from "lucide-react";
 
 // aspect 1.47
 
@@ -12,15 +13,21 @@ export default function Hero() {
         <span className="text-lg">
           Trying to leave it better than I found it
         </span>
-        <Button variant="outline">About</Button>
-        <Button variant="outline">Interesting</Button>
+        <Button variant="outline">
+          About Me
+          <Lightbulb className="pl-2" />
+        </Button>
+        <Button variant="outline">
+          The world is so interesting!
+          <LibraryBig className="pl-2" />
+        </Button>
       </div>
       <div className="w-full min-w-96">
         <AspectRatio ratio={1.47} className="overflow-hidden">
           <Image
             src={"/ben_and_liz_point_lobos.jpeg"}
             alt="Ben with his favorite person."
-            className="rounded-md object-cover"
+            className="rounded object-cover"
             fill
           />
         </AspectRatio>
