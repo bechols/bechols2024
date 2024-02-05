@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="flex flex-col gap-4">
         <span className="text-xl font-bold">Ben Echols</span>
         <span className="text-lg">
-          Trying to leave it better than I found it
+          Trying to leave it better than I found it.
         </span>
         <Button variant="outline">
           About Me

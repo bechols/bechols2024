@@ -2,21 +2,17 @@
 
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-import { Mail, LinkedinIcon, TwitterIcon, GithubIcon } from "lucide-react";
+import { Mail, LinkedinIcon, GithubIcon } from "lucide-react";
 
 export default function Nav() {
   return (
-    <div className="flex justify-end pt-4">
+    <div className="flex justify-center pt-4">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -66,14 +62,6 @@ export default function Nav() {
               href="https://linkedin.com/in/benechols"
             >
               <LinkedinIcon />
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              className={navigationMenuTriggerStyle()}
-              href="https://twitter.com/bechols"
-            >
-              <TwitterIcon />
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
