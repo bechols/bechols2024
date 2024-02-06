@@ -1,9 +1,8 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { AspectRatio } from "./ui/aspect-ratio";
-import { LibraryBig, Lightbulb } from "lucide-react";
-
-// aspect 1.47
+import { LibraryBig, Lightbulb, Rocket } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -13,14 +12,24 @@ export default function Hero() {
         <span className="text-lg">
           Trying to leave it better than I found it.
         </span>
-        <Button variant="outline">
-          About Me
-          <Lightbulb className="pl-2" />
-        </Button>
-        <Button variant="outline">
-          The world is so interesting!
-          <LibraryBig className="pl-2" />
-        </Button>
+        <Link href="/about">
+          <Button variant="outline" className="w-full">
+            {`Experience and how I like to work`}
+            <Lightbulb className="pl-2" />
+          </Button>
+        </Link>
+        <Link href="/books">
+          <Button variant="outline" className="w-full">
+            {`What I'm reading lately`}
+            <LibraryBig className="pl-2" />
+          </Button>
+        </Link>
+        <Link href="/interesting">
+          <Button variant="outline" className="w-full">
+            {`Some interesting stuff`}
+            <Rocket className="pl-2" />
+          </Button>
+        </Link>
       </div>
       <div className="w-full min-w-96">
         <AspectRatio ratio={1.47} className="overflow-hidden">

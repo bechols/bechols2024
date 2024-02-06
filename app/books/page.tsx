@@ -1,4 +1,3 @@
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import {
   Card,
   CardContent,
@@ -185,7 +184,7 @@ function BookCard({
                   ))}
                 </div>
               )}
-              {review && <div className="pt-4 max-w-[50%]">{review}</div>}
+              {review && <div className="pt-4 max-w-[80%]">{review}</div>}
               {!rating && !review && <div>Currently reading</div>}
             </div>
             <div className="shrink-0">
@@ -199,10 +198,11 @@ function BookCard({
 }
 
 export default async function Books() {
-  const currentBooks = await getCurrentBooks();
+  const currentBooks: Promise<string> = await getCurrentBooks();
   const recentBooks = await getRecentBooks();
   return (
     <div>
+      <h1 className="text-2xl font-bold pb-4">Currently reading</h1>
       {currentBooks.map((review) => (
         <BookCard
           title={review.book.title}
@@ -212,6 +212,7 @@ export default async function Books() {
           image={review.book.imageUrl}
         />
       ))}
+      <h1 className="text-2xl font-bold py-4">Recently read</h1>
       {recentBooks.map((review) => (
         <BookCard
           title={review.book.title}
