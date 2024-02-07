@@ -80,8 +80,8 @@ export default function History() {
 
       <ResumeEntry
         position="Co-founder and CEO"
-        company="Something new"
-        link="/"
+        company="Nemo"
+        link="https://whynemo.com"
       />
       <h2>Previous</h2>
       {previousWork.map((work) => (
