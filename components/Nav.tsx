@@ -52,6 +52,8 @@ export default function Nav() {
             <NavigationMenuLink
               className={navigationMenuTriggerStyle()}
               href="mailto:benjamin.echols@gmail.com"
+              target="_blank"
+              rel="noreferrer noopener"
             >
               <Mail />
             </NavigationMenuLink>
@@ -60,6 +62,8 @@ export default function Nav() {
             <NavigationMenuLink
               className={navigationMenuTriggerStyle()}
               href="https://linkedin.com/in/benechols"
+              target="_blank"
+              rel="noreferrer noopener"
             >
               <LinkedinIcon />
             </NavigationMenuLink>
@@ -68,6 +72,8 @@ export default function Nav() {
             <NavigationMenuLink
               className={navigationMenuTriggerStyle()}
               href="https://github.com/bechols"
+              target="_blank"
+              rel="noreferrer noopener"
             >
               <GithubIcon />
             </NavigationMenuLink>
