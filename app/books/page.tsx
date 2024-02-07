@@ -44,7 +44,7 @@ async function getCurrentBooks(): Promise<BookInfo[]> {
           author: element["book"][0]["authors"][0]["author"][0]["name"],
           link: element["book"][0]["link"][0],
           title: element["book"][0]["title"][0],
-          imageUrl: element["book"][0]["image_url"][0],
+          imageURL: element["book"][0]["image_url"][0],
         };
       });
     }
@@ -88,7 +88,7 @@ async function getRecentBooks(): Promise<BookInfo[]> {
             author: element["book"][0]["authors"][0]["author"][0]["name"],
             link: element["book"][0]["link"][0],
             title: element["book"][0]["title"][0],
-            imageUrl: element["book"][0]["image_url"][0],
+            imageURL: element["book"][0]["image_url"][0],
           };
         }
       );
@@ -107,6 +107,7 @@ type BookInfo = {
 };
 
 function BookCard(bookInfo: BookInfo) {
+  console.log(bookInfo);
   return (
     <a
       href={bookInfo.link}
@@ -131,9 +132,14 @@ function BookCard(bookInfo: BookInfo) {
               {bookInfo.review && (
                 <div className="pt-4 max-w-[80%]">{bookInfo.review}</div>
               )}
-              {!bookInfo.rating && !bookInfo.review && (
-                <div>Currently reading</div>
-              )}
+            </div>
+            <div className="shrink-0">
+              <Image
+                src={bookInfo.imageURL}
+                alt="Book cover"
+                width={50}
+                height={200}
+              />
             </div>
           </div>
         </CardContent>
