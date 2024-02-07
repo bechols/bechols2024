@@ -157,7 +157,14 @@ export default async function Books() {
           imageURL={bookInfo.imageURL}
         />
       ))}
-      <h1 className="text-2xl font-bold py-4">Recently read</h1>
+      {currentBooks.length === 0 && (
+        <div>{`Either the Goodreads API finally quit working, or I'm not reading anything right now.`}</div>
+      )}
+
+      {recentBooks.length > 0 && (
+        <h1 className="text-2xl font-bold py-4">Recently read</h1>
+      )}
+
       {recentBooks.map((bookInfo) => (
         <BookCard
           title={bookInfo.title}
