@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
 
 const previousWork = [
   {
@@ -63,6 +64,18 @@ function ResumeEntry({
 export default function History() {
   return (
     <div>
+      <div className="flex justify-around">
+        <Link href="/about/how-i-got-into-pm">
+          <Button variant="outline" className="mb-8">
+            How I got into PM
+          </Button>
+        </Link>
+        <Link href="/about/user-manual">
+          <Button variant="outline" className="mb-8">
+            User manual for working with me
+          </Button>
+        </Link>
+      </div>
       <h2>Current</h2>
 
       <ResumeEntry

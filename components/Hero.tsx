@@ -31,12 +31,12 @@ export default function Hero() {
           </Button>
         </Link>
       </div>
-      <div className="w-full min-w-96">
+      <div className="w-full min-w-96 max-w-2xl">
         <AspectRatio ratio={1.47} className="overflow-hidden">
           <Image
             src={"/ben_and_liz_point_lobos.jpeg"}
             alt="Ben with his favorite person."
-            className="rounded object-cover"
+            className="rounded object-cover max-w-2xl"
             fill
           />
         </AspectRatio>
