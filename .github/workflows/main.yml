@@ -1,0 +1,14 @@
+name: Trigger Vercel build every 4 days
+
+on:
+  schedule:
+    - cron: "19 19 */4 * *"
+
+  workflow_dispatch:
+
+jobs:
+  trigger_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: POST to Vercel build hook endpoint
+        run: curl -X POST ${{ secrets.VERCEL_BUILD_URL }}
