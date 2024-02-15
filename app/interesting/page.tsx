@@ -23,6 +23,13 @@ To pass the remaining time, start shuffling your deck of cards. Every billion ye
 `,
   },
   {
+    title: "The Economics of Time Travel",
+    sourceName: "Arjun Narayan",
+    sourceURL:
+      "https://www.theseedsofscience.pub/p/the-economics-of-time-travel",
+    text: `The lack of time travellers visiting us may be seen as evidence that time travel is not possible. In this article, I argue an alternative explanation is that we are not economically important enough to our descendants to justify the costs of time travel. Using a cost-benefit analysis, I elaborate on this argument. I suggest that the major cost of time travel is likely to be the energy cost, whilst the largest benefit of time travel is knowledge which the present possesses, but the future has lost. Focusing on this benefit, I argue it is extremely unlikely that we possess a piece of knowledge which is sufficiently important to a future civilisation (system critical), but also has been lost by said civilisation. This is to say, we may not have been visited by time travellers because we are not important enough.`,
+  },
+  {
     title: "The Computational Universe and the Physical Universe",
     sourceName: "Arjun Narayan",
     sourceURL: "https://ristret.com/s/qk8wpt",
