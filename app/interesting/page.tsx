@@ -30,6 +30,14 @@ To pass the remaining time, start shuffling your deck of cards. Every billion ye
     text: `The lack of time travellers visiting us may be seen as evidence that time travel is not possible. In this article, I argue an alternative explanation is that we are not economically important enough to our descendants to justify the costs of time travel. Using a cost-benefit analysis, I elaborate on this argument. I suggest that the major cost of time travel is likely to be the energy cost, whilst the largest benefit of time travel is knowledge which the present possesses, but the future has lost. Focusing on this benefit, I argue it is extremely unlikely that we possess a piece of knowledge which is sufficiently important to a future civilisation (system critical), but also has been lost by said civilisation. This is to say, we may not have been visited by time travellers because we are not important enough.`,
   },
   {
+    title: "Grabby Aliens",
+    sourceName: "Robin Hanson",
+    sourceURL: "https://grabbyaliens.com/press-release",
+    text: `Evolution is so slow that human-level intelligence will probably never evolve on most habitable planets. If so, advanced life should be more likely to appear on longer-lived planets, and toward the end of their habitable periods. Yet in a universe where most planets last for trillions of years, we humans have appeared in less than 1% of that time. Why are we so surprisingly early?
+
+Some have tried to explain this by suggesting that long-lived planets are not long habitable. However, a new paper instead explains human earliness via a selection effect. “Grabby” aliens have long been out there, expanding fast and changing the appearance of their volumes. Within a few billion years they will “grab” all of the universe, and then suppress competitors. This sets a deadline; we could not have appeared much later than we did. Which is why we are early.`,
+  },
+  {
     title: "The Computational Universe and the Physical Universe",
     sourceName: "Arjun Narayan",
     sourceURL: "https://ristret.com/s/qk8wpt",
