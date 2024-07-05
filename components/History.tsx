@@ -6,7 +6,7 @@ const previousWork = [
   {
     position: "Co-founder and CEO",
     company: "Nemo",
-    link: "https://whynemo.com",
+    link: "https://www.youtube.com/watch?v=IEvZmzYIZQY",
   },
   {
     position: "Director of Product Management, Confluent Cloud",
