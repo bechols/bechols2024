@@ -66,7 +66,7 @@ const manualMarkdown = `
   * If it's important to decide, decide it ASAP and make sure someone's owning the decision.
   * If it's not important, that's ok. There will always be lots of stuff we don't know.
 * Coworkers ignoring resources.
-  * Everyone's busy. I know it'd be easier if someone would just tell you the exact thing you want to know. But there are too many things to know! I try to create internal and customer*facing docs to get some leverage. We're usually doing new and difficult things, and the answers often aren't simple, so having a complete response instead of a quick reply in chat is important for getting it right.
+  * Everyone's busy. I know it'd be easier if someone would just tell you the exact thing you want to know. But there are too many things to know! I try to create internal and customer facing docs to get some leverage. We're usually doing new and difficult things, and the answers often aren't simple, so having a complete response instead of a quick reply in chat is important for getting it right.
   * Finding those resources and knowing whether they're up to date is often difficult - discovery is a hard problem! I'm happy to help point you in the right direction (or to fix errors/gaps, as is frequently necessary) but once you know where to look, please actually use those resources.
 * Duplicate communication across multiple channels. Please don't simultaneously ask me a question in two Slack channels and via email. Please don't simultaneously tag me in a PR and comment in a Jira ticket. I'm very good at staying on top of lots of sources of information (Slack channels, wiki pages, Jira tickets, pull requests, emails, etc) and responding quickly (sometimes to the detriment of deeper work).
   
