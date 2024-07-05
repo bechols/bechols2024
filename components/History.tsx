@@ -4,6 +4,11 @@ import { Button } from "./ui/button";
 
 const previousWork = [
   {
+    position: "Co-founder and CEO",
+    company: "Nemo",
+    link: "https://whynemo.com",
+  },
+  {
     position: "Director of Product Management, Confluent Cloud",
     company: "Confluent",
     link: "https://www.confluent.io",
@@ -79,10 +84,11 @@ export default function History() {
       <h2>Current</h2>
 
       <ResumeEntry
-        position="Co-founder and CEO"
-        company="Nemo"
-        link="https://whynemo.com"
+        position="Product Leader"
+        company="Lamini"
+        link="https://lamini.ai"
       />
+
       <h2>Previous</h2>
       {previousWork.map((work) => (
         <ResumeEntry key={work.position} {...work} />
