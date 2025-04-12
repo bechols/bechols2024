@@ -8,7 +8,9 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-import { Mail, LinkedinIcon, GithubIcon } from "lucide-react";
+import { SiLinkedin } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
+import { SiGmail } from "react-icons/si";
 
 export default function Nav() {
   return (
@@ -19,6 +21,7 @@ export default function Nav() {
             <NavigationMenuLink
               className={navigationMenuTriggerStyle()}
               href="/"
+              aria-label="Home"
             >
               Home
             </NavigationMenuLink>
@@ -27,6 +30,7 @@ export default function Nav() {
             <NavigationMenuLink
               className={navigationMenuTriggerStyle()}
               href="/about"
+              aria-label="About"
             >
               About
             </NavigationMenuLink>
@@ -35,6 +39,7 @@ export default function Nav() {
             <NavigationMenuLink
               className={navigationMenuTriggerStyle()}
               href="/books"
+              aria-label="Books"
             >
               Books
             </NavigationMenuLink>
@@ -43,6 +48,7 @@ export default function Nav() {
             <NavigationMenuLink
               className={navigationMenuTriggerStyle()}
               href="/interesting"
+              aria-label="Interesting"
             >
               Interesting
             </NavigationMenuLink>
@@ -54,8 +60,9 @@ export default function Nav() {
               href="mailto:benjamin.echols@gmail.com"
               target="_blank"
               rel="noreferrer noopener"
+              aria-label="Email"
             >
-              <Mail />
+              <SiGmail />
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
@@ -64,8 +71,9 @@ export default function Nav() {
               href="https://linkedin.com/in/benechols"
               target="_blank"
               rel="noreferrer noopener"
+              aria-label="LinkedIn"
             >
-              <LinkedinIcon />
+              <SiLinkedin />
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
@@ -74,8 +82,9 @@ export default function Nav() {
               href="https://github.com/bechols"
               target="_blank"
               rel="noreferrer noopener"
+              aria-label="GitHub"
             >
-              <GithubIcon />
+              <SiGithub />
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
