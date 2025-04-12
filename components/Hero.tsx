@@ -44,7 +44,7 @@ export default function Hero() {
       <div className="w-full lg:w-[55%] hidden sm:block">
         <AspectRatio ratio={1.47} className="overflow-hidden bg-muted">
           <Image
-            src={"/ben_and_liz_point_lobos.jpeg"}
+            src={"/ben_and_liz_point_lobos.webp"}
             alt="Ben with his favorite person."
             className="rounded-lg object-cover"
             fill

@@ -14,7 +14,7 @@ export default function Nav() {
   return (
     <div className="flex justify-center pt-4">
       <NavigationMenu>
-        <NavigationMenuList>
+        <NavigationMenuList className="flex-wrap justify-center gap-y-2">
           <NavigationMenuItem>
             <NavigationMenuLink
               className={navigationMenuTriggerStyle()}
