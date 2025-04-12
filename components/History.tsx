@@ -4,6 +4,11 @@ import { Button } from "./ui/button";
 
 const previousWork = [
   {
+    position: "Head of Product",
+    company: "Lamini",
+    link: "https://lamini.ai",
+  },
+  {
     position: "Co-founder and CEO",
     company: "Nemo",
     link: "https://www.youtube.com/watch?v=IEvZmzYIZQY",
@@ -68,28 +73,28 @@ function ResumeEntry({
 
 export default function History() {
   return (
-    <div>
-      <div className="flex justify-around">
-        <Link href="/about/how-i-got-into-pm">
-          <Button variant="outline" className="mb-8">
+    <div className="w-full max-w-4xl mx-auto px-4 md:px-8">
+      <div className="flex flex-col sm:flex-row sm:justify-around gap-4 mb-8">
+        <Link href="/about/how-i-got-into-pm" className="w-full sm:w-auto">
+          <Button variant="outline" className="w-full">
             How I got into PM
           </Button>
         </Link>
-        <Link href="/about/user-manual">
-          <Button variant="outline" className="mb-8">
+        <Link href="/about/user-manual" className="w-full sm:w-auto">
+          <Button variant="outline" className="w-full">
             User manual for working with me
           </Button>
         </Link>
       </div>
-      <h2>Current</h2>
+      <h2 className="text-xl md:text-2xl font-bold mb-6">Current</h2>
 
       <ResumeEntry
-        position="Product Leader"
-        company="Lamini"
-        link="https://lamini.ai"
+        position="Director of Product, Temporal Cloud"
+        company="Temporal"
+        link="https://temporal.io"
       />
 
-      <h2>Previous</h2>
+      <h2 className="text-xl md:text-2xl font-bold mb-6">Previous</h2>
       {previousWork.map((work) => (
         <ResumeEntry key={work.position} {...work} />
       ))}

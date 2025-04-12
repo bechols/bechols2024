@@ -107,38 +107,38 @@ type BookInfo = {
 };
 
 function BookCard(bookInfo: BookInfo) {
-  console.log(bookInfo);
   return (
     <a
       href={bookInfo.link}
       target="_blank"
       rel="noreferrer noopener"
-      className="max-w-[50%]"
+      className="w-full"
     >
-      <Card className="p-4 hover:bg-slate-200 mb-6 max-w-2xl">
-        <CardTitle className="p-2">{bookInfo.title}</CardTitle>
+      <Card className="p-4 hover:bg-slate-200 mb-6">
+        <CardTitle className="text-lg md:text-xl p-2 break-words">{bookInfo.title}</CardTitle>
         <CardDescription className="p-2">{bookInfo.author}</CardDescription>
         <CardContent>
-          <div className="flex justify-between">
-            <div className="flex flex-col w-xl">
+          <div className="flex flex-col sm:flex-row justify-between gap-4">
+            <div className="flex flex-col w-full sm:w-3/4">
               {bookInfo.rating && (
-                <div className="flex">
+                <div className="flex items-center gap-2">
                   My rating:{" "}
                   {Array.from({ length: bookInfo.rating }, (_, i) => (
-                    <Star key={i} />
+                    <Star key={i} className="h-4 w-4" />
                   ))}
                 </div>
               )}
               {bookInfo.review && (
-                <div className="pt-4 max-w-[80%]">{bookInfo.review}</div>
+                <div className="pt-4">{bookInfo.review}</div>
               )}
             </div>
             <div className="shrink-0">
               <Image
                 src={bookInfo.imageURL}
                 alt="Book cover"
-                width={50}
-                height={200}
+                width={80}
+                height={120}
+                className="object-contain"
               />
             </div>
           </div>
@@ -152,36 +152,40 @@ export default async function Books() {
   const currentBooks = await getCurrentBooks();
   const recentBooks = await getRecentBooks();
   return (
-    <div>
-      <h1 className="text-2xl font-bold pb-4">Currently reading</h1>
-      {currentBooks.map((bookInfo) => (
-        <BookCard
-          title={bookInfo.title}
-          author={bookInfo.author}
-          key={bookInfo.title}
-          link={bookInfo.link}
-          imageURL={bookInfo.imageURL}
-        />
-      ))}
+    <div className="w-full max-w-4xl mx-auto px-4 md:px-8">
+      <h1 className="text-2xl md:text-3xl font-bold pb-6">Currently reading</h1>
+      <div className="space-y-6">
+        {currentBooks.map((bookInfo) => (
+          <BookCard
+            title={bookInfo.title}
+            author={bookInfo.author}
+            key={bookInfo.title}
+            link={bookInfo.link}
+            imageURL={bookInfo.imageURL}
+          />
+        ))}
+      </div>
       {currentBooks.length === 0 && (
-        <div>{`Either the Goodreads API finally quit working, or I'm not reading anything right now.`}</div>
+        <div className="text-lg">{`Either the Goodreads API finally quit working, or I'm not reading anything right now.`}</div>
       )}
 
       {recentBooks.length > 0 && (
-        <h1 className="text-2xl font-bold py-4">Recently read</h1>
+        <h1 className="text-2xl md:text-3xl font-bold py-6">Recently read</h1>
       )}
 
-      {recentBooks.map((bookInfo) => (
-        <BookCard
-          title={bookInfo.title}
-          author={bookInfo.author}
-          key={bookInfo.title}
-          link={bookInfo.link}
-          imageURL={bookInfo.imageURL}
-          rating={bookInfo.rating}
-          review={bookInfo.review}
-        />
-      ))}
+      <div className="space-y-6">
+        {recentBooks.map((bookInfo) => (
+          <BookCard
+            title={bookInfo.title}
+            author={bookInfo.author}
+            key={bookInfo.title}
+            link={bookInfo.link}
+            imageURL={bookInfo.imageURL}
+            rating={bookInfo.rating}
+            review={bookInfo.review}
+          />
+        ))}
+      </div>
     </div>
   );
 }
