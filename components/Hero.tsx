@@ -26,7 +26,7 @@ export default function Hero() {
           <Link href="/books" className="w-full">
             <Button variant="outline" className="w-full min-h-[3.5rem] px-6">
               <div className="flex justify-between items-center w-full gap-4">
-                <span className="text-left">What I'm reading lately</span>
+                <span className="text-left">What I&apos;m reading lately</span>
                 <LibraryBig className="h-6 w-6 flex-shrink-0" />
               </div>
             </Button>
