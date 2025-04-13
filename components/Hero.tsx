@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col lg:flex-row gap-8 w-full">
+    <div className="flex flex-col lg:flex-row gap-8 w-full max-w-screen-xl mx-auto">
       <div className="flex flex-col gap-8 w-full lg:w-[45%]">
         <div className="flex flex-col gap-2">
           <span className="text-2xl font-bold">Ben Echols</span>
@@ -41,7 +41,7 @@ export default function Hero() {
           </Link>
         </div>
       </div>
-      <div className="w-full lg:w-[55%] hidden sm:block">
+      <div className="w-full lg:w-[55%] xl:max-w-2xl">
         <AspectRatio ratio={1.47} className="overflow-hidden bg-muted">
           <Image
             src={"/ben_and_liz_point_lobos.webp"}
