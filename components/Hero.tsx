@@ -45,7 +45,7 @@ export default function Hero() {
           <img
             src={"/ben_and_liz_point_lobos.webp"}
             alt="Ben with his favorite person."
-            className="h-full w-full object-cover transition-all hover:scale-105"
+            className="h-full w-full object-cover"
             loading="eager"
           />
         </AspectRatio>
