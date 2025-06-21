@@ -15,26 +15,24 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "jsxImportSource": "react",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "paths": {
       "@/*": [
         "./*"
       ]
     },
-    "target": "ES2017"
+    "target": "ES2022",
+    "types": ["vinxi/types/client", "vinxi/types/server"]
   },
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    "app/**/*",
+    "components/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".vinxi"
   ]
 }
