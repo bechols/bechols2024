@@ -41,6 +41,7 @@ const getCurrentBooks = createServerFn({
     let currentlyReading: BookInfo[] = []
 
     return new Promise((resolve) => {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       parseString(currentShelfListXml.data, function (err, result) {
         if (err) {
           resolve([])
@@ -48,20 +49,27 @@ const getCurrentBooks = createServerFn({
         }
         
         if (
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
           !result["GoodreadsResponse"]["reviews"][0]["review"] ||
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-argument
           Object.keys(result["GoodreadsResponse"]["reviews"][0]["review"]).length === 0
         ) {
           resolve([])
           return
         }
         
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
         currentlyReading = result["GoodreadsResponse"]["reviews"][0]["review"].map(
-          // @ts-expect-error
+          // @ts-expect-error - Goodreads API response structure is complex and untyped
           (element) => {
             return {
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
               author: element["book"][0]["authors"][0]["author"][0]["name"],
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
               link: element["book"][0]["link"][0],
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
               title: element["book"][0]["title"][0],
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
               imageURL: element["book"][0]["image_url"][0],
             }
           }
@@ -97,6 +105,7 @@ const getRecentBooks = createServerFn({
     let recentlyRead: BookInfo[] = []
 
     return new Promise((resolve) => {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       parseString(recentShelfListXml.data, function (err, result) {
         if (err) {
           resolve([])
@@ -104,22 +113,31 @@ const getRecentBooks = createServerFn({
         }
         
         if (
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
           !result["GoodreadsResponse"]["reviews"][0]["review"] ||
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-argument
           Object.keys(result["GoodreadsResponse"]["reviews"][0]["review"]).length === 0
         ) {
           resolve([])
           return
         }
         
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
         recentlyRead = result["GoodreadsResponse"]["reviews"][0]["review"].map(
-          // @ts-expect-error
+          // @ts-expect-error - Goodreads API response structure is complex and untyped
           (element) => {
             return {
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
               rating: element["rating"][0],
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
               review: element["body"][0],
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
               author: element["book"][0]["authors"][0]["author"][0]["name"],
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
               link: element["book"][0]["link"][0],
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
               title: element["book"][0]["title"][0],
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
               imageURL: element["book"][0]["image_url"][0],
             }
           }
