@@ -61,7 +61,7 @@ function ResumeEntry({
 }) {
   return (
     <a href={link} target="_blank" rel="noreferrer noopener">
-      <Card className="mb-8">
+      <Card className="mb-4">
         <CardHeader>
           <CardTitle>{position}</CardTitle>
         </CardHeader>
@@ -74,7 +74,7 @@ function ResumeEntry({
 export default function History() {
   return (
     <div className="w-full max-w-4xl mx-auto px-4 md:px-8">
-      <div className="flex flex-col sm:flex-row sm:justify-around gap-4 mb-8">
+      <div className="flex flex-col sm:flex-row sm:justify-around gap-4 mb-6">
         <Link href="/about/how-i-got-into-pm" className="w-full sm:w-auto">
           <Button variant="outline" className="w-full">
             How I got into PM
@@ -86,7 +86,7 @@ export default function History() {
           </Button>
         </Link>
       </div>
-      <h2 className="text-xl md:text-2xl font-bold mb-6">Current</h2>
+      <h2 className="text-xl md:text-2xl font-bold mb-4">Current</h2>
 
       <ResumeEntry
         position="Director of Product, Temporal Cloud"
@@ -94,7 +94,7 @@ export default function History() {
         link="https://temporal.io"
       />
 
-      <h2 className="text-xl md:text-2xl font-bold mb-6">Previous</h2>
+      <h2 className="text-xl md:text-2xl font-bold mb-4 mt-6">Previous</h2>
       {previousWork.map((work) => (
         <ResumeEntry key={work.position} {...work} />
       ))}
