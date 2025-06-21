@@ -41,10 +41,12 @@ export default function Hero() {
         </div>
       </div>
       <div className="w-full lg:w-[55%] xl:max-w-2xl">
-        <AspectRatio ratio={1.47} className="overflow-hidden bg-muted">
+        <AspectRatio ratio={1.47} className="overflow-hidden bg-muted rounded-lg">
           <img
             src={"/ben_and_liz_point_lobos.webp"}
             alt="Ben with his favorite person."
+            className="h-full w-full object-cover transition-all hover:scale-105"
+            loading="eager"
           />
         </AspectRatio>
       </div>
