@@ -32,6 +32,7 @@ export default defineConfig({
         // Specifies the directory TanStack Router uses for your routes.
         routesDirectory: 'src/app', // Defaults to "src/routes"
       },
+      target: 'vercel'
     }),
   ],
 })
