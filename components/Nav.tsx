@@ -17,44 +17,48 @@ export default function Nav() {
       <NavigationMenu>
         <NavigationMenuList className="flex-wrap justify-center gap-y-2">
           <NavigationMenuItem>
-            <Link to="/">
-              <NavigationMenuLink
+            <NavigationMenuLink asChild>
+              <Link 
+                to="/"
                 className={navigationMenuTriggerStyle()}
                 aria-label="Home"
               >
                 Home
-              </NavigationMenuLink>
-            </Link>
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link to="/about">
-              <NavigationMenuLink
+            <NavigationMenuLink asChild>
+              <Link 
+                to="/about"
                 className={navigationMenuTriggerStyle()}
                 aria-label="About"
               >
                 About
-              </NavigationMenuLink>
-            </Link>
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link to="/books">
-              <NavigationMenuLink
+            <NavigationMenuLink asChild>
+              <Link 
+                to="/books"
                 className={navigationMenuTriggerStyle()}
                 aria-label="Books"
               >
                 Books
-              </NavigationMenuLink>
-            </Link>
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link to="/interesting">
-              <NavigationMenuLink
+            <NavigationMenuLink asChild>
+              <Link 
+                to="/interesting"
                 className={navigationMenuTriggerStyle()}
                 aria-label="Interesting"
               >
                 Interesting
-              </NavigationMenuLink>
-            </Link>
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>

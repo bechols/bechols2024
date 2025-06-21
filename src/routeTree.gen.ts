@@ -13,6 +13,7 @@ import { Route as InterestingRouteImport } from './app/interesting'
 import { Route as BooksRouteImport } from './app/books'
 import { Route as AboutRouteImport } from './app/about'
 import { Route as IndexRouteImport } from './app/index'
+import { Route as AboutIndexRouteImport } from './app/about/index'
 import { Route as AboutUserManualRouteImport } from './app/about/user-manual'
 import { Route as AboutHowIGotIntoPmRouteImport } from './app/about/how-i-got-into-pm'
 
@@ -36,6 +37,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutIndexRoute = AboutIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AboutRoute,
+} as any)
 const AboutUserManualRoute = AboutUserManualRouteImport.update({
   id: '/user-manual',
   path: '/user-manual',
@@ -54,14 +60,15 @@ export interface FileRoutesByFullPath {
   '/interesting': typeof InterestingRoute
   '/about/how-i-got-into-pm': typeof AboutHowIGotIntoPmRoute
   '/about/user-manual': typeof AboutUserManualRoute
+  '/about/': typeof AboutIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRouteWithChildren
   '/books': typeof BooksRoute
   '/interesting': typeof InterestingRoute
   '/about/how-i-got-into-pm': typeof AboutHowIGotIntoPmRoute
   '/about/user-manual': typeof AboutUserManualRoute
+  '/about': typeof AboutIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +78,7 @@ export interface FileRoutesById {
   '/interesting': typeof InterestingRoute
   '/about/how-i-got-into-pm': typeof AboutHowIGotIntoPmRoute
   '/about/user-manual': typeof AboutUserManualRoute
+  '/about/': typeof AboutIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,14 +89,15 @@ export interface FileRouteTypes {
     | '/interesting'
     | '/about/how-i-got-into-pm'
     | '/about/user-manual'
+    | '/about/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/about'
     | '/books'
     | '/interesting'
     | '/about/how-i-got-into-pm'
     | '/about/user-manual'
+    | '/about'
   id:
     | '__root__'
     | '/'
@@ -97,6 +106,7 @@ export interface FileRouteTypes {
     | '/interesting'
     | '/about/how-i-got-into-pm'
     | '/about/user-manual'
+    | '/about/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -136,6 +146,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about/': {
+      id: '/about/'
+      path: '/'
+      fullPath: '/about/'
+      preLoaderRoute: typeof AboutIndexRouteImport
+      parentRoute: typeof AboutRoute
+    }
     '/about/user-manual': {
       id: '/about/user-manual'
       path: '/user-manual'
@@ -156,11 +173,13 @@ declare module '@tanstack/react-router' {
 interface AboutRouteChildren {
   AboutHowIGotIntoPmRoute: typeof AboutHowIGotIntoPmRoute
   AboutUserManualRoute: typeof AboutUserManualRoute
+  AboutIndexRoute: typeof AboutIndexRoute
 }
 
 const AboutRouteChildren: AboutRouteChildren = {
   AboutHowIGotIntoPmRoute: AboutHowIGotIntoPmRoute,
   AboutUserManualRoute: AboutUserManualRoute,
+  AboutIndexRoute: AboutIndexRoute,
 }
 
 const AboutRouteWithChildren = AboutRoute._addFileChildren(AboutRouteChildren)
