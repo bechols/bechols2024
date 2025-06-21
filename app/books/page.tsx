@@ -114,7 +114,7 @@ function BookCard(bookInfo: BookInfo) {
       rel="noreferrer noopener"
       className="w-full"
     >
-      <Card className="p-4 hover:bg-slate-200 mb-6">
+      <Card className="p-4 hover:bg-slate-200 mb-4">
         <CardTitle className="text-lg md:text-xl p-2 break-words">{bookInfo.title}</CardTitle>
         <CardDescription className="p-2">{bookInfo.author}</CardDescription>
         <CardContent>
@@ -153,8 +153,8 @@ export default async function Books() {
   const recentBooks = await getRecentBooks();
   return (
     <div className="w-full max-w-4xl mx-auto px-4 md:px-8">
-      <h1 className="text-2xl md:text-3xl font-bold pb-6">Currently reading</h1>
-      <div className="space-y-6">
+      <h1 className="text-2xl md:text-3xl font-bold pb-4">Currently reading</h1>
+      <div className="space-y-4">
         {currentBooks.map((bookInfo) => (
           <BookCard
             title={bookInfo.title}
@@ -170,10 +170,10 @@ export default async function Books() {
       )}
 
       {recentBooks.length > 0 && (
-        <h1 className="text-2xl md:text-3xl font-bold py-6">Recently read</h1>
+        <h1 className="text-2xl md:text-3xl font-bold pt-6 pb-4">Recently read</h1>
       )}
 
-      <div className="space-y-6">
+      <div className="space-y-4">
         {recentBooks.map((bookInfo) => (
           <BookCard
             title={bookInfo.title}
