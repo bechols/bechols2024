@@ -7,7 +7,7 @@ import {
 import "./globals.css"
 import Nav from "@/components/Nav"
 
-const commitSha = import.meta.env.VITE_GIT_COMMIT_SHA;
+const commitSha = __GIT_COMMIT_SHA__;
 
 function Footer() {
   const currentYear = new Date().getFullYear();
