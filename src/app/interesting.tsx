@@ -1,10 +1,11 @@
+import { createFileRoute } from '@tanstack/react-router'
 import {
   Card,
   CardContent,
   CardDescription,
   CardTitle,
-} from "@/components/ui/card";
-import Markdown from "react-markdown";
+} from "@/components/ui/card"
+import Markdown from "react-markdown"
 
 const interesting = [
   {
@@ -13,13 +14,13 @@ const interesting = [
     sourceURL: "https://czep.net/weblog/52cards.html",
     text: `This number is beyond astronomically large. I say beyond astronomically large because most numbers that we already consider to be astronomically large are mere infinitesmal fractions of this number. So, just how large is it? Let's try to wrap our puny human brains around the magnitude of this number with a fun little theoretical exercise. Start a timer that will count down the number of seconds from 52! to 0. We're going to see how much fun we can have before the timer counts down all the way.
 
-Start by picking your favorite spot on the equator. You're going to walk around the world along the equator, but take a very leisurely pace of one step every billion years. Make sure to pack a deck of playing cards, so you can get in a few trillion hands of solitaire between steps. After you complete your round the world trip, remove one drop of water from the Pacific Ocean. Now do the same thing again: walk around the world at one billion years per step, removing one drop of water from the Pacific Ocean each time you circle the globe. Continue until the ocean is empty. When it is, take one sheet of paper and place it flat on the ground. Now, fill the ocean back up and start the entire process all over again, adding a sheet of paper to the stack each time you’ve emptied the ocean.
+Start by picking your favorite spot on the equator. You're going to walk around the world along the equator, but take a very leisurely pace of one step every billion years. Make sure to pack a deck of playing cards, so you can get in a few trillion hands of solitaire between steps. After you complete your round the world trip, remove one drop of water from the Pacific Ocean. Now do the same thing again: walk around the world at one billion years per step, removing one drop of water from the Pacific Ocean each time you circle the globe. Continue until the ocean is empty. When it is, take one sheet of paper and place it flat on the ground. Now, fill the ocean back up and start the entire process all over again, adding a sheet of paper to the stack each time you've emptied the ocean.
 
 
-Do this until the stack of paper reaches from the Earth to the Sun. Take a glance at the timer, you will see that the three left-most digits haven’t even changed. You still have 8.063e67 more seconds to go. So, take the stack of papers down and do it all over again. One thousand times more. Unfortunately, that still won’t do it. There are still more than 5.385e67 seconds remaining. You’re just about a third of the way done.
+Do this until the stack of paper reaches from the Earth to the Sun. Take a glance at the timer, you will see that the three left-most digits haven't even changed. You still have 8.063e67 more seconds to go. So, take the stack of papers down and do it all over again. One thousand times more. Unfortunately, that still won't do it. There are still more than 5.385e67 seconds remaining. You're just about a third of the way done.
 
 
-To pass the remaining time, start shuffling your deck of cards. Every billion years deal yourself a 5-card poker hand. Each time you get a royal flush, buy yourself a lottery ticket. If that ticket wins the jackpot, throw a grain of sand into the Grand Canyon. Keep going and when you’ve filled up the canyon with sand, remove one ounce of rock from Mt. Everest. Now empty the canyon and start all over again. When you’ve levelled Mt. Everest, look at the timer, you still have 5.364e67 seconds remaining. You barely made a dent. If you were to repeat this 255 times, you would still be looking at 3.024e64 seconds. The timer would finally reach zero sometime during your 256th attempt.
+To pass the remaining time, start shuffling your deck of cards. Every billion years deal yourself a 5-card poker hand. Each time you get a royal flush, buy yourself a lottery ticket. If that ticket wins the jackpot, throw a grain of sand into the Grand Canyon. Keep going and when you've filled up the canyon with sand, remove one ounce of rock from Mt. Everest. Now empty the canyon and start all over again. When you've levelled Mt. Everest, look at the timer, you still have 5.364e67 seconds remaining. You barely made a dent. If you were to repeat this 255 times, you would still be looking at 3.024e64 seconds. The timer would finally reach zero sometime during your 256th attempt.
 `,
   },
   {
@@ -34,7 +35,7 @@ To pass the remaining time, start shuffling your deck of cards. Every billion ye
     sourceURL: "https://grabbyaliens.com/press-release",
     text: `Evolution is so slow that human-level intelligence will probably never evolve on most habitable planets. If so, advanced life should be more likely to appear on longer-lived planets, and toward the end of their habitable periods. Yet in a universe where most planets last for trillions of years, we humans have appeared in less than 1% of that time. Why are we so surprisingly early?
 
-Some have tried to explain this by suggesting that long-lived planets are not long habitable. However, a new paper instead explains human earliness via a selection effect. “Grabby” aliens have long been out there, expanding fast and changing the appearance of their volumes. Within a few billion years they will “grab” all of the universe, and then suppress competitors. This sets a deadline; we could not have appeared much later than we did. Which is why we are early.`,
+Some have tried to explain this by suggesting that long-lived planets are not long habitable. However, a new paper instead explains human earliness via a selection effect. "Grabby" aliens have long been out there, expanding fast and changing the appearance of their volumes. Within a few billion years they will "grab" all of the universe, and then suppress competitors. This sets a deadline; we could not have appeared much later than we did. Which is why we are early.`,
   },
   {
     title: "The Computational Universe and the Physical Universe",
@@ -52,11 +53,11 @@ Some have tried to explain this by suggesting that long-lived planets are not lo
     title: "The Evolutionary Argument Against Reality",
     sourceName: "Donald Hoffman",
     sourceURL: "https://www.quantamagazine.org/the-evolutionary-argument-against-reality-20160421",
-    text: `Suppose in reality there’s a resource, like water, and you can quantify how much of it there is in an objective order — very little water, medium amount of water, a lot of water. Now suppose your fitness function is linear, so a little water gives you a little fitness, medium water gives you medium fitness, and lots of water gives you lots of fitness — in that case, the organism that sees the truth about the water in the world can win, but only because the fitness function happens to align with the true structure in reality. Generically, in the real world, that will never be the case. Something much more natural is a bell curve — say, too little water you die of thirst, but too much water you drown, and only somewhere in between is good for survival. Now the fitness function doesn’t match the structure in the real world. And that’s enough to send truth to extinction. For example, an organism tuned to fitness might see small and large quantities of some resource as, say, red, to indicate low fitness, whereas they might see intermediate quantities as green, to indicate high fitness. Its perceptions will be tuned to fitness, but not to truth. It won’t see any distinction between small and large — it only sees red — even though such a distinction exists in reality.
+    text: `Suppose in reality there's a resource, like water, and you can quantify how much of it there is in an objective order — very little water, medium amount of water, a lot of water. Now suppose your fitness function is linear, so a little water gives you a little fitness, medium water gives you medium fitness, and lots of water gives you lots of fitness — in that case, the organism that sees the truth about the water in the world can win, but only because the fitness function happens to align with the true structure in reality. Generically, in the real world, that will never be the case. Something much more natural is a bell curve — say, too little water you die of thirst, but too much water you drown, and only somewhere in between is good for survival. Now the fitness function doesn't match the structure in the real world. And that's enough to send truth to extinction. For example, an organism tuned to fitness might see small and large quantities of some resource as, say, red, to indicate low fitness, whereas they might see intermediate quantities as green, to indicate high fitness. Its perceptions will be tuned to fitness, but not to truth. It won't see any distinction between small and large — it only sees red — even though such a distinction exists in reality.
 
-But how can seeing a false reality be beneficial to an organism’s survival?
+But how can seeing a false reality be beneficial to an organism's survival?
 
-There’s a metaphor that’s only been available to us in the past 30 or 40 years, and that’s the desktop interface. Suppose there’s a blue rectangular icon on the lower right corner of your computer’s desktop — does that mean that the file itself is blue and rectangular and lives in the lower right corner of your computer? Of course not. But those are the only things that can be asserted about anything on the desktop — it has color, position and shape. Those are the only categories available to you, and yet none of them are true about the file itself or anything in the computer. They couldn’t possibly be true. That’s an interesting thing. You could not form a true description of the innards of the computer if your entire view of reality was confined to the desktop. And yet the desktop is useful. That blue rectangular icon guides my behavior, and it hides a complex reality that I don’t need to know. That’s the key idea. Evolution has shaped us with perceptions that allow us to survive. They guide adaptive behaviors. But part of that involves hiding from us the stuff we don’t need to know. And that’s pretty much all of reality, whatever reality might be. If you had to spend all that time figuring it out, the tiger would eat you.`,
+There's a metaphor that's only been available to us in the past 30 or 40 years, and that's the desktop interface. Suppose there's a blue rectangular icon on the lower right corner of your computer's desktop — does that mean that the file itself is blue and rectangular and lives in the lower right corner of your computer? Of course not. But those are the only things that can be asserted about anything on the desktop — it has color, position and shape. Those are the only categories available to you, and yet none of them are true about the file itself or anything in the computer. They couldn't possibly be true. That's an interesting thing. You could not form a true description of the innards of the computer if your entire view of reality was confined to the desktop. And yet the desktop is useful. That blue rectangular icon guides my behavior, and it hides a complex reality that I don't need to know. That's the key idea. Evolution has shaped us with perceptions that allow us to survive. They guide adaptive behaviors. But part of that involves hiding from us the stuff we don't need to know. And that's pretty much all of reality, whatever reality might be. If you had to spend all that time figuring it out, the tiger would eat you.`,
   },
   {
     title: "Heads or Tails",
@@ -113,7 +114,7 @@ At least several of these features might be considered computational in nature. 
   },
   {
     title: "Boundaries",
-    sourceName: "Marhsall McLuhan",
+    sourceName: "Marshall McLuhan",
     sourceURL: "https://www.goodreads.com/quotes/677252-once-you-see-the-boundaries-of-your-environment-they-are",
     text: `Once you see the boundaries of your environment, they are no longer the boundaries of your environment.`,
   },
@@ -121,9 +122,9 @@ At least several of these features might be considered computational in nature. 
     title: "Reality has a surprising amount of detail",
     sourceName: "John Salvatier",
     sourceURL: "http://johnsalvatier.org/blog/2017/reality-has-a-surprising-amount-of-detail",
-    text: `Before you’ve noticed important details they are, of course, basically invisible. It’s hard to put your attention on them because you don’t even know what you’re looking for. But after you see them they quickly become so integrated into your intuitive models of the world that they become essentially transparent. Do you remember the insights that were crucial in learning to ride a bike or drive? How about the details and insights you have that led you to be good at the things you’re good at?
+    text: `Before you've noticed important details they are, of course, basically invisible. It's hard to put your attention on them because you don't even know what you're looking for. But after you see them they quickly become so integrated into your intuitive models of the world that they become essentially transparent. Do you remember the insights that were crucial in learning to ride a bike or drive? How about the details and insights you have that led you to be good at the things you're good at?
 
-This means it’s really easy to get stuck. Stuck in your current way of seeing and thinking about things. Frames are made out of the details that seem important to you. The important details you haven’t noticed are invisible to you, and the details you have noticed seem completely obvious and you see right through them. This all makes makes it difficult to imagine how you could be missing something important.
+This means it's really easy to get stuck. Stuck in your current way of seeing and thinking about things. Frames are made out of the details that seem important to you. The important details you haven't noticed are invisible to you, and the details you have noticed seem completely obvious and you see right through them. This all makes makes it difficult to imagine how you could be missing something important.
 `,
   },
   {
@@ -132,17 +133,17 @@ This means it’s really easy to get stuck. Stuck in your current way of seeing 
     sourceURL: "https://ldmce.wordpress.com/2020/09/09/thingifying-the-world-ii/",
     text: `A sign in the University of Chicago Bookstore:
 
-— ‘Umbrellas are non-refundable.’
+— 'Umbrellas are non-refundable.'
 
-I can see why the Bookstore chose this phrasing.  It’s not just shorter, it’s more polite, less in-your-face than the alternatives:
+I can see why the Bookstore chose this phrasing.  It's not just shorter, it's more polite, less in-your-face than the alternatives:
 
-— ‘If you buy an umbrella here, you can’t get a refund for it.’
+— 'If you buy an umbrella here, you can't get a refund for it.'
 
-— ‘We won’t refund your money for an umbrella bought here.’
+— 'We won't refund your money for an umbrella bought here.'
 
-If I were running the Bookstore, I’d probably use the same sign they did, and I don’t mean to imply that the fate of humankind rests on the phrasing here.  I only want to use the sign as an example of what we do when we thingify the world.
+If I were running the Bookstore, I'd probably use the same sign they did, and I don't mean to imply that the fate of humankind rests on the phrasing here.  I only want to use the sign as an example of what we do when we thingify the world.
 
-I hope the umbrella example helps to show what I mean by ‘thingify’.  The sign is dealing with what is *going on* in the world, but converts all that into a single characteristic of a thing.`,
+I hope the umbrella example helps to show what I mean by 'thingify'.  The sign is dealing with what is *going on* in the world, but converts all that into a single characteristic of a thing.`,
   },
   {
     title: "Verschlimmbessern",
@@ -150,9 +151,13 @@ I hope the umbrella example helps to show what I mean by ‘thingify’.  The 
     sourceURL: "https://twitter.com/simongerman600/status/972432830717243392",
     text: `Verschlimmbessern: Making something worse while attempting to improve it.`,
   },
-];
+]
 
-export default function Interesting() {
+export const Route = createFileRoute('/interesting')({
+  component: Interesting,
+})
+
+function Interesting() {
   return (
     <div className="max-w-prose">
       {interesting.map((entry) => {
@@ -173,15 +178,15 @@ export default function Interesting() {
                   <Markdown
                     components={{
                       p(props) {
-                        return <p>{props.children}</p>;
+                        return <p>{props.children}</p>
                       },
                       ul(props) {
                         return (
                           <ul className="list-disc">{props.children}</ul>
-                        );
+                        )
                       },
                       li(props) {
-                        return <li className="ml-8">{props.children}</li>;
+                        return <li className="ml-8">{props.children}</li>
                       },
                     }}
                   >
@@ -191,8 +196,8 @@ export default function Interesting() {
               </CardContent>
             </Card>
           </a>
-        );
+        )
       })}
     </div>
-  );
+  )
 }

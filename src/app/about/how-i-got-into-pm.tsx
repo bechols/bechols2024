@@ -1,4 +1,5 @@
-import Markdown from "react-markdown";
+import { createFileRoute } from '@tanstack/react-router'
+import Markdown from "react-markdown"
 
 const historyMarkdown = `
 I got really lucky, several times.
@@ -55,9 +56,13 @@ skills. This was extremely lucky!
 
 I did well enough in my interviews to get the job, and I've loved being
 a PM ever since.
-`;
+`
 
-export default function PM() {
+export const Route = createFileRoute('/about/how-i-got-into-pm')({
+  component: PM,
+})
+
+function PM() {
   return (
     <div>
       <h1 className="text-2xl font-bold pb-4">
@@ -66,18 +71,18 @@ export default function PM() {
       <Markdown
         components={{
           p(props) {
-            return <p className="mb-4">{props.children}</p>;
+            return <p className="mb-4">{props.children}</p>
           },
           ul(props) {
-            return <ul className="list-disc mb-4">{props.children}</ul>;
+            return <ul className="list-disc mb-4">{props.children}</ul>
           },
           li(props) {
-            return <li className="ml-8">{props.children}</li>;
+            return <li className="ml-8">{props.children}</li>
           },
         }}
       >
         {historyMarkdown}
       </Markdown>
     </div>
-  );
+  )
 }

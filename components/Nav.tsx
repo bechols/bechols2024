@@ -1,5 +1,3 @@
-"use client";
-
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -7,6 +5,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { Link } from "@tanstack/react-router";
 
 import { SiLinkedin } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
@@ -18,40 +17,44 @@ export default function Nav() {
       <NavigationMenu>
         <NavigationMenuList className="flex-wrap justify-center gap-y-2">
           <NavigationMenuItem>
-            <NavigationMenuLink
-              className={navigationMenuTriggerStyle()}
-              href="/"
-              aria-label="Home"
-            >
-              Home
-            </NavigationMenuLink>
+            <Link to="/">
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                aria-label="Home"
+              >
+                Home
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink
-              className={navigationMenuTriggerStyle()}
-              href="/about"
-              aria-label="About"
-            >
-              About
-            </NavigationMenuLink>
+            <Link to="/about">
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                aria-label="About"
+              >
+                About
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink
-              className={navigationMenuTriggerStyle()}
-              href="/books"
-              aria-label="Books"
-            >
-              Books
-            </NavigationMenuLink>
+            <Link to="/books">
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                aria-label="Books"
+              >
+                Books
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink
-              className={navigationMenuTriggerStyle()}
-              href="/interesting"
-              aria-label="Interesting"
-            >
-              Interesting
-            </NavigationMenuLink>
+            <Link to="/interesting">
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                aria-label="Interesting"
+              >
+                Interesting
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
 
           <NavigationMenuItem>

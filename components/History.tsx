@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@tanstack/react-router";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 
@@ -75,12 +75,12 @@ export default function History() {
   return (
     <div className="w-full max-w-4xl mx-auto px-4 md:px-8">
       <div className="flex flex-col sm:flex-row sm:justify-around gap-4 mb-8">
-        <Link href="/about/how-i-got-into-pm" className="w-full sm:w-auto">
+        <Link to="/about/how-i-got-into-pm" className="w-full sm:w-auto">
           <Button variant="outline" className="w-full">
             How I got into PM
           </Button>
         </Link>
-        <Link href="/about/user-manual" className="w-full sm:w-auto">
+        <Link to="/about/user-manual" className="w-full sm:w-auto">
           <Button variant="outline" className="w-full">
             User manual for working with me
           </Button>

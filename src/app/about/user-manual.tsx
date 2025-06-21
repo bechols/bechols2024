@@ -1,4 +1,5 @@
-import Markdown from "react-markdown";
+import { createFileRoute } from '@tanstack/react-router'
+import Markdown from "react-markdown"
 
 const manualMarkdown = `
 ## How I think about the world:
@@ -7,7 +8,7 @@ const manualMarkdown = `
   
   * I was a philosophy major (yeah, yeah). I have been astounded at how relevant [epistemological thinking](https://en.wikipedia.org/wiki/Epistemology) has been in my career as a PM.
   * It's hard to learn stuff. The more valuable an answer is, the harder it is for us to determine a definite answer with an experiment (usually). It's easy to suggest A/B tests in software products. They're great for some contexts, but we can't A/B test a strategy or core product bets. That doesn't mean we can't define feedback loops to assess them, but we shouldn't conflate those signals with a high level of certainty.
-  * Error ranges and confidence intervals are an underused concept. "How much sooner will team X finish project Y if we change Z?" is the type of question that often doesn't have a meaningful answer more precise than "Sooner...maybe." because the error bars are usually larger than any of the absolute values in play. I haven't yet worked in an organization or seen a tool that handles this well. Makes sense, because people don't like uncertainty.
+  * Error ranges and confidence intervals are an underused concept. "How much sooner will team X finish project Y if we change Z?" is the type of question that often doesn't have a meaningful answer more precise than "Sooner...maybe." because the error bars are usually larger than any of the absolute values in play. I haven't yet worked in an organization or seen a tool that handles this well. Makes sense, because people don't like uncertainty.
   
 * **We're never just creating or changing a product. We're also evolving the system that creates the product.**
   
@@ -99,9 +100,13 @@ const manualMarkdown = `
 * I played ultimate in college. I haven't played much lately, but I still love throwing things, and I'm getting into disc golf.
 * The California coast is my favorite place.
 
-`;
+`
 
-export default function UserManual() {
+export const Route = createFileRoute('/about/user-manual')({
+  component: UserManual,
+})
+
+function UserManual() {
   return (
     <div>
       <h1 className="text-2xl font-bold pb-4">
@@ -110,18 +115,18 @@ export default function UserManual() {
       <Markdown
         components={{
           p(props) {
-            return <p className="mb-4">{props.children}</p>;
+            return <p className="mb-4">{props.children}</p>
           },
           ul(props) {
-            return <ul className="list-disc mb-4">{props.children}</ul>;
+            return <ul className="list-disc mb-4">{props.children}</ul>
           },
           li(props) {
-            return <li className="ml-8">{props.children}</li>;
+            return <li className="ml-8">{props.children}</li>
           },
         }}
       >
         {manualMarkdown}
       </Markdown>
     </div>
-  );
+  )
 }
