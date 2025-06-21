@@ -42,6 +42,8 @@ The `/books` page integrates with Goodreads API to display:
 - Requires environment variables: `GOODREADS_USER_ID` and `GOODREADS_API_KEY`
 
 #### Custom Styling
+- **Tailwind v4**: Uses Tailwind CSS v4 with @tailwindcss/vite plugin
+- **IMPORTANT**: globals.css must include `@import "tailwindcss";` for Tailwind v4 to work properly
 - Williams College purple color: `#500082` (defined as `williams-purple` in Tailwind config)
 - Custom typography plugin enabled
 - Responsive design with mobile-first approach
