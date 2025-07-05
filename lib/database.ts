@@ -74,7 +74,7 @@ export function initDatabase(): void {
     CREATE TABLE IF NOT EXISTS reviews (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       book_id INTEGER NOT NULL,
-      shelf TEXT NOT NULL,
+      shelf TEXT NOT NULL DEFAULT 'read',
       rating INTEGER,
       review TEXT,
       date_added DATETIME,

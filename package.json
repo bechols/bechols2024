@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "npx eslint . --report-unused-disable-directives --max-warnings 0",
     "test:goodreads": "node scripts/test-goodreads.js",
-    "db:init": "node scripts/init-db.js"
+    "db:init": "node scripts/init-db.js",
+    "scrape:full": "node scripts/scrape-goodreads.js"
   },
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^1.1.7",
