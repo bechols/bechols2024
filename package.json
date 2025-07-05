@@ -9,7 +9,8 @@
     "lint": "npx eslint . --report-unused-disable-directives --max-warnings 0",
     "test:goodreads": "node scripts/test-goodreads.js",
     "db:init": "node scripts/init-db.js",
-    "scrape:goodreads": "node scripts/scrape-goodreads.js"
+    "scrape:goodreads": "node scripts/scrape-goodreads.js",
+    "sync:goodreads": "node scripts/sync-goodreads.js"
   },
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^1.1.7",

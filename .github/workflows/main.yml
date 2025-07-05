@@ -1,4 +1,4 @@
-name: Trigger Vercel build every 4 days
+name: Update Goodreads database every 4 days
 
 on:
   schedule:
@@ -7,8 +7,38 @@ on:
   workflow_dispatch:
 
 jobs:
-  trigger_build:
+  update_goodreads_db:
     runs-on: ubuntu-latest
     steps:
-      - name: POST to Vercel build hook endpoint
-        run: curl -X POST ${{ secrets.VERCEL_BUILD_URL }}
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update Goodreads database
+        env:
+          GOODREADS_USER_ID: ${{ secrets.GOODREADS_USER_ID }}
+          GOODREADS_API_KEY: ${{ secrets.GOODREADS_API_KEY }}
+        run: |
+          # Initialize database (creates if doesn't exist)
+          npm run db:init
+          # Run full scrape to ensure complete data
+          npm run scrape:goodreads
+
+      - name: Commit updated database
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/books.db
+          git diff --staged --quiet || git commit -m "📚 Update Goodreads database - $(date -u '+%Y-%m-%d %H:%M UTC')
+
+          🤖 Generated with [Claude Code](https://claude.ai/code)
+
+          Co-Authored-By: Claude <noreply@anthropic.com>"
