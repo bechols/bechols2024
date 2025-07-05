@@ -1,0 +1,203 @@
+import Database from 'better-sqlite3'
+import { resolve } from 'path'
+
+export type Book = {
+  id: number
+  goodreads_id: string
+  title: string
+  author: string
+  isbn?: string
+  image_url?: string
+  description?: string
+  pages?: number
+  publication_year?: number
+  created_at: string
+}
+
+export type Review = {
+  id: number
+  book_id: number
+  shelf: string
+  rating?: number
+  review?: string
+  date_added?: string
+  date_read?: string
+  date_started?: string
+  read_count: number
+  owned: number
+}
+
+export type BookWithReview = Book & {
+  shelf: string
+  rating?: number
+  review?: string
+  date_added?: string
+  date_read?: string
+  date_started?: string
+  read_count: number
+  owned: number
+}
+
+let db: Database.Database | null = null
+
+export function getDatabase(): Database.Database {
+  if (!db) {
+    const dbPath = resolve(process.cwd(), 'data', 'books.db')
+    db = new Database(dbPath)
+    db.pragma('journal_mode = WAL')
+    db.pragma('foreign_keys = ON')
+  }
+  return db
+}
+
+export function initDatabase(): void {
+  const database = getDatabase()
+  
+  // Create books table
+  database.exec(`
+    CREATE TABLE IF NOT EXISTS books (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      goodreads_id TEXT UNIQUE NOT NULL,
+      title TEXT NOT NULL,
+      author TEXT NOT NULL,
+      isbn TEXT,
+      image_url TEXT,
+      description TEXT,
+      pages INTEGER,
+      publication_year INTEGER,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    )
+  `)
+  
+  // Create reviews table
+  database.exec(`
+    CREATE TABLE IF NOT EXISTS reviews (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      book_id INTEGER NOT NULL,
+      shelf TEXT NOT NULL DEFAULT 'read',
+      rating INTEGER,
+      review TEXT,
+      date_added DATETIME,
+      date_read DATETIME,
+      date_started DATETIME,
+      read_count INTEGER DEFAULT 1,
+      owned INTEGER DEFAULT 0,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+      FOREIGN KEY (book_id) REFERENCES books(id),
+      UNIQUE(book_id, shelf)
+    )
+  `)
+  
+  // Create indexes for better performance
+  database.exec(`
+    CREATE INDEX IF NOT EXISTS idx_books_goodreads_id ON books(goodreads_id);
+    CREATE INDEX IF NOT EXISTS idx_reviews_book_id ON reviews(book_id);
+    CREATE INDEX IF NOT EXISTS idx_reviews_shelf ON reviews(shelf);
+    CREATE INDEX IF NOT EXISTS idx_reviews_date_read ON reviews(date_read);
+  `)
+}
+
+export function insertBook(book: Omit<Book, 'id' | 'created_at'>): number {
+  const database = getDatabase()
+  const stmt = database.prepare(`
+    INSERT OR REPLACE INTO books (goodreads_id, title, author, isbn, image_url, description, pages, publication_year)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+  `)
+  
+  const result = stmt.run(
+    book.goodreads_id,
+    book.title,
+    book.author,
+    book.isbn,
+    book.image_url,
+    book.description,
+    book.pages,
+    book.publication_year
+  )
+  
+  return result.lastInsertRowid as number
+}
+
+export function insertReview(review: Omit<Review, 'id' | 'created_at'>): number {
+  const database = getDatabase()
+  const stmt = database.prepare(`
+    INSERT OR REPLACE INTO reviews (book_id, shelf, rating, review, date_added, date_read, date_started, read_count, owned)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+  `)
+  
+  const result = stmt.run(
+    review.book_id,
+    review.shelf,
+    review.rating,
+    review.review,
+    review.date_added,
+    review.date_read,
+    review.date_started,
+    review.read_count,
+    review.owned
+  )
+  
+  return result.lastInsertRowid as number
+}
+
+export function getBookByGoodreadsId(goodreadsId: string): Book | null {
+  const database = getDatabase()
+  const stmt = database.prepare('SELECT * FROM books WHERE goodreads_id = ?')
+  return stmt.get(goodreadsId) as Book | null
+}
+
+export function getBooksByShelf(shelf: string): BookWithReview[] {
+  const database = getDatabase()
+  const stmt = database.prepare(`
+    SELECT 
+      b.*,
+      r.shelf,
+      r.rating,
+      r.review,
+      r.date_added,
+      r.date_read,
+      r.date_started,
+      r.read_count,
+      r.owned
+    FROM books b
+    INNER JOIN reviews r ON b.id = r.book_id
+    WHERE r.shelf = ?
+    ORDER BY r.date_read DESC, r.date_added DESC
+  `)
+  
+  return stmt.all(shelf) as BookWithReview[]
+}
+
+export function getCurrentlyReading(): BookWithReview[] {
+  return getBooksByShelf('currently-reading')
+}
+
+export function getRecentlyRead(limit: number = 10): BookWithReview[] {
+  const database = getDatabase()
+  const stmt = database.prepare(`
+    SELECT 
+      b.*,
+      r.shelf,
+      r.rating,
+      r.review,
+      r.date_added,
+      r.date_read,
+      r.date_started,
+      r.read_count,
+      r.owned
+    FROM books b
+    INNER JOIN reviews r ON b.id = r.book_id
+    WHERE r.shelf = 'read' AND r.date_read IS NOT NULL
+    ORDER BY r.date_read DESC
+    LIMIT ?
+  `)
+  
+  return stmt.all(limit) as BookWithReview[]
+}
+
+export function closeDatabase(): void {
+  if (db) {
+    db.close()
+    db = null
+  }
+}
