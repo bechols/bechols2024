@@ -6,8 +6,9 @@ import {
   CardDescription,
   CardTitle,
 } from "@/components/ui/card"
-import axios from "axios"
 import { Star } from "lucide-react"
+import { getCurrentlyReadingFromDB, getRecentlyReadFromDB, transformDBBookToBookInfo } from '@/lib/database-queries'
+import axios from "axios"
 import { parseString } from "xml2js"
 
 type BookInfo = {
@@ -94,17 +95,47 @@ function parseGoodreadsXML(xmlData: string, config: ShelfConfig): Promise<BookIn
 const getCurrentBooks = createServerFn({
   method: 'GET',
 }).handler(async (): Promise<BookInfo[]> => {
-  return fetchGoodreadsShelf({ shelf: 'currently-reading' })
+  try {
+    // Try database first
+    const dbBooks = getCurrentlyReadingFromDB()
+    if (dbBooks.length > 0) {
+      return dbBooks.map(transformDBBookToBookInfo)
+    }
+    
+    // Fallback to API if database is empty
+    console.log('Database empty, falling back to Goodreads API for currently reading')
+    return fetchGoodreadsShelf({ shelf: 'currently-reading' })
+  } catch (error) {
+    console.error('Error fetching current books from database, falling back to API:', error)
+    return fetchGoodreadsShelf({ shelf: 'currently-reading' })
+  }
 })
 
 const getRecentBooks = createServerFn({
   method: 'GET',
 }).handler(async (): Promise<BookInfo[]> => {
-  return fetchGoodreadsShelf({ 
-    shelf: 'read', 
-    includeRating: true, 
-    includeReview: true 
-  })
+  try {
+    // Try database first
+    const dbBooks = getRecentlyReadFromDB(5)
+    if (dbBooks.length > 0) {
+      return dbBooks.map(transformDBBookToBookInfo)
+    }
+    
+    // Fallback to API if database is empty
+    console.log('Database empty, falling back to Goodreads API for recent books')
+    return fetchGoodreadsShelf({ 
+      shelf: 'read', 
+      includeRating: true, 
+      includeReview: true 
+    })
+  } catch (error) {
+    console.error('Error fetching recent books from database, falling back to API:', error)
+    return fetchGoodreadsShelf({ 
+      shelf: 'read', 
+      includeRating: true, 
+      includeReview: true 
+    })
+  }
 })
 
 function BookCard(bookInfo: BookInfo) {
@@ -178,7 +209,7 @@ function Books() {
         ))}
       </div>
       {currentBooks.length === 0 && (
-        <div className="text-lg">{`Either the Goodreads API finally quit working, or I'm not reading anything right now.`}</div>
+        <div className="text-lg">{`Either the database is empty, or I'm not reading anything right now.`}</div>
       )}
 
       {recentBooks.length > 0 && (
