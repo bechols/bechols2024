@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal website built with Next.js 15 (App Router), TypeScript, and Tailwind CSS. The site showcases Ben Echols' personal information, reading list via Goodreads API integration, and various personal content pages.
+This is a personal website built with TanStack Start (React Router), TypeScript, and Tailwind CSS. The site showcases Ben Echols' personal information, reading list via Goodreads API integration, and various personal content pages.
 
 ## Common Commands
 
@@ -20,9 +20,11 @@ No test framework is currently configured in this project.
 ## Architecture & Key Components
 
 ### Project Structure
-- **App Router**: Uses Next.js 13+ App Router pattern with `app/` directory
-- **Layout**: Global layout in `app/layout.tsx` with navigation and footer
-- **Pages**: Route-based pages in `app/` subdirectories (about, books, interesting)
+- **TanStack Start Router**: Uses TanStack Start with React Router for file-based routing
+- **Routing**: Files in `src/app/` directory map to routes (e.g., `src/app/books/analytics.tsx` → `/books/analytics`)
+- **Route Components**: Each route file exports a `Route` object created with `createFileRoute()`
+- **Layout**: Global layout with navigation and footer
+- **Pages**: Route-based pages in `src/app/` subdirectories (about, books, interesting)
 - **Components**: Reusable UI components in `components/` directory
 - **Styling**: Tailwind CSS with custom theme configuration
 
@@ -60,9 +62,9 @@ The `/books` page integrates with Goodreads API to display:
   - All styled with Tailwind CSS and CSS variables for theming
 
 ### Content Structure
-- Personal pages in `app/about/` with nested routes
+- Personal pages in `src/app/about/` with nested routes
 - Static content pages for books and interesting links
-- Image optimization with Next.js Image component
+- Image optimization with React Image component
 - Remote image support configured for Goodreads book covers
 
 ## Environment Variables
@@ -75,8 +77,16 @@ Required for full functionality:
 ## Development Notes
 
 - Uses TypeScript with strict type checking
-- ESLint configured with Next.js recommended rules
+- ESLint configured with React/TypeScript recommended rules
 - No testing framework currently configured
-- Deployment ready for Vercel (Next.js creators' platform)
+- Built with TanStack Start for full-stack React applications
 - Responsive design optimized for mobile and desktop
 - Uses semantic HTML and accessibility attributes
+
+## Routing Notes
+
+- **File-based routing**: Routes are defined by file structure in `src/app/`
+- **Route exports**: Each route file must export a `Route` object created with `createFileRoute('/path')`
+- **Nested routes**: Subdirectories create nested routes (e.g., `/books/analytics`)
+- **Server functions**: Use `createServerFn()` for server-side data fetching
+- **Loaders**: Routes can have loaders for data fetching before component renders

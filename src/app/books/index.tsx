@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
 import {
   Card,
@@ -6,7 +6,8 @@ import {
   CardDescription,
   CardTitle,
 } from "@/components/ui/card"
-import { Star } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { BarChart3, Star } from "lucide-react"
 import { getCurrentlyReadingFromDB, getRecentlyReadFromDB, transformDBBookToBookInfo } from '@/lib/database-queries'
 import axios from "axios"
 import { parseString } from "xml2js"
@@ -144,34 +145,57 @@ function BookCard(bookInfo: BookInfo) {
       href={bookInfo.link}
       target="_blank"
       rel="noreferrer noopener"
-      className="w-full"
+      className="block w-full group"
     >
-      <Card className="p-4 hover:bg-slate-200 mb-6">
-        <CardTitle className="text-lg md:text-xl p-2 break-words">{bookInfo.title}</CardTitle>
-        <CardDescription className="p-2">{bookInfo.author}</CardDescription>
-        <CardContent>
-          <div className="flex flex-col sm:flex-row justify-between gap-4">
-            <div className="flex flex-col w-full sm:w-3/4">
-              {bookInfo.rating && (
-                <div className="flex items-center gap-2">
-                  My rating:{" "}
-                  {Array.from({ length: bookInfo.rating }, (_, i) => (
-                    <Star key={i} className="h-4 w-4" />
-                  ))}
-                </div>
-              )}
-              {bookInfo.review && (
-                <div className="pt-4">{bookInfo.review}</div>
-              )}
-            </div>
-            <div className="shrink-0">
+      <Card className="overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-[1.02] border border-gray-200">
+        <CardContent className="p-0">
+          <div className="flex flex-col sm:flex-row">
+            {/* Book Cover */}
+            <div className="shrink-0 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4 sm:p-6">
               <img
                 src={bookInfo.imageURL}
-                alt="Book cover"
-                width={80}
-                height={120}
-                className="object-contain"
+                alt={`Cover of ${bookInfo.title}`}
+                width={120}
+                height={180}
+                className="object-contain shadow-md rounded-sm max-w-[120px] max-h-[180px]"
               />
+            </div>
+            
+            {/* Content */}
+            <div className="flex-1 p-4 sm:p-6">
+              <CardTitle className="text-xl md:text-2xl font-bold mb-2 break-words group-hover:text-blue-600 transition-colors">
+                {bookInfo.title}
+              </CardTitle>
+              <CardDescription className="text-base md:text-lg font-medium text-gray-600 mb-4">
+                by {bookInfo.author}
+              </CardDescription>
+              
+              {bookInfo.rating && (
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-sm font-medium text-gray-700">My rating:</span>
+                  <div className="flex items-center gap-1">
+                    {Array.from({ length: 5 }, (_, i) => (
+                      <Star 
+                        key={i} 
+                        className={`h-4 w-4 ${
+                          i < bookInfo.rating! 
+                            ? 'text-yellow-400 fill-yellow-400' 
+                            : 'text-gray-300'
+                        }`} 
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {bookInfo.review && bookInfo.review.length > 0 && bookInfo.review.trim() !== '' && (
+                <div className="mt-4">
+                  <p className="text-sm font-medium text-gray-700 mb-2">My review:</p>
+                  <p className="text-sm text-gray-600 leading-relaxed line-clamp-3">
+                    {bookInfo.review}
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </CardContent>
@@ -180,7 +204,7 @@ function BookCard(bookInfo: BookInfo) {
   )
 }
 
-export const Route = createFileRoute('/books')({
+export const Route = createFileRoute('/books/')({
   component: Books,
   loader: async () => {
     const [currentBooks, recentBooks] = await Promise.all([
@@ -196,9 +220,17 @@ function Books() {
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 md:px-8">
-      <h1 className="text-2xl md:text-3xl font-bold pb-6">Currently reading</h1>
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-6">
+        <h1 className="text-2xl md:text-3xl font-bold">Currently reading</h1>
+        <Button asChild variant="outline" className="flex items-center gap-2">
+          <Link to="/books/analytics">
+            <BarChart3 className="h-4 w-4" />
+            Reading Analytics
+          </Link>
+        </Button>
+      </div>
       <div className="space-y-6">
-        {currentBooks.map((bookInfo) => (
+        {currentBooks.map((bookInfo: BookInfo) => (
           <BookCard
             title={bookInfo.title}
             author={bookInfo.author}
@@ -209,7 +241,7 @@ function Books() {
         ))}
       </div>
       {currentBooks.length === 0 && (
-        <div className="text-lg">{`Either the database is empty, or I'm not reading anything right now.`}</div>
+        <div className="text-lg">{`Maybe I'm not reading anything right now, or maybe the Goodreads API finally stopped working.`}</div>
       )}
 
       {recentBooks.length > 0 && (
@@ -217,7 +249,7 @@ function Books() {
       )}
 
       <div className="space-y-6">
-        {recentBooks.map((bookInfo) => (
+        {recentBooks.map((bookInfo: BookInfo) => (
           <BookCard
             title={bookInfo.title}
             author={bookInfo.author}
