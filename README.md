@@ -12,7 +12,7 @@ This is a personal website built with [TanStack Start](https://tanstack.com/star
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 22+ 
 - npm, yarn, pnpm, or bun
 
 ### Installation
@@ -24,7 +24,7 @@ This is a personal website built with [TanStack Start](https://tanstack.com/star
 npm install
 ```
 
-3. Set up environment variables (create `.env.local`):
+3. Set up environment variables (create `.env`):
 
 ```bash
 GOODREADS_USER_ID=your_goodreads_user_id

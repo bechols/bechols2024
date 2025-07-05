@@ -19,136 +19,92 @@ type BookInfo = {
   review?: string | undefined
 }
 
-const getCurrentBooks = createServerFn({
-  method: 'GET',
-}).handler(async (): Promise<BookInfo[]> => {
-  const currentOptions = {
-    method: `get`,
-    url: `https://www.goodreads.com/review/list`,
+type ShelfConfig = {
+  shelf: string
+  includeRating?: boolean
+  includeReview?: boolean
+}
+
+async function fetchGoodreadsShelf(config: ShelfConfig): Promise<BookInfo[]> {
+  const options = {
+    method: 'GET',
+    url: 'https://www.goodreads.com/review/list',
     params: {
       id: process.env.GOODREADS_USER_ID,
-      shelf: `currently-reading`,
+      shelf: config.shelf,
       v: 2,
       key: process.env.GOODREADS_API_KEY,
       per_page: 5,
       page: 1,
-      sort: `date_read`,
+      sort: 'date_read',
     },
   }
   
   try {
-    const currentShelfListXml = await axios(currentOptions)
-    let currentlyReading: BookInfo[] = []
-
-    return new Promise((resolve) => {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-      parseString(currentShelfListXml.data, function (err, result) {
-        if (err) {
-          resolve([])
-          return
-        }
-        
-        if (
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-          !result["GoodreadsResponse"]["reviews"][0]["review"] ||
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-argument
-          Object.keys(result["GoodreadsResponse"]["reviews"][0]["review"]).length === 0
-        ) {
-          resolve([])
-          return
-        }
-        
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
-        currentlyReading = result["GoodreadsResponse"]["reviews"][0]["review"].map(
-          // @ts-expect-error - Goodreads API response structure is complex and untyped
-          (element) => {
-            return {
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-              author: element["book"][0]["authors"][0]["author"][0]["name"],
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-              link: element["book"][0]["link"][0],
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-              title: element["book"][0]["title"][0],
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-              imageURL: element["book"][0]["image_url"][0],
-            }
-          }
-        )
-        resolve(currentlyReading)
-      })
-    })
+    const response = await axios(options)
+    return parseGoodreadsXML(response.data, config)
   } catch (error) {
-    console.error('Error fetching current books:', error)
+    console.error(`Error fetching ${config.shelf} books:`, error)
     return []
   }
+}
+
+function parseGoodreadsXML(xmlData: string, config: ShelfConfig): Promise<BookInfo[]> {
+  return new Promise((resolve) => {
+    parseString(xmlData, function (err, result) {
+      if (err) {
+        resolve([])
+        return
+      }
+      
+      if (
+        !result["GoodreadsResponse"]["reviews"][0]["review"] ||
+        Object.keys(result["GoodreadsResponse"]["reviews"][0]["review"]).length === 0
+      ) {
+        resolve([])
+        return
+      }
+      
+      const books = result["GoodreadsResponse"]["reviews"][0]["review"].map(
+        // @ts-expect-error - Goodreads API response structure is complex and untyped
+        (element) => {
+          const bookInfo: BookInfo = {
+            author: element["book"][0]["authors"][0]["author"][0]["name"],
+            link: element["book"][0]["link"][0],
+            title: element["book"][0]["title"][0],
+            imageURL: element["book"][0]["image_url"][0],
+          }
+          
+          if (config.includeRating) {
+            bookInfo.rating = element["rating"][0]
+          }
+          
+          if (config.includeReview) {
+            bookInfo.review = element["body"][0]
+          }
+          
+          return bookInfo
+        }
+      )
+      resolve(books)
+    })
+  })
+}
+
+const getCurrentBooks = createServerFn({
+  method: 'GET',
+}).handler(async (): Promise<BookInfo[]> => {
+  return fetchGoodreadsShelf({ shelf: 'currently-reading' })
 })
 
 const getRecentBooks = createServerFn({
   method: 'GET',
 }).handler(async (): Promise<BookInfo[]> => {
-  const recentOptions = {
-    method: "GET",
-    url: "https://www.goodreads.com/review/list",
-    params: {
-      v: "2",
-      sort: "date_read",
-      shelf: "read",
-      per_page: "5",
-      page: "1",
-      id: process.env.GOODREADS_USER_ID,
-      key: process.env.GOODREADS_API_KEY,
-    },
-  }
-  
-  try {
-    const recentShelfListXml = await axios(recentOptions)
-    let recentlyRead: BookInfo[] = []
-
-    return new Promise((resolve) => {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-      parseString(recentShelfListXml.data, function (err, result) {
-        if (err) {
-          resolve([])
-          return
-        }
-        
-        if (
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-          !result["GoodreadsResponse"]["reviews"][0]["review"] ||
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-argument
-          Object.keys(result["GoodreadsResponse"]["reviews"][0]["review"]).length === 0
-        ) {
-          resolve([])
-          return
-        }
-        
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
-        recentlyRead = result["GoodreadsResponse"]["reviews"][0]["review"].map(
-          // @ts-expect-error - Goodreads API response structure is complex and untyped
-          (element) => {
-            return {
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-              rating: element["rating"][0],
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-              review: element["body"][0],
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-              author: element["book"][0]["authors"][0]["author"][0]["name"],
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-              link: element["book"][0]["link"][0],
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-              title: element["book"][0]["title"][0],
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-              imageURL: element["book"][0]["image_url"][0],
-            }
-          }
-        )
-        resolve(recentlyRead)
-      })
-    })
-  } catch (error) {
-    console.error('Error fetching recent books:', error)
-    return []
-  }
+  return fetchGoodreadsShelf({ 
+    shelf: 'read', 
+    includeRating: true, 
+    includeReview: true 
+  })
 })
 
 function BookCard(bookInfo: BookInfo) {
