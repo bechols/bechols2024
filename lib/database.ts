@@ -41,34 +41,42 @@ export type BookWithReview = Book & {
 let db: Database.Database | null = null
 
 export async function getDatabase(): Promise<Database.Database | null> {
-  if (!db) {
+  // Always try to create a fresh database for now to debug
+  // if (!db) {
     try {
       // Try local file first (for development)
       const dbPath = resolve(process.cwd(), 'public', 'books.db')
+      console.log('Attempting to load database from:', dbPath)
       db = new Database(dbPath)
       db.pragma('journal_mode = WAL')
       db.pragma('foreign_keys = ON')
+      console.log('✅ Database loaded from local file')
     } catch (error) {
+      console.log('Local file failed:', error.message)
       try {
         // Fallback: fetch from public URL (for Vercel)
         console.log('Local database not found, fetching from public URL...')
-        const response = await fetch(new URL('/books.db', process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'))
+        
+        // Use relative URL for same-origin requests
+        const response = await fetch('/books.db')
+        console.log('Fetch response status:', response.status, response.statusText)
         
         if (!response.ok) {
-          throw new Error(`Failed to fetch database: ${response.statusText}`)
+          throw new Error(`Failed to fetch database: ${response.status} ${response.statusText}`)
         }
         
         const dbBuffer = await response.arrayBuffer()
+        console.log('Database buffer size:', dbBuffer.byteLength)
         db = new Database(Buffer.from(dbBuffer))
         db.pragma('journal_mode = WAL')
         db.pragma('foreign_keys = ON')
         console.log('✅ Database loaded from public URL')
       } catch (fetchError) {
-        console.warn('Database not available via file or URL:', fetchError)
+        console.error('Database not available via file or URL:', fetchError)
         return null
       }
     }
-  }
+  // }
   return db
 }
 
