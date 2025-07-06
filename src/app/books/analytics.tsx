@@ -21,6 +21,20 @@ const getAnalyticsData = createServerFn({
 }).handler(async (): Promise<AnalyticsData> => {
   const db = getDatabase()
   
+  // If database is not available, return empty data
+  if (!db) {
+    console.warn('Database not available, returning empty analytics data')
+    return {
+      totalBooks: 0,
+      averageRating: 0,
+      booksThisYear: 0,
+      ratingDistribution: [],
+      topAuthors: [],
+      readingActivity: [],
+      availableYears: []
+    }
+  }
+  
   // Total books read
   const totalBooksResult = db.prepare(`
     SELECT COUNT(DISTINCT b.id) as count
@@ -158,24 +172,23 @@ function aggregateReadingActivity(
     if (!date || date < startDate || date > adjustedEndDate) continue
     
     let key: string
-    let displayKey: string
     
     switch (interval) {
-      case 'week':
+      case 'week': {
         // Get Monday of the week
         const monday = new Date(date)
         monday.setDate(date.getDate() - date.getDay() + 1)
         key = monday.toISOString().slice(0, 10)
-        displayKey = monday.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
         break
-      case 'month':
+      }
+      case 'month': {
         key = date.toISOString().slice(0, 7) // YYYY-MM
-        displayKey = date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
         break
-      case 'year':
+      }
+      case 'year': {
         key = date.getFullYear().toString()
-        displayKey = key
         break
+      }
     }
     
     result[key] = (result[key] || 0) + item.books
@@ -183,14 +196,14 @@ function aggregateReadingActivity(
   
   // Fill missing periods with zeros
   const periods: Array<{ period: string; books: number; displayPeriod: string }> = []
-  let currentDate = new Date(startDate)
+  const currentDate = new Date(startDate)
   
   while (currentDate <= adjustedEndDate) {
     let key: string
     let displayKey: string
     
     switch (interval) {
-      case 'week':
+      case 'week': {
         // Get Monday of the week
         const monday = new Date(currentDate)
         monday.setDate(currentDate.getDate() - currentDate.getDay() + 1)
@@ -198,16 +211,19 @@ function aggregateReadingActivity(
         displayKey = monday.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
         currentDate.setDate(currentDate.getDate() + 7)
         break
-      case 'month':
+      }
+      case 'month': {
         key = currentDate.toISOString().slice(0, 7)
         displayKey = currentDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
         currentDate.setMonth(currentDate.getMonth() + 1)
         break
-      case 'year':
+      }
+      case 'year': {
         key = currentDate.getFullYear().toString()
         displayKey = key
         currentDate.setFullYear(currentDate.getFullYear() + 1)
         break
+      }
     }
     
     periods.push({
@@ -276,12 +292,12 @@ function Analytics() {
   // Transform rating distribution for stacked bar chart
   const ratingChartData = [{
     name: 'All Books',
-    '0★': data.ratingDistribution.find(r => r.rating === 0)?.count || 0,
-    '1★': data.ratingDistribution.find(r => r.rating === 1)?.count || 0,
-    '2★': data.ratingDistribution.find(r => r.rating === 2)?.count || 0,
-    '3★': data.ratingDistribution.find(r => r.rating === 3)?.count || 0,
-    '4★': data.ratingDistribution.find(r => r.rating === 4)?.count || 0,
-    '5★': data.ratingDistribution.find(r => r.rating === 5)?.count || 0,
+    '0★': data.ratingDistribution.find(r => r.rating === 0)?.count ?? 0,
+    '1★': data.ratingDistribution.find(r => r.rating === 1)?.count ?? 0,
+    '2★': data.ratingDistribution.find(r => r.rating === 2)?.count ?? 0,
+    '3★': data.ratingDistribution.find(r => r.rating === 3)?.count ?? 0,
+    '4★': data.ratingDistribution.find(r => r.rating === 4)?.count ?? 0,
+    '5★': data.ratingDistribution.find(r => r.rating === 5)?.count ?? 0,
   }]
   
   return (
@@ -428,7 +444,7 @@ function Analytics() {
                   labelFormatter={() => 'Rating Distribution'}
                   itemSorter={(item) => {
                     // Sort by rating value in descending order (5★ to 0★)
-                    const rating = parseInt(item.dataKey?.toString().replace('★', '') || '0')
+                    const rating = parseInt(item.dataKey?.toString().replace('★', '') ?? '0')
                     return -rating
                   }}
                 />

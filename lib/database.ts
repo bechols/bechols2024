@@ -40,18 +40,28 @@ export type BookWithReview = Book & {
 
 let db: Database.Database | null = null
 
-export function getDatabase(): Database.Database {
+export function getDatabase(): Database.Database | null {
   if (!db) {
-    const dbPath = resolve(process.cwd(), 'data', 'books.db')
-    db = new Database(dbPath)
-    db.pragma('journal_mode = WAL')
-    db.pragma('foreign_keys = ON')
+    try {
+      const dbPath = resolve(process.cwd(), 'data', 'books.db')
+      db = new Database(dbPath)
+      db.pragma('journal_mode = WAL')
+      db.pragma('foreign_keys = ON')
+    } catch (error) {
+      console.warn('Database not available:', error)
+      return null
+    }
   }
   return db
 }
 
 export function initDatabase(): void {
   const database = getDatabase()
+  
+  if (!database) {
+    console.warn('Database not available, skipping initialization')
+    return
+  }
   
   // Create books table
   database.exec(`
@@ -99,6 +109,12 @@ export function initDatabase(): void {
 
 export function insertBook(book: Omit<Book, 'id' | 'created_at'>): number {
   const database = getDatabase()
+  
+  if (!database) {
+    console.warn('Database not available, cannot insert book')
+    return -1
+  }
+  
   const stmt = database.prepare(`
     INSERT OR REPLACE INTO books (goodreads_id, title, author, isbn, image_url, description, pages, publication_year)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
@@ -120,6 +136,12 @@ export function insertBook(book: Omit<Book, 'id' | 'created_at'>): number {
 
 export function insertReview(review: Omit<Review, 'id' | 'created_at'>): number {
   const database = getDatabase()
+  
+  if (!database) {
+    console.warn('Database not available, cannot insert review')
+    return -1
+  }
+  
   const stmt = database.prepare(`
     INSERT OR REPLACE INTO reviews (book_id, shelf, rating, review, date_added, date_read, date_started, read_count, owned)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
@@ -142,12 +164,24 @@ export function insertReview(review: Omit<Review, 'id' | 'created_at'>): number 
 
 export function getBookByGoodreadsId(goodreadsId: string): Book | null {
   const database = getDatabase()
+  
+  if (!database) {
+    console.warn('Database not available, cannot get book by Goodreads ID')
+    return null
+  }
+  
   const stmt = database.prepare('SELECT * FROM books WHERE goodreads_id = ?')
   return stmt.get(goodreadsId) as Book | null
 }
 
 export function getBooksByShelf(shelf: string): BookWithReview[] {
   const database = getDatabase()
+  
+  if (!database) {
+    console.warn('Database not available, cannot get books by shelf')
+    return []
+  }
+  
   const stmt = database.prepare(`
     SELECT 
       b.*,
@@ -174,6 +208,12 @@ export function getCurrentlyReading(): BookWithReview[] {
 
 export function getRecentlyRead(limit: number = 10): BookWithReview[] {
   const database = getDatabase()
+  
+  if (!database) {
+    console.warn('Database not available, cannot get recently read books')
+    return []
+  }
+  
   const stmt = database.prepare(`
     SELECT 
       b.*,
