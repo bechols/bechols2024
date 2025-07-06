@@ -43,7 +43,7 @@ let db: Database.Database | null = null
 export function getDatabase(): Database.Database | null {
   if (!db) {
     try {
-      const dbPath = resolve(process.cwd(), 'data', 'books.db')
+      const dbPath = resolve(process.cwd(), 'public', 'books.db')
       db = new Database(dbPath)
       db.pragma('journal_mode = WAL')
       db.pragma('foreign_keys = ON')

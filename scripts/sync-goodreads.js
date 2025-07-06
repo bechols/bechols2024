@@ -20,7 +20,7 @@ if (!GOODREADS_USER_ID || !GOODREADS_API_KEY) {
 }
 
 // Initialize database
-const dbPath = resolve(process.cwd(), 'data', 'books.db')
+const dbPath = resolve(process.cwd(), 'public', 'books.db')
 const db = new Database(dbPath)
 
 // Helper functions (same as scraper)

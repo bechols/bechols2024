@@ -21,7 +21,7 @@ if (!GOODREADS_USER_ID || !GOODREADS_API_KEY) {
 }
 
 // Initialize database and cache directories
-const dbPath = resolve(process.cwd(), 'data', 'books.db')
+const dbPath = resolve(process.cwd(), 'public', 'books.db')
 const cacheDir = resolve(process.cwd(), 'data', 'cache')
 const db = new Database(dbPath)
 

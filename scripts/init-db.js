@@ -9,15 +9,15 @@ async function main() {
   console.log('🗄️  Initializing SQLite database...')
   
   try {
-    // Create data directory if it doesn't exist
-    const dataDir = resolve(process.cwd(), 'data')
-    if (!existsSync(dataDir)) {
-      await mkdir(dataDir, { recursive: true })
-      console.log('📁 Created data directory')
+    // Create public directory if it doesn't exist
+    const publicDir = resolve(process.cwd(), 'public')
+    if (!existsSync(publicDir)) {
+      await mkdir(publicDir, { recursive: true })
+      console.log('📁 Created public directory')
     }
     
     // Initialize database
-    const dbPath = resolve(dataDir, 'books.db')
+    const dbPath = resolve(publicDir, 'books.db')
     const db = new Database(dbPath)
     db.pragma('journal_mode = WAL')
     db.pragma('foreign_keys = ON')
