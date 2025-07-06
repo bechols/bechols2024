@@ -1,0 +1,92 @@
+name: Update PR with Vercel Preview
+
+on:
+  deployment_status:
+
+jobs:
+  comment-preview:
+    if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Preview'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Find PR for deployment
+        id: find-pr
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const deployment = context.payload.deployment;
+            const ref = deployment.ref;
+            
+            // Find PR for this ref/branch
+            const { data: pulls } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head: `${context.repo.owner}:${ref}`,
+              state: 'open'
+            });
+            
+            if (pulls.length > 0) {
+              const pr = pulls[0];
+              core.setOutput('pr_number', pr.number);
+              core.setOutput('branch', ref);
+              return pr.number;
+            } else {
+              console.log(`No open PR found for ref: ${ref}`);
+              return null;
+            }
+
+      - name: Comment on PR
+        if: steps.find-pr.outputs.pr_number
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = ${{ steps.find-pr.outputs.pr_number }};
+            const branch = '${{ steps.find-pr.outputs.branch }}';
+            const deploymentUrl = '${{ github.event.deployment_status.target_url }}';
+            
+            const comment = `## 🚀 Vercel Preview Updated
+
+            ✅ **Latest Preview:** ${deploymentUrl}
+
+            📱 **Test the updated preview:**
+            - [Homepage](${deploymentUrl})
+            - [Books](${deploymentUrl}/books)
+            - [Analytics](${deploymentUrl}/books/analytics)
+            - [About](${deploymentUrl}/about)
+
+            🕒 **Updated:** ${new Date().toLocaleString()}
+            🌿 **Branch:** \`${branch}\`
+
+            ---
+            *This comment is automatically updated when new commits are deployed.*`;
+
+            // Look for existing bot comments to update
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber
+            });
+
+            const botComment = comments.find(comment => 
+              comment.user.login === 'github-actions[bot]' && 
+              comment.body.includes('🚀 Vercel Preview')
+            );
+
+            if (botComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: comment
+              });
+              console.log(`Updated existing comment on PR #${prNumber}`);
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: comment
+              });
+              console.log(`Created new comment on PR #${prNumber}`);
+            }

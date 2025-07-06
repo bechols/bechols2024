@@ -1,0 +1,129 @@
+name: Auto PR Creation and Vercel Preview
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - master
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Check if PR exists
+        id: check-pr
+        run: |
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+          echo "branch=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          
+          # Check if PR already exists for this branch
+          PR_EXISTS=$(gh pr list --head "$BRANCH_NAME" --json number --jq length)
+          echo "pr_exists=$PR_EXISTS" >> $GITHUB_OUTPUT
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Pull Request
+        if: steps.check-pr.outputs.pr_exists == '0'
+        id: create-pr
+        run: |
+          BRANCH_NAME="${{ steps.check-pr.outputs.branch }}"
+          
+          # Get commit messages for PR description
+          COMMITS=$(git log --oneline main.."$BRANCH_NAME" | head -10)
+          
+          # Create PR description
+          PR_BODY="## Changes in this branch
+
+          Recent commits:
+          \`\`\`
+          $COMMITS
+          \`\`\`
+
+          🚀 This PR was created automatically when you pushed to \`$BRANCH_NAME\`.
+          
+          📱 Vercel preview will be available once deployment completes.
+          "
+          
+          # Create the PR
+          PR_NUMBER=$(gh pr create \
+            --title "🚀 Auto-PR: $BRANCH_NAME" \
+            --body "$PR_BODY" \
+            --head "$BRANCH_NAME" \
+            --base main \
+            --draft)
+          
+          echo "pr_number=$PR_NUMBER" >> $GITHUB_OUTPUT
+          echo "Created PR #$PR_NUMBER for branch $BRANCH_NAME"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  wait-for-vercel:
+    runs-on: ubuntu-latest
+    needs: create-pr
+    if: needs.create-pr.outputs.pr_number
+    steps:
+      - name: Wait for Vercel deployment
+        id: wait-deployment
+        run: |
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+          echo "Waiting for Vercel deployment for branch: $BRANCH_NAME"
+          
+          # Wait up to 5 minutes for deployment
+          for i in {1..30}; do
+            echo "Checking deployment status... (attempt $i/30)"
+            
+            # Check Vercel deployments via API
+            DEPLOYMENT=$(curl -s \
+              -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+              "https://api.vercel.com/v6/deployments?teamId=${{ secrets.VERCEL_TEAM_ID }}&gitSource.ref=$BRANCH_NAME&state=READY&limit=1")
+            
+            DEPLOYMENT_URL=$(echo "$DEPLOYMENT" | jq -r '.deployments[0].url // empty')
+            
+            if [ -n "$DEPLOYMENT_URL" ] && [ "$DEPLOYMENT_URL" != "null" ]; then
+              echo "Found deployment: https://$DEPLOYMENT_URL"
+              echo "deployment_url=https://$DEPLOYMENT_URL" >> $GITHUB_OUTPUT
+              break
+            fi
+            
+            sleep 10
+          done
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_TEAM_ID: ${{ secrets.VERCEL_TEAM_ID }}
+
+      - name: Comment on PR with preview URL
+        if: steps.wait-deployment.outputs.deployment_url
+        run: |
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+          DEPLOYMENT_URL="${{ steps.wait-deployment.outputs.deployment_url }}"
+          
+          # Find the PR number for this branch
+          PR_NUMBER=$(gh pr list --head "$BRANCH_NAME" --json number --jq '.[0].number')
+          
+          if [ -n "$PR_NUMBER" ] && [ "$PR_NUMBER" != "null" ]; then
+            # Create comment with preview link
+            COMMENT="## 🚀 Vercel Preview Deployed
+
+            ✅ **Preview URL:** $DEPLOYMENT_URL
+
+            📱 **Test the preview:**
+            - [Homepage]($DEPLOYMENT_URL)
+            - [Books]($DEPLOYMENT_URL/books)
+            - [Analytics]($DEPLOYMENT_URL/books/analytics)
+            - [About]($DEPLOYMENT_URL/about)
+
+            🔄 This comment will be updated when new commits are pushed to \`$BRANCH_NAME\`."
+            
+            gh pr comment "$PR_NUMBER" --body "$COMMENT"
+            echo "Added preview URL comment to PR #$PR_NUMBER"
+          else
+            echo "Could not find PR number for branch $BRANCH_NAME"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
