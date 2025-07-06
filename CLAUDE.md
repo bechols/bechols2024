@@ -14,6 +14,12 @@ This is a personal website built with TanStack Start (React Router), TypeScript,
 - `npm start` - Start production server
 - `npm run lint` - Run ESLint to check code quality
 
+### Database Scripts
+- `node scripts/scrape-goodreads.js` - Full Goodreads data scrape to populate database
+- `node scripts/sync-goodreads.js` - Incremental sync for recent changes
+- `node scripts/init-db.js` - Initialize database schema
+- `node scripts/test-db-queries.js` - Test database query functions
+
 ### Testing
 No test framework is currently configured in this project.
 
@@ -76,15 +82,30 @@ Required for full functionality:
 
 ## Database & Analytics
 
-- **SQLite Database**: Uses local SQLite database stored in `database.db`
+### Database Architecture
+- **SQLite Database**: Uses SQLite database stored in `public/books.db` (accessible as static asset)
+- **Async Database Functions**: All database functions are async to support both local file access and network fetching
+- **Vercel Deployment Strategy**: 
+  - **Local Development**: Reads database from `public/books.db` file path
+  - **Vercel Production**: Fetches database from `https://bechols.com/books.db` and writes to `/tmp/books.db`
+  - **Error Handling**: Gracefully falls back to empty data if database unavailable
 - **Database Queries**: Custom functions in `lib/database-queries.ts` for book data operations
-- **Analytics System**: Complex reading analytics with time-based aggregation
+
+### Analytics System
+- **Complex Analytics**: Reading analytics with time-based aggregation at `/books/analytics`
   - Supports week/month/year intervals with current-time boundary enforcement
   - ISO 8601 date format (YYYY-MM-DD) with database constraints for data integrity
   - Full SQLite date function compatibility (strftime, date, julianday, etc.)
   - Stacked bar charts for rating distribution with inverted tooltip ordering
   - Progress bar visualizations for top authors ranking
+- **Performance**: Analytics queries process 1000+ books efficiently with proper indexing
 - **Dual Data Sources**: Falls back from database to Goodreads API if database is empty
+
+### Critical Implementation Details
+- **Server Functions**: Use `createServerFn()` for database access - all must be async
+- **Database Path**: Always use `public/books.db` (not `data/books.db`) for consistency
+- **Vercel Limitations**: Serverless functions can't access `public/` via filesystem, must fetch via HTTP
+- **Error Recovery**: Database connection failures return empty data rather than crashing the app
 
 ## Data Visualization
 
@@ -110,6 +131,19 @@ Required for full functionality:
 - **Server functions**: Use `createServerFn()` for server-side data fetching
 - **Loaders**: Routes can have loaders for data fetching before component renders
 - **Route paths**: Use exact paths like `/books/analytics` not `/books/analytics/`
+
+## GitHub Actions & Automation
+
+### Auto-PR System
+- **Auto PR Creation**: GitHub Action creates PRs automatically when pushing to any branch (except main)
+- **Vercel Preview Integration**: Posts Vercel preview URLs in PR comments automatically
+- **Setup Required**: Repository must have "Read and write permissions" enabled for Actions
+- **Configuration**: See `.github/SETUP_AUTO_PR.md` for complete setup instructions
+- **Optional Secrets**: `VERCEL_TOKEN` and `VERCEL_TEAM_ID` for faster preview URL detection
+
+### Workflow Files
+- `.github/workflows/auto-pr.yml` - Creates PRs and waits for Vercel deployments
+- `.github/workflows/vercel-preview-comment.yml` - Updates PR comments with preview URLs
 
 ## Common Patterns
 
