@@ -3,6 +3,11 @@ import { getDatabase, type BookWithReview } from './database'
 export function getCurrentlyReadingFromDB(): BookWithReview[] {
   try {
     const db = getDatabase()
+    if (!db) {
+      console.warn('Database not available, returning empty currently reading list')
+      return []
+    }
+    
     const stmt = db.prepare(`
       SELECT 
         b.*,
@@ -30,6 +35,11 @@ export function getCurrentlyReadingFromDB(): BookWithReview[] {
 export function getRecentlyReadFromDB(limit: number = 10): BookWithReview[] {
   try {
     const db = getDatabase()
+    if (!db) {
+      console.warn('Database not available, returning empty recently read list')
+      return []
+    }
+    
     const stmt = db.prepare(`
       SELECT 
         b.*,
