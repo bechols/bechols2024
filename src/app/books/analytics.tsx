@@ -36,14 +36,15 @@ const getAnalyticsData = createServerFn({
     WHERE r.shelf = 'read' AND r.rating IS NOT NULL
   `).get() as { avg_rating: number | null }
   
-  // Books finished this year
+  // Books finished this year - use three-part fallback
+  const currentYear = new Date().getFullYear().toString()
   const booksThisYear = db.prepare(`
     SELECT COUNT(*) as count
     FROM reviews r
     WHERE r.shelf = 'read' 
-      AND r.date_started IS NOT NULL
-      AND substr(date_started, -4) = '2025'
-  `).get() as { count: number }
+      AND COALESCE(date_read, date_started, date_added) IS NOT NULL
+      AND substr(COALESCE(date_read, date_started, date_added), 1, 4) = ?
+  `).get(currentYear) as { count: number }
   
   // Rating distribution
   const ratingDistribution = db.prepare(`
@@ -70,25 +71,25 @@ const getAnalyticsData = createServerFn({
   `).all() as Array<{ author: string; count: number }>
   
   // Reading activity over time - get all data for flexible filtering
+  // Use three-part fallback: date_read (finished) -> date_started -> date_added
   const readingActivity = db.prepare(`
     SELECT 
-      date_started,
+      COALESCE(date_read, date_started, date_added) as date_started,
       COUNT(*) as books
     FROM reviews r
     WHERE r.shelf = 'read' 
-      AND r.date_started IS NOT NULL
-      AND substr(date_started, -4) >= '2020'
-    GROUP BY date_started
-    ORDER BY date_started
+      AND COALESCE(date_read, date_started, date_added) IS NOT NULL
+    GROUP BY COALESCE(date_read, date_started, date_added)
+    ORDER BY COALESCE(date_read, date_started, date_added)
   `).all() as Array<{ date_started: string; books: number }>
   
-  // Get available years from the data
+  // Get available years from the data using same fallback logic
   const availableYearsResult = db.prepare(`
-    SELECT DISTINCT substr(date_started, -4) as year
+    SELECT DISTINCT substr(COALESCE(date_read, date_started, date_added), 1, 4) as year
     FROM reviews r
     WHERE r.shelf = 'read' 
-      AND r.date_started IS NOT NULL
-      AND substr(date_started, -4) IS NOT NULL
+      AND COALESCE(date_read, date_started, date_added) IS NOT NULL
+      AND substr(COALESCE(date_read, date_started, date_added), 1, 4) IS NOT NULL
     ORDER BY year
   `).all() as Array<{ year: string }>
   
@@ -112,10 +113,11 @@ const getAnalyticsData = createServerFn({
 })
 
 
-// Helper function to parse date from Goodreads format (e.g., "Jan 15, 2024")
-function parseGoodreadsDate(dateStr: string): Date | null {
+// Helper function to parse ISO date from database (e.g., "2024-01-15")
+function parseISODate(dateStr: string): Date | null {
   try {
-    const date = new Date(dateStr)
+    // ISO date format is YYYY-MM-DD
+    const date = new Date(dateStr + 'T00:00:00')
     return isNaN(date.getTime()) ? null : date
   } catch {
     return null
@@ -152,7 +154,7 @@ function aggregateReadingActivity(
   
   // Filter and aggregate data
   for (const item of data) {
-    const date = parseGoodreadsDate(item.date_started)
+    const date = parseISODate(item.date_started)
     if (!date || date < startDate || date > adjustedEndDate) continue
     
     let key: string
@@ -304,7 +306,7 @@ function Analytics() {
           title="Books This Year"
           value={data.booksThisYear}
           icon={CalendarDays}
-          subtitle="2025"
+          subtitle={new Date().getFullYear().toString()}
         />
       </div>
       

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoodreadsResponse>
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[9C5mQHjIy4wGu6jQwzL3w]]></key>
+    <method><![CDATA[review_list]]></method>
+  </Request>
+  
+  <shelf exclusive='true' id='18314221' name='read' sortable='false'></shelf>
+
+<reviews start="0" end="0" total="1080">
+</reviews>
+
+</GoodreadsResponse>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoodreadsResponse>
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[9C5mQHjIy4wGu6jQwzL3w]]></key>
+    <method><![CDATA[review_list]]></method>
+  </Request>
+  
+  <shelf exclusive='true' id='18314363' name='currently-reading' sortable='false'></shelf>
+
+<reviews start="1" end="3" total="3">
+    <review>
+  <id>7564802051</id>
+  <book_id>13586928</book_id>
+      <book>
+  <id type="integer">13586928</id>
+  <isbn>142218739X</isbn>
+  <isbn13>9781422187395</isbn13>
+  <text_reviews_count type="integer">437</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1._EV_s6jzO6DebHQBui4jVA</uri>
+  <title>Playing to Win: How Strategy Really Works</title>
+  <title_without_series>Playing to Win: How Strategy Really Works</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1369869853l/13586928._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1369869853l/13586928._SY75_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/13586928-playing-to-win</link>
+  <num_pages></num_pages>
+  <format></format>
+  <edition_information>32305th</edition_information>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>3.99</average_rating>
+  <ratings_count>8580</ratings_count>
+  <description>&lt;b&gt;This is A.G. Lafley’s guidebook. Shouldn’t it be yours as well?&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;Winning CEO A.G. Lafley is now back at the helm of consumer goods giant Procter &amp;amp; Gamble. If you want to know the strategy he’ll use to restore P&amp;amp;G to its former dominance—read this book.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;Playing to Win&lt;/i&gt;, a noted &lt;i&gt;Wall Street Journal&lt;/i&gt; and &lt;i&gt;Washington Post&lt;/i&gt; bestseller, outlines the strategic approach Lafley, in close partnership with strategic adviser Roger Martin, used to double P&amp;amp;G’s sales, quadruple its profits, and increase its market value by more than $100 billion when Lafley was first CEO (he led the company from 2000 to 2009). The book shows leaders in any type of organization how to guide everyday actions with larger strategic goals built around the clear, essential elements that determine business success—&lt;i&gt;where to play and how to win&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;Lafley and Martin have created a set of five essential strategic choices that, when addressed in an integrated way, will move you ahead of your competitors. They are: (1) What is our winning aspiration? (2) Where will we play? (3) How will we win? (4) What capabilities must we have in place to win? and (5) What management systems are required to support our choices? The result is a playbook for winning.&lt;br /&gt;&lt;br /&gt;The stories of how P&amp;amp;G repeatedly won by applying this method to iconic brands such as Olay, Bounty, Gillette, Swiffer, and Febreze clearly illustrate how deciding on a strategic approach—and then making the right choices to support it—makes the difference between just playing the game and actually winning.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;Playing to Win&lt;/i&gt; outlines a proven method that has worked for some of today’s most celebrated brands and products. Let this book serve as your new guide to winning, as well.&lt;br /&gt;</description>
+<authors>
+<author>
+<id>1254177</id>
+<name>A.G. Lafley</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1532147674p5/1254177.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1532147674p2/1254177.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/1254177.A_G_Lafley]]></link>
+<average_rating>3.96</average_rating>
+<ratings_count>10797</ratings_count>
+<text_reviews_count>593</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>19174280</id>
+  <uri>kca://work/amzn1.gr.work.v1.tCx6jrNBzj8nNOJ0Ueq0IA</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314363' name='currently-reading' review_shelf_id='7289415288' sortable='false'></shelf>
+
+</shelves>
+
+  <started_at>Tue May 27 00:00:00 -0700 2025</started_at>
+  <read_at></read_at>
+  <date_added>Mon May 12 20:37:37 -0700 2025</date_added>
+  <date_updated>Tue May 27 21:20:52 -0700 2025</date_updated>
+  <read_count>1</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/7564802051]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/7564802051]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>7226314313</id>
+  <book_id>195443798</book_id>
+      <book>
+  <id type="integer">195443798</id>
+  <isbn>1035013770</isbn>
+  <isbn13>9781035013777</isbn13>
+  <text_reviews_count type="integer">1189</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v3.U07jHOWpgU_-RRTg</uri>
+  <title>Alien Clay</title>
+  <title_without_series>Alien Clay</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1693389349l/195443798._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1693389349l/195443798._SY75_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/195443798-alien-clay</link>
+  <num_pages></num_pages>
+  <format></format>
+  <edition_information/>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.02</average_rating>
+  <ratings_count>11458</ratings_count>
+  <description>They travelled into the unknown and left themselves behind . . .&lt;br /&gt;&lt;br /&gt;On the distant world of Kiln lie the ruins of an alien civilization. It’s the greatest discovery in humanity’s spacefaring history – yet who were its builders and where did they go?&lt;br /&gt;&lt;br /&gt;Professor Arton Daghdev had always wanted to study alien life up close. Then his wishes become a reality in the worst way. His political activism sees him exiled from Earth to Kiln’s extrasolar labour camp. There, he’s condemned to work under an alien sky until he dies.&lt;br /&gt;&lt;br /&gt;Kiln boasts a ravenous, chaotic ecosystem like nothing seen on Earth. The monstrous alien life interacts in surprising, sometimes shocking ways with the human body, so Arton will risk death on a daily basis. However, the camp’s oppressive regime might just kill him first. If Arton can somehow escape both fates, the world of Kiln holds a wondrous, terrible secret. It will redefine life and intelligence as he knows it, and might just set him free . . .</description>
+<authors>
+<author>
+<id>1445909</id>
+<name>Adrian Tchaikovsky</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1282303363p5/1445909.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1282303363p2/1445909.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/1445909.Adrian_Tchaikovsky]]></link>
+<average_rating>4.14</average_rating>
+<ratings_count>519921</ratings_count>
+<text_reviews_count>51894</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>197089092</id>
+  <uri>kca://work/amzn1.gr.work.v3.kKmENNUf2Xm-9MGY</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314363' name='currently-reading' review_shelf_id='7399825503' sortable='false'></shelf>
+
+</shelves>
+
+  <started_at>Sat Jul 05 00:00:00 -0700 2025</started_at>
+  <read_at></read_at>
+  <date_added>Fri Jan 17 13:10:26 -0800 2025</date_added>
+  <date_updated>Sat Jul 05 07:46:02 -0700 2025</date_updated>
+  <read_count>1</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/7226314313]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/7226314313]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>6019017757</id>
+  <book_id>824412</book_id>
+      <book>
+  <id type="integer">824412</id>
+  <isbn>0674026764</isbn>
+  <isbn13>9780674026766</isbn13>
+  <text_reviews_count type="integer">275</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.QSVBqWOxpk1nwSlH1TEkRg</uri>
+  <title>A Secular Age</title>
+  <title_without_series>A Secular Age</title_without_series>
+  <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+  <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/824412.A_Secular_Age</link>
+  <num_pages>874</num_pages>
+  <format></format>
+  <edition_information>1st, First Edition</edition_information>
+  <publisher>Belknap</publisher>
+  <publication_day/>
+  <publication_year>2007</publication_year>
+  <publication_month/>
+  <average_rating>4.27</average_rating>
+  <ratings_count>1797</ratings_count>
+  <description>Almost everyone would agree that the place of religion in our societies has changed profoundly over the years. This book takes up the question of what these changes mean—of what, precisely, happens when a society in which it is virtually impossible not to believe in God becomes one in which faith is only one human possibility among others.</description>
+<authors>
+<author>
+<id>14187</id>
+<name>Charles Margrave Taylor</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1304874137p5/14187.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1304874137p2/14187.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/14187.Charles_Margrave_Taylor]]></link>
+<average_rating>4.05</average_rating>
+<ratings_count>8430</ratings_count>
+<text_reviews_count>919</text_reviews_count>
+</author>
+</authors>
+  <published>2007</published>
+<work>  <id>810184</id>
+  <uri>kca://work/amzn1.gr.work.v1.OcE6CTdM2ovZ8v636XO-Lw</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314363' name='currently-reading' review_shelf_id='7311234086' sortable='false'></shelf>
+
+    <shelf exclusive='false' id='563965698' name='bookstore-check' review_shelf_id='5673161838' sortable='false'></shelf>
+
+</shelves>
+
+  <started_at>Wed Jun 04 00:00:00 -0700 2025</started_at>
+  <read_at></read_at>
+  <date_added>Sat Dec 02 11:30:33 -0800 2023</date_added>
+  <date_updated>Wed Jun 04 05:17:16 -0700 2025</date_updated>
+  <read_count>1</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/6019017757]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/6019017757]]></link>
+    <owned>0</owned>
+</review>
+
+</reviews>
+
+</GoodreadsResponse>

@@ -5,6 +5,7 @@ import { parseString } from 'xml2js'
 import { config } from 'dotenv'
 import Database from 'better-sqlite3'
 import { resolve } from 'path'
+import { writeFileSync, readFileSync, existsSync, mkdirSync } from 'fs'
 
 // Load environment variables
 config()
@@ -19,9 +20,15 @@ if (!GOODREADS_USER_ID || !GOODREADS_API_KEY) {
   process.exit(1)
 }
 
-// Initialize database
+// Initialize database and cache directories
 const dbPath = resolve(process.cwd(), 'data', 'books.db')
+const cacheDir = resolve(process.cwd(), 'data', 'cache')
 const db = new Database(dbPath)
+
+// Ensure cache directory exists
+if (!existsSync(cacheDir)) {
+  mkdirSync(cacheDir, { recursive: true })
+}
 
 // Prepare database statements
 const insertBookStmt = db.prepare(`
@@ -59,10 +66,44 @@ function safeParseInt(value) {
   return isNaN(parsed) ? null : parsed
 }
 
+function convertToISODate(goodreadsDate) {
+  if (!goodreadsDate || goodreadsDate === '') {
+    return null
+  }
+  
+  try {
+    // Goodreads dates are in RFC 2822 format: "Fri Apr 06 10:10:54 -0700 2012"
+    // or sometimes simpler formats like "Jan 15, 2024" or "2024-01-15"
+    const date = new Date(goodreadsDate)
+    
+    // Check if the date is valid
+    if (isNaN(date.getTime())) {
+      console.warn(`⚠️  Invalid date format: "${goodreadsDate}"`)
+      return null
+    }
+    
+    // Return ISO date string (YYYY-MM-DD format)
+    return date.toISOString().split('T')[0]
+  } catch (error) {
+    console.warn(`⚠️  Error parsing date "${goodreadsDate}":`, error.message)
+    return null
+  }
+}
+
 // Rate limiting
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
 async function fetchShelfData(shelf, page = 1) {
+  // Create cache filename
+  const cacheFilename = `${shelf}-page-${page}.xml`
+  const cachePath = resolve(cacheDir, cacheFilename)
+  
+  // Check if cached file exists
+  if (existsSync(cachePath)) {
+    console.log(`📂 Using cached data for ${shelf} shelf, page ${page}`)
+    return readFileSync(cachePath, 'utf8')
+  }
+  
   const options = {
     method: 'GET',
     url: 'https://www.goodreads.com/review/list',
@@ -80,6 +121,10 @@ async function fetchShelfData(shelf, page = 1) {
   try {
     console.log(`📖 Fetching ${shelf} shelf, page ${page}...`)
     const response = await axios(options)
+    
+    // Cache the response
+    writeFileSync(cachePath, response.data, 'utf8')
+    console.log(`💾 Cached response to ${cacheFilename}`)
     
     // Add delay to respect rate limits
     await delay(1000)
@@ -141,9 +186,9 @@ function parseXMLData(xmlData) {
           shelf: safeExtract(element.shelves?.[0]?.shelf?.[0]?.$?.name) || 'read',
           rating: safeParseInt(element.rating?.[0]),
           review: safeExtract(element.body?.[0]),
-          date_added: safeExtract(element.date_added?.[0]),
-          date_read: safeExtract(element.date_read?.[0]),
-          date_started: safeExtract(element.started_at?.[0]),
+          date_added: convertToISODate(safeExtract(element.date_added?.[0])),
+          date_read: convertToISODate(safeExtract(element.read_at?.[0])),
+          date_started: convertToISODate(safeExtract(element.started_at?.[0])),
           read_count: safeParseInt(element.read_count?.[0]) || 1,
           owned: safeParseInt(element.owned?.[0]) || 0,
         }

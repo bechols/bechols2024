@@ -74,6 +74,25 @@ Required for full functionality:
 - `GOODREADS_API_KEY` - Goodreads API key for book data
 - `NEXT_PUBLIC_GIT_COMMIT_SHA` - Auto-generated during build
 
+## Database & Analytics
+
+- **SQLite Database**: Uses local SQLite database stored in `database.db`
+- **Database Queries**: Custom functions in `lib/database-queries.ts` for book data operations
+- **Analytics System**: Complex reading analytics with time-based aggregation
+  - Supports week/month/year intervals with current-time boundary enforcement
+  - ISO 8601 date format (YYYY-MM-DD) with database constraints for data integrity
+  - Full SQLite date function compatibility (strftime, date, julianday, etc.)
+  - Stacked bar charts for rating distribution with inverted tooltip ordering
+  - Progress bar visualizations for top authors ranking
+- **Dual Data Sources**: Falls back from database to Goodreads API if database is empty
+
+## Data Visualization
+
+- **Recharts Library**: Used for all charts (LineChart, BarChart, stacked charts)
+- **Chart Configurations**: Custom tooltip formatters and itemSorter functions
+- **Responsive Design**: All charts use ResponsiveContainer for mobile compatibility
+- **Color Schemes**: Consistent color mapping across different chart types
+
 ## Development Notes
 
 - Uses TypeScript with strict type checking
@@ -90,3 +109,12 @@ Required for full functionality:
 - **Nested routes**: Subdirectories create nested routes (e.g., `/books/analytics`)
 - **Server functions**: Use `createServerFn()` for server-side data fetching
 - **Loaders**: Routes can have loaders for data fetching before component renders
+- **Route paths**: Use exact paths like `/books/analytics` not `/books/analytics/`
+
+## Common Patterns
+
+- **Card Components**: Extensive use of shadcn/ui Card components for layout
+- **Hover Effects**: Consistent hover states with scale transforms and shadow changes
+- **State Management**: Local useState for UI controls, server functions for data
+- **Error Handling**: Graceful fallbacks from database to API with console logging
+- **Accessibility**: Proper ARIA labels, semantic HTML, and keyboard navigation

@@ -1,0 +1,2226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoodreadsResponse>
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[9C5mQHjIy4wGu6jQwzL3w]]></key>
+    <method><![CDATA[review_list]]></method>
+  </Request>
+  
+  <shelf exclusive='true' id='18314222' name='to-read' sortable='true'></shelf>
+
+<reviews start="201" end="300" total="429">
+    <review>
+  <id>1605726214</id>
+  <book_id>499429</book_id>
+      <book>
+  <id type="integer">499429</id>
+  <isbn>0765312670</isbn>
+  <isbn13>9780765312679</isbn13>
+  <text_reviews_count type="integer">140</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.wlPr3bRviZr9wCXigpCxjg</uri>
+  <title>Counting Heads (Counting Heads, #1)</title>
+  <title_without_series>Counting Heads</title_without_series>
+  <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+  <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/499429.Counting_Heads</link>
+  <num_pages></num_pages>
+  <format></format>
+  <edition_information>1st Ed.</edition_information>
+  <publisher>Tor Books</publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>3.77</average_rating>
+  <ratings_count>1238</ratings_count>
+  <description>&lt;div&gt;&lt;i&gt;Counting Heads&lt;/i&gt; is David Marusek's extraordinary launch as an SF novelist: The year is 2134, and the Information Age has given rise to the Boutique Economy in which mass production and mass consumption are rendered obsolete. Life extension therapies have increased the human lifespan by centuries. Loyal mentars (artificial intelligence) and robots do most of society's work. The Boutique Economy has made redundant ninety-nine percent of the world's fifteen billion human inhabitants. The world would be a much better place if they all simply went away. &lt;br /&gt;Eleanor K. Starke, one of the world's leading citizens is assassinated, and her daughter, Ellen, is mortally wounded. Only Ellen, the heir to her mother's financial empire, is capable of saving Earth from complete domination plotted by the cynical, selfish, immortal rich, if she, herself, survives. Her cryonically frozen head is in the hands of her family's enemies. A ragtag ensemble of unlikely heroes join forces to rescue Ellen's head, all for their own purposes. &lt;br /&gt;Counting Heads arrives as a science fiction novel like a bolt of electricity, galvanizing readers with an entirely new vision of the future. It's the debut of the year in SF.&lt;/div&gt;</description>
+<authors>
+<author>
+<id>278272</id>
+<name>David Marusek</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1497732894p5/278272.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1497732894p2/278272.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/278272.David_Marusek]]></link>
+<average_rating>3.80</average_rating>
+<ratings_count>3878</ratings_count>
+<text_reviews_count>492</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>487556</id>
+  <uri>kca://work/amzn1.gr.work.v1.p9iRZnQW3WnNXRwidYKmDw</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='1279256503' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Sat Apr 09 17:51:02 -0700 2016</date_added>
+  <date_updated>Sat Apr 09 17:51:03 -0700 2016</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1605726214]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1605726214]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1592704088</id>
+  <book_id>319043</book_id>
+      <book>
+  <id type="integer">319043</id>
+  <isbn>157062299X</isbn>
+  <isbn13>9781570622991</isbn13>
+  <text_reviews_count type="integer">17</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.bcnrESO-w9ZRjKZfESMJ4A</uri>
+  <title>After Ikkyu &amp; Other Poems</title>
+  <title_without_series>After Ikkyu &amp; Other Poems</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1284654936l/319043._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1284654936l/319043._SY75_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/319043.After_Ikkyu_Other_Poems</link>
+  <num_pages></num_pages>
+  <format></format>
+  <edition_information>1st, First Edition</edition_information>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.10</average_rating>
+  <ratings_count>248</ratings_count>
+  <description></description>
+<authors>
+<author>
+<id>17055</id>
+<name>Jim Harrison</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1384235534p5/17055.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1384235534p2/17055.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/17055.Jim_Harrison]]></link>
+<average_rating>3.99</average_rating>
+<ratings_count>62525</ratings_count>
+<text_reviews_count>6176</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>2122030</id>
+  <uri>kca://work/amzn1.gr.work.v1.0JAi7J9i5KIFY0aKq0RjAQ</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='1267168879' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Sun Mar 27 22:21:33 -0700 2016</date_added>
+  <date_updated>Sun Mar 27 22:21:34 -0700 2016</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1592704088]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1592704088]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1578017006</id>
+  <book_id>25131230</book_id>
+      <book>
+  <id type="integer">25131230</id>
+  <isbn>1939311152</isbn>
+  <isbn13>9781939311153</isbn13>
+  <text_reviews_count type="integer">177</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.Zx-LBPscki8pCb7DWjTZPw</uri>
+  <title>Rationality: From AI to Zombies</title>
+  <title_without_series>Rationality: From AI to Zombies</title_without_series>
+  <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+  <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/25131230-rationality</link>
+  <num_pages>1813</num_pages>
+  <format></format>
+  <edition_information/>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.32</average_rating>
+  <ratings_count>1731</ratings_count>
+  <description>What does it actually mean to be rational? Not Hollywood-style "rational," where you forsake all human feeling to embrace Cold Hard Logic. Real rationality, of the sort studied by psychologists, social scientists, and mathematicians. The kind of rationality where you make good decisions, even when it's hard; where you reason well, even in the face of massive uncertainty; where you recognize and make full use of your fuzzy intuitions and emotions, rather than trying to discard them. &lt;br /&gt; &lt;br /&gt;In "Rationality: From AI to Zombies," Eliezer Yudkowsky explains the science underlying human irrationality with a mix of fables, argumentative essays, and personal vignettes. These eye-opening accounts of how the mind works (and how, all too often, it doesn't!) are then put to the test through some genuinely difficult puzzles: computer scientists' debates about the future of artificial intelligence (AI), physicists' debates about the relationship between the quantum and classical worlds, philosophers' debates about the metaphysics of zombies and the nature of morality, and many more. In the process, "Rationality: From AI to Zombies" delves into the human significance of correct reasoning more deeply than you'll find in any conventional textbook on cognitive science or philosophy of mind. &lt;br /&gt; &lt;br /&gt;A decision theorist and researcher at the Machine Intelligence Research Institute, Yudkowsky published earlier drafts of his writings to the websites Overcoming Bias and Less Wrong. "Rationality: From AI to Zombies" compiles six volumes of Yudkowsky's essays into a single electronic tome. Collectively, these sequences of linked essays serve as a rich and lively introduction to the science—and the art—of human rationality.</description>
+<authors>
+<author>
+<id>4533716</id>
+<name>Eliezer Yudkowsky</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1750547919p5/4533716.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1750547919p2/4533716.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/4533716.Eliezer_Yudkowsky]]></link>
+<average_rating>4.33</average_rating>
+<ratings_count>30387</ratings_count>
+<text_reviews_count>2821</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>44828040</id>
+  <uri>kca://work/amzn1.gr.work.v1.6s90ljQR6_jnRNekUv9fsA</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='1253465286' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Sat Mar 12 21:56:22 -0800 2016</date_added>
+  <date_updated>Sat Mar 12 21:56:23 -0800 2016</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1578017006]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1578017006]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1537961863</id>
+  <book_id>9696782</book_id>
+      <book>
+  <id type="integer">9696782</id>
+  <isbn>0691137676</isbn>
+  <isbn13>9780691137674</isbn13>
+  <text_reviews_count type="integer">19</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.pVW-rNl9DP__IhPBWmxxVg</uri>
+  <title>Diversity and Complexity</title>
+  <title_without_series>Diversity and Complexity</title_without_series>
+  <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+  <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/9696782-diversity-and-complexity</link>
+  <num_pages></num_pages>
+  <format></format>
+  <edition_information>Illustrated</edition_information>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.12</average_rating>
+  <ratings_count>206</ratings_count>
+  <description></description>
+<authors>
+<author>
+<id>143418</id>
+<name>Scott E. Page</name>
+<role></role>
+<image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png]]>
+</image_url>
+<small_image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_50x66-632230dc9882b4352d753eedf9396530.png]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/143418.Scott_E_Page]]></link>
+<average_rating>3.98</average_rating>
+<ratings_count>3130</ratings_count>
+<text_reviews_count>331</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>14584943</id>
+  <uri>kca://work/amzn1.gr.work.v1.moFn0avBF5hRAyTDSadzew</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='1216313676' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Thu Feb 04 21:02:04 -0800 2016</date_added>
+  <date_updated>Thu Feb 04 21:02:05 -0800 2016</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1537961863]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1537961863]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1423956852</id>
+  <book_id>18490533</book_id>
+      <book>
+  <id type="integer">18490533</id>
+  <isbn>0765335298</isbn>
+  <isbn13>9780765335296</isbn13>
+  <text_reviews_count type="integer">1052</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.RGCHq9z8n9N8nzHSkcC2Tw</uri>
+  <title>Radiance</title>
+  <title_without_series>Radiance</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1412283972l/18490533._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1412283972l/18490533._SY75_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/18490533-radiance</link>
+  <num_pages>432</num_pages>
+  <format></format>
+  <edition_information>A Tor Book</edition_information>
+  <publisher>Tom Doherty Associates, LLC</publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>3.72</average_rating>
+  <ratings_count>5401</ratings_count>
+  <description>Radiance is a decopunk pulp SF alt-history space opera mystery set in a Hollywood-and solar system-very different from our own, from Catherynne M. Valente, the phenomenal talent behind the New York Times bestselling The Girl Who Circumnavigated Fairyland in a Ship of Her Own Making.&lt;br /&gt;&lt;br /&gt;Severin Unck's father is a famous director of Gothic romances in an alternate 1946 in which talking movies are still a daring innovation due to the patent-hoarding Edison family. Rebelling against her father's films of passion, intrigue, and spirits from beyond, Severin starts making documentaries, traveling through space and investigating the levitator cults of Neptune and the lawless saloons of Mars. For this is not our solar system, but one drawn from classic science fiction in which all the planets are inhabited and we travel through space on beautiful rockets. Severin is a realist in a fantastic universe.&lt;br /&gt;&lt;br /&gt;But her latest film, which investigates the disappearance of a diving colony on a watery Venus populated by island-sized alien creatures, will be her last. Though her crew limps home to earth and her story is preserved by the colony's last survivor, Severin will never return.&lt;br /&gt;&lt;br /&gt;Told using techniques from reality TV, classic film, gossip magazines, and meta-fictional narrative, Radiance is a solar system-spanning story of love, exploration, family, loss, quantum physics, and silent film.</description>
+<authors>
+<author>
+<id>338705</id>
+<name>Catherynne M. Valente</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1220999852p5/338705.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1220999852p2/338705.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/338705.Catherynne_M_Valente]]></link>
+<average_rating>3.84</average_rating>
+<ratings_count>228234</ratings_count>
+<text_reviews_count>39637</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>26174247</id>
+  <uri>kca://work/amzn1.gr.work.v1.-Q7qUgJTSfpBJXZeaQRZkA</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='1114116077' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Fri Oct 23 23:47:29 -0700 2015</date_added>
+  <date_updated>Fri Oct 23 23:47:30 -0700 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1423956852]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1423956852]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1391374052</id>
+  <book_id>17471298</book_id>
+      <book>
+  <id type="integer">17471298</id>
+  <isbn>0521199565</isbn>
+  <isbn13>9780521199568</isbn13>
+  <text_reviews_count type="integer">93</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.k4-FxHWy_RP_8HpyuVb6MQ</uri>
+  <title>Quantum Computing Since Democritus</title>
+  <title_without_series>Quantum Computing Since Democritus</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1363657987l/17471298._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1363657987l/17471298._SX50_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/17471298-quantum-computing-since-democritus</link>
+  <num_pages>370</num_pages>
+  <format></format>
+  <edition_information>1</edition_information>
+  <publisher></publisher>
+  <publication_day/>
+  <publication_year>2013</publication_year>
+  <publication_month>3</publication_month>
+  <average_rating>4.15</average_rating>
+  <ratings_count>1043</ratings_count>
+  <description>Written by noted quantum computing theorist Scott Aaronson, this book takes readers on a tour through some of the deepest ideas of maths, computer science and physics. Full of insights, arguments and philosophical perspectives, the book covers an amazing array of topics. Beginning in antiquity with Democritus, it progresses through logic and set theory, computability and complexity theory, quantum computing, cryptography, the information content of quantum states and the interpretation of quantum mechanics. There are also extended discussions about time travel, Newcomb's Paradox, the anthropic principle and the views of Roger Penrose. Aaronson's informal style makes this fascinating book accessible to readers with scientific backgrounds, as well as students and researchers working in physics, computer science, mathematics and philosophy.</description>
+<authors>
+<author>
+<id>2952149</id>
+<name>Scott Aaronson</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1521315332p5/2952149.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1521315332p2/2952149.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/2952149.Scott_Aaronson]]></link>
+<average_rating>4.16</average_rating>
+<ratings_count>1142</ratings_count>
+<text_reviews_count>108</text_reviews_count>
+</author>
+</authors>
+  <published>2013</published>
+<work>  <id>24380320</id>
+  <uri>kca://work/amzn1.gr.work.v1.BlqoZDp318UFWf17p4EtVQ</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='1084461144' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Sun Sep 13 21:07:19 -0700 2015</date_added>
+  <date_updated>Sun Sep 13 21:07:20 -0700 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1391374052]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1391374052]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1391372032</id>
+  <book_id>79766</book_id>
+      <book>
+  <id type="integer">79766</id>
+  <isbn>0195019199</isbn>
+  <isbn13>9780195019193</isbn13>
+  <text_reviews_count type="integer">430</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.4rWLUtFoqrzdZRkl_bifFw</uri>
+  <title>A Pattern Language: Towns, Buildings, Construction (Center for Environmental Structure Series)</title>
+  <title_without_series>A Pattern Language: Towns, Buildings, Construction</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1437097809l/79766._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1437097809l/79766._SY75_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/79766.A_Pattern_Language</link>
+  <num_pages>1171</num_pages>
+  <format></format>
+  <edition_information/>
+  <publisher>Oxford University Press</publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.42</average_rating>
+  <ratings_count>5315</ratings_count>
+  <description>At the core of &lt;i&gt;A Pattern Language&lt;/i&gt; is the philosophy that in designing their environments people always rely on certain ‘languages,’ which, like the languages we speak, allow them to articulate and communicate an infinite variety of designs within a formal system which gives them coherence.&lt;br /&gt;&lt;br /&gt;This book provides a language of this kind. It will enable making a design for almost any kind of building, or any part of the built environment. ‘Patterns,’ the units of this language, are answers to design problems: how high should a window sill be?; how many stories should a building have?; how much space in a neighborhood should be devoted to grass and trees?&lt;br /&gt;&lt;br /&gt;More than 250 of the patterns in this language are outlined, each consisting of a problem statement, a discussion of the problem with an illustration, and a solution. As the authors say in their introduction, many of the patterns are archetypal, so deeply rooted in the nature of things that it seems likely that they will be a part of human nature and human action as much in five hundred years as they are today.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;A Pattern Language&lt;/i&gt; is related to Alexander’s other works in the Center for Environmental Structure series: &lt;i&gt;The Timeless Way of Building&lt;/i&gt; (introductory volume) and &lt;i&gt;The Oregon Experiment&lt;/i&gt;.</description>
+<authors>
+<author>
+<id>9826601</id>
+<name>Christopher W. Alexander</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1474760903p5/9826601.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1474760903p2/9826601.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/9826601.Christopher_W_Alexander]]></link>
+<average_rating>4.36</average_rating>
+<ratings_count>10196</ratings_count>
+<text_reviews_count>842</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>77027</id>
+  <uri>kca://work/amzn1.gr.work.v1.o4ET-NQHGlQX-XM0RS3GDQ</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='1084459387' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Sun Sep 13 21:04:11 -0700 2015</date_added>
+  <date_updated>Sun Sep 13 21:04:12 -0700 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1391372032]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1391372032]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1391371696</id>
+  <book_id>25559688</book_id>
+      <book>
+  <id type="integer">25559688</id>
+  <isbn nil="true"/>
+  <isbn13 nil="true"/>
+  <text_reviews_count type="integer">45</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.BixwqDFw64m9skDoWcqoqQ</uri>
+  <title>Hive Mind: How Your Nation's IQ Matters So Much More Than Your Own</title>
+  <title_without_series>Hive Mind: How Your Nation's IQ Matters So Much More Than Your Own</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1431967330l/25559688._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1431967330l/25559688._SY75_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/25559688-hive-mind</link>
+  <num_pages>184</num_pages>
+  <format></format>
+  <edition_information/>
+  <publisher></publisher>
+  <publication_day/>
+  <publication_year>2015</publication_year>
+  <publication_month>11</publication_month>
+  <average_rating>3.55</average_rating>
+  <ratings_count>329</ratings_count>
+  <description>Over the last few decades, economists and psychologists have quietly documented the many ways in which a person's IQ matters. But, research suggests that a nation's IQ matters so much more.&lt;br /&gt;&lt;br /&gt;As Garett Jones argues in Hive Mind, modest differences in national IQ can explain most cross-country inequalities. Whereas IQ scores do a moderately good job of predicting individual wages, information processing power, and brain size, a country's average score is a much stronger bellwether of its overall prosperity.</description>
+<authors>
+<author>
+<id>6860850</id>
+<name>Garett Jones</name>
+<role></role>
+<image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png]]>
+</image_url>
+<small_image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_50x66-632230dc9882b4352d753eedf9396530.png]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/6860850.Garett_Jones]]></link>
+<average_rating>3.63</average_rating>
+<ratings_count>640</ratings_count>
+<text_reviews_count>96</text_reviews_count>
+</author>
+</authors>
+  <published>2015</published>
+<work>  <id>45356448</id>
+  <uri>kca://work/amzn1.gr.work.v1.2K7C-fvxGjUXn14XYYMGUQ</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='1084459050' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Sun Sep 13 21:03:35 -0700 2015</date_added>
+  <date_updated>Sun Sep 13 21:03:36 -0700 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1391371696]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1391371696]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1379663198</id>
+  <book_id>24019181</book_id>
+      <book>
+  <id type="integer">24019181</id>
+  <isbn>1250014549</isbn>
+  <isbn13>9781250014542</isbn13>
+  <text_reviews_count type="integer">129</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.Qc6YOOdBrQNN0SSMpCK8LQ</uri>
+  <title>Relentless Strike: The Secret History of Joint Special Operations Command</title>
+  <title_without_series>Relentless Strike: The Secret History of Joint Special Operations Command</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1424086665l/24019181._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1424086665l/24019181._SY75_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/24019181-relentless-strike</link>
+  <num_pages></num_pages>
+  <format></format>
+  <edition_information>First Ed</edition_information>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.27</average_rating>
+  <ratings_count>2274</ratings_count>
+  <description>Since the attacks of September 11, one organization has been at the forefront of America's military response. Its efforts turned the tide against al-Qaida in Iraq, killed Bin Laden and Zarqawi, rescued Captain Phillips and captured Saddam Hussein. Its commander can direct cruise missile strikes from nuclear submarines and conduct special operations raids anywhere in the world.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;Relentless Strike&lt;/i&gt; tells the inside story of Joint Special Operations Command, the secret military organization that during the past decade has revolutionized counterterrorism, seamlessly fusing intelligence and operational skills to conduct missions that hit the headlines, and those that have remained in the shadows-until now. Because JSOC includes the military's most storied special operations units-Delta Force, SEAL Team 6, the 75th Ranger Regiment-as well as America's most secret aviation and intelligence units, this is their story, too.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;Relentless Strike&lt;/i&gt; reveals tension-drenched meetings in war rooms from the Pentagon to Iraq and special operations battles from the cabin of an MH-60 Black Hawk to the driver's seat of Delta Force's Pinzgauer vehicles as they approach their targets. Through exclusive interviews, reporter Sean Naylor uses his unique access to reveal how an organization designed in the 1980s for a very limited mission set transformed itself after 9/11 to become the military's premier weapon in the war against terrorism and how it continues to evolve today.</description>
+<authors>
+<author>
+<id>228957</id>
+<name>Sean Naylor</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1432690518p5/228957.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1432690518p2/228957.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/228957.Sean_Naylor]]></link>
+<average_rating>4.20</average_rating>
+<ratings_count>6083</ratings_count>
+<text_reviews_count>306</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>43618132</id>
+  <uri>kca://work/amzn1.gr.work.v1.1GQrCD41sG39MrdRnS6G2A</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='1074059365' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Mon Aug 31 22:07:47 -0700 2015</date_added>
+  <date_updated>Mon Aug 31 22:07:48 -0700 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1379663198]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1379663198]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1324133041</id>
+  <book_id>30833</book_id>
+      <book>
+  <id type="integer">30833</id>
+  <isbn>0375508732</isbn>
+  <isbn13>9780375508738</isbn13>
+  <text_reviews_count type="integer">1475</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.O1TZBtxxEoLVz3XuzdJ5Gw</uri>
+  <title>The Death and Life of Great American Cities</title>
+  <title_without_series>The Death and Life of Great American Cities</title_without_series>
+  <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+  <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/30833.The_Death_and_Life_of_Great_American_Cities</link>
+  <num_pages></num_pages>
+  <format></format>
+  <edition_information/>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.29</average_rating>
+  <ratings_count>19080</ratings_count>
+  <description>A direct and fundamentally optimistic indictment of the short-sightedness and intellectual arrogance that has characterized much of urban planning in this century, &lt;i&gt;The Death and Life of Great American Cities&lt;/i&gt; has, since its first publication in 1961, become the standard against which all endeavors in that field are measured. In prose of outstanding immediacy, Jane Jacobs writes about what makes streets safe or unsafe; about what constitutes a neighborhood, and what function it serves within the larger organism of the city; about why some neighborhoods remain impoverished while others regenerate themselves. She writes about the salutary role of funeral parlors and tenement windows, the dangers of too much development money and too little diversity. Compassionate, bracingly indignant, and always keenly detailed, Jane Jacobs's monumental work provides an essential framework for assessing the vitality of all cities.</description>
+<authors>
+<author>
+<id>17285</id>
+<name>Jane Jacobs</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1380518514p5/17285.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1380518514p2/17285.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/17285.Jane_Jacobs]]></link>
+<average_rating>4.07</average_rating>
+<ratings_count>37057</ratings_count>
+<text_reviews_count>3509</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>1289564</id>
+  <uri>kca://work/amzn1.gr.work.v1.fjZdNf1p8mV2wgk4EOXG8A</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='1024196374' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Thu Jul 02 21:50:23 -0700 2015</date_added>
+  <date_updated>Thu Jul 02 21:50:24 -0700 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1324133041]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1324133041]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1324132996</id>
+  <book_id>18635378</book_id>
+      <book>
+  <id type="integer">18635378</id>
+  <isbn>0199845980</isbn>
+  <isbn13>9780199845989</isbn13>
+  <text_reviews_count type="integer">33</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.kcazcf5fjSmgpzjdZo_NLA</uri>
+  <title>Japan and the Shackles of the Past (What Everyone Needs to Know (Hardcover))</title>
+  <title_without_series>Japan and the Shackles of the Past (What Everyone Needs to Know</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1631954865l/18635378._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1631954865l/18635378._SX50_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/18635378-japan-and-the-shackles-of-the-past-what-everyone-needs-to-know</link>
+  <num_pages>443</num_pages>
+  <format></format>
+  <edition_information>1</edition_information>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.25</average_rating>
+  <ratings_count>307</ratings_count>
+  <description>Japan is one of the world's wealthiest and most technologically advanced nations, and its rapid ascent to global power status after 1853 remains one of the most remarkable stories in modern world history. Yet it has not been an easy path; military catastrophe, political atrophy, and economic upheavals have made regular appearances from the feudal era to the present. Today, Japan is seen as a has-been with a sluggish economy, an aging population, dysfunctional politics, and a business landscape dominated by yesterday's champions. Though it is supposed to be America's strongest ally in the Asia-Pacific region, it has almost entirely disappeared from the American radar screen.&lt;br /&gt;&lt;br /&gt;In &lt;em&gt;Japan and the Shackles of the Past&lt;/em&gt;, R. Taggart Murphy places the current troubles of Japan in a sweeping historical context, moving deftly from early feudal times to the modern age that began with the Meiji Restoration. Combining fascinating analyses of Japanese culture and society over the centuries with hard-headed accounts of Japan's numerous political regimes, Murphy not only reshapes our understanding of Japanese history, but of Japan's place in the contemporary world. He concedes that Japan has indeed been out of sight and out of mind in recent decades, but contends that this is already changing. Political and economic developments in Japan today risk upheaval in the pivotal arena of Northeast Asia, inviting comparisons with Europe on the eve of the First World War. America's half-completed effort to remake Japan in the late 1940s is unraveling, and the American foreign policy and defense establishment is directly culpable for what has happened. The one apparent exception to Japan's malaise is the vitality of its pop culture, but it's actually no exception at all; rather, it provides critical clues to what is going on now.&lt;br /&gt;&lt;br /&gt;With insights into everything from Japan's politics and economics to the texture of daily life, gender relations, the changing business landscape, and popular and high culture, &lt;em&gt;Japan and the Shackles of the Past&lt;/em&gt; is the indispensable guide to understanding Japan in all its complexity.&lt;br /&gt;</description>
+<authors>
+<author>
+<id>185576</id>
+<name>R. Taggart Murphy</name>
+<role></role>
+<image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png]]>
+</image_url>
+<small_image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_50x66-632230dc9882b4352d753eedf9396530.png]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/185576.R_Taggart_Murphy]]></link>
+<average_rating>4.21</average_rating>
+<ratings_count>360</ratings_count>
+<text_reviews_count>50</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>26432019</id>
+  <uri>kca://work/amzn1.gr.work.v1.iuhwLc-azc6xZRXptpquxA</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='1024196325' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Thu Jul 02 21:50:19 -0700 2015</date_added>
+  <date_updated>Thu Jul 02 21:50:19 -0700 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1324132996]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1324132996]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1288791427</id>
+  <book_id>1354758</book_id>
+      <book>
+  <id type="integer">1354758</id>
+  <isbn>0874744911</isbn>
+  <isbn13>9780874744910</isbn13>
+  <text_reviews_count type="integer">70</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.rjgOAKebU3KKBwfLVWhY5w</uri>
+  <title>Kelly: More Than My Share of It All</title>
+  <title_without_series>Kelly: More Than My Share of It All</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320401064l/1354758._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320401064l/1354758._SY75_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/1354758.Kelly</link>
+  <num_pages></num_pages>
+  <format></format>
+  <edition_information/>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.24</average_rating>
+  <ratings_count>927</ratings_count>
+  <description></description>
+<authors>
+<author>
+<id>644501</id>
+<name>Clarence L. Johnson</name>
+<role></role>
+<image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png]]>
+</image_url>
+<small_image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_50x66-632230dc9882b4352d753eedf9396530.png]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/644501.Clarence_L_Johnson]]></link>
+<average_rating>4.24</average_rating>
+<ratings_count>928</ratings_count>
+<text_reviews_count>79</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>1344460</id>
+  <uri>kca://work/amzn1.gr.work.v1.7QrmwjOUDl_GXj1dZEUt3Q</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='992400519' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Sun May 24 17:00:11 -0700 2015</date_added>
+  <date_updated>Sun May 24 17:00:12 -0700 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1288791427]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1288791427]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1250757113</id>
+  <book_id>22522805</book_id>
+      <book>
+  <id type="integer">22522805</id>
+  <isbn>030727103X</isbn>
+  <isbn13>9780307271037</isbn13>
+  <text_reviews_count type="integer">10332</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.WuI8lXdrYXhioTirzI7RBQ</uri>
+  <title>The Buried Giant</title>
+  <title_without_series>The Buried Giant</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1451444392l/22522805._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1451444392l/22522805._SX50_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/22522805-the-buried-giant</link>
+  <num_pages>317</num_pages>
+  <format></format>
+  <edition_information>First Edition</edition_information>
+  <publisher>Alfred A. Knopf</publisher>
+  <publication_day/>
+  <publication_year>2015</publication_year>
+  <publication_month>3</publication_month>
+  <average_rating>3.59</average_rating>
+  <ratings_count>117061</ratings_count>
+  <description>"You've long set your heart against it, Axl, I know. But it's time now to think on it anew. There's a journey we must go on, and no more delay..."&lt;br /&gt;&lt;br /&gt;&lt;i&gt;The Buried Giant&lt;/i&gt; begins as a couple set off across a troubled land of mist and rain in the hope of finding a son they have not seen in years.&lt;br /&gt;&lt;br /&gt;Sometimes savage, often intensely moving, Kazuo Ishiguro's first novel in nearly a decade is about lost memories, love, revenge, and war.&lt;br /&gt;&lt;br /&gt;Included on TIME Magazine's "THE 100 BEST FANTASY BOOKS OF ALL TIME"</description>
+<authors>
+<author>
+<id>4280</id>
+<name>Kazuo Ishiguro</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1424906625p5/4280.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1424906625p2/4280.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/4280.Kazuo_Ishiguro]]></link>
+<average_rating>3.84</average_rating>
+<ratings_count>1859995</ratings_count>
+<text_reviews_count>176076</text_reviews_count>
+</author>
+</authors>
+  <published>2015</published>
+<work>  <id>41115424</id>
+  <uri>kca://work/amzn1.gr.work.v1.x71Pj9eIdtlTqU0oV3CEaQ</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='957689097' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Thu Apr 09 17:17:27 -0700 2015</date_added>
+  <date_updated>Thu Apr 09 17:17:28 -0700 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1250757113]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1250757113]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1225237612</id>
+  <book_id>20663759</book_id>
+      <book>
+  <id type="integer">20663759</id>
+  <isbn>0393349969</isbn>
+  <isbn13>9780393349962</isbn13>
+  <text_reviews_count type="integer">195</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.4JVXdxjeRok2jEU7n0zAgw</uri>
+  <title>The UnAmericans</title>
+  <title_without_series>The UnAmericans</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1407107716l/20663759._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1407107716l/20663759._SX50_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/20663759-the-unamericans</link>
+  <num_pages>256</num_pages>
+  <format></format>
+  <edition_information/>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>3.97</average_rating>
+  <ratings_count>2510</ratings_count>
+  <description>In this auspicious debut, Molly Antopol cuts a wide swath through the fabric of time and place, exploring people from different cultures who are all painfully human in their joys, desires, tragedies, and heartaches. An actor, phased out of Hollywood for his Communist ties during McCarthyism, tries to share a meaningful moment with his son. An Israeli soldier comes of age when his brother is maimed on their communal farm. A gallerist, swept up by the 1970s dissident art movement, begins smuggling paintings out of Moscow and curating underground shows in her Jerusalem home. This is a rare collection as accomplished at capturing our soaring triumphs as it is our crippling defeats--a hopeful reminder that we are all closer and more capable than we sometimes feel.</description>
+<authors>
+<author>
+<id>3448834</id>
+<name>Molly Antopol</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1379084172p5/3448834.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1379084172p2/3448834.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/3448834.Molly_Antopol]]></link>
+<average_rating>3.97</average_rating>
+<ratings_count>2759</ratings_count>
+<text_reviews_count>413</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>25222327</id>
+  <uri>kca://work/amzn1.gr.work.v1.TIk5gHUaAsgPgFIizr-QaA</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='934220278' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Wed Mar 11 23:28:57 -0700 2015</date_added>
+  <date_updated>Wed Mar 11 23:28:58 -0700 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1225237612]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1225237612]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1223450432</id>
+  <book_id>6194</book_id>
+      <book>
+  <id type="integer">6194</id>
+  <isbn>0140283358</isbn>
+  <isbn13>9780140283358</isbn13>
+  <text_reviews_count type="integer">1610</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.AePLYa69Mlr_7IFmo_cIyw</uri>
+  <title>Waiting for the Barbarians</title>
+  <title_without_series>Waiting for the Barbarians</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1330879044l/6194._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1330879044l/6194._SX50_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/6194.Waiting_for_the_Barbarians</link>
+  <num_pages>152</num_pages>
+  <format></format>
+  <edition_information/>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>3.93</average_rating>
+  <ratings_count>34631</ratings_count>
+  <description>For decades the Magistrate has been a loyal servant of the Empire, running the affairs of a tiny frontier settlement and ignoring the impending war with the barbarians. When interrogation experts arrive, however, he witnesses the Empire's cruel and unjust treatment of prisoners of war. Jolted into sympathy for their victims, he commits a quixotic act of rebellion that brands him an enemy of the state.&lt;br /&gt;J. M. Coetzee's prize-winning novel is a startling allegory of the war between oppressor and oppressed. The Magistrate is not simply a man living through a crisis of conscience in an obscure place in remote times; his situation is that of all men living in unbearable complicity with regimes that ignore justice and decency.</description>
+<authors>
+<author>
+<id>4128</id>
+<name>J.M. Coetzee</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1550676691p5/4128.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1550676691p2/4128.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/4128.J_M_Coetzee]]></link>
+<average_rating>3.77</average_rating>
+<ratings_count>307872</ratings_count>
+<text_reviews_count>25887</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>1155689</id>
+  <uri>kca://work/amzn1.gr.work.v1.38qq8EU1CnTO7MI7W2M9Ew</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='932632641' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Mon Mar 09 22:22:28 -0700 2015</date_added>
+  <date_updated>Mon Mar 09 22:22:28 -0700 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1223450432]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1223450432]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1223274567</id>
+  <book_id>149033</book_id>
+      <book>
+  <id type="integer">149033</id>
+  <isbn>0674276604</isbn>
+  <isbn13>9780674276604</isbn13>
+  <text_reviews_count type="integer">114</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.6Q-b0iyC2BNfP5HqUPqXPQ</uri>
+  <title>Exit, Voice, and Loyalty: Responses to Decline in Firms, Organizations, and States</title>
+  <title_without_series>Exit, Voice, and Loyalty: Responses to Decline in Firms, Organizations, and States</title_without_series>
+  <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+  <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/149033.Exit_Voice_and_Loyalty</link>
+  <num_pages></num_pages>
+  <format></format>
+  <edition_information>57618th</edition_information>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.11</average_rating>
+  <ratings_count>1062</ratings_count>
+  <description>An innovator in contemporary thought on economic and political development looks here at decline rather than growth. &lt;b&gt;Albert O. Hirschman&lt;/b&gt; makes a basic distinction between alternative ways of reacting to deterioration in business firms and, in general, to dissatisfaction with organizations: one, "exit," is for the member to quit the organization or for the customer to switch to the competing product, and the other, "voice," is for members or customers to agitate and exert influence for change "from within." The efficiency of the competitive mechanism, with its total reliance on exit, is questioned for certain important situations. As exit often undercuts voice while being unable to counteract decline, loyalty is seen in the function of retarding exit and of permitting voice to play its proper role. The interplay of the three concepts turns out to illuminate a wide range of economic, social, and political phenomena. As the author states in the preface, "having found my own unifying way of looking at issues as diverse as competition and the two-party system, divorce and the American character, black power and the failure of 'unhappy' top officials to resign over Vietnam, I decided to let myself go a little."</description>
+<authors>
+<author>
+<id>86202</id>
+<name>Albert O. Hirschman</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1493344015p5/86202.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1493344015p2/86202.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/86202.Albert_O_Hirschman]]></link>
+<average_rating>4.07</average_rating>
+<ratings_count>2656</ratings_count>
+<text_reviews_count>291</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>143835</id>
+  <uri>kca://work/amzn1.gr.work.v1.ShCfcY9muh-nWNnmNoKfbQ</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='932484738' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Mon Mar 09 18:24:49 -0700 2015</date_added>
+  <date_updated>Mon Mar 09 18:24:50 -0700 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1223274567]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1223274567]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1223274084</id>
+  <book_id>294731</book_id>
+      <book>
+  <id type="integer">294731</id>
+  <isbn>057121214X</isbn>
+  <isbn13>9780571212149</isbn13>
+  <text_reviews_count type="integer">246</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.XxN3z1gVxxUoaFZFBDRwzg</uri>
+  <title>Provinces of Night</title>
+  <title_without_series>Provinces of Night</title_without_series>
+  <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+  <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/294731.Provinces_of_Night</link>
+  <num_pages>292</num_pages>
+  <format></format>
+  <edition_information/>
+  <publisher>Faber and Faber</publisher>
+  <publication_day/>
+  <publication_year>2001</publication_year>
+  <publication_month/>
+  <average_rating>4.20</average_rating>
+  <ratings_count>2868</ratings_count>
+  <description>The year is 1952, and E.F. Bloodworth has returned to his home - a forgotten corner of Tennessee - after twenty years of roaming. The wife he walked out on has withered and faded. His three sons are grown and angry. Warren is a womanising alcoholic; Boyd is driven by jealousy to hunt down his wife's lover; and Brady puts hexes on his enemies from his mother's porch. Only Fleming, the old man's grandson, treats him with respect and sees past all the hatred, realising the way it can poison a man's soul. It is ultimately the love of Raven Lee, a sloe-eyed beauty from another town, that gives Fleming the courage to reject his family's curse.&lt;br /&gt;&lt;br /&gt;In a tale redolent with the crumbling loyalties and age-old strife of the post-war American South made familiar to us by Cormac McCarthy, Gay's characters inhabit a world driven by blood ties that strangle as they bind. A coming of age novel, a love story, and a portrait of a family torn apart, &lt;b&gt;Provinces of Night&lt;/b&gt; introduced a distinctive new voice in American fiction and a superb cast of characters.</description>
+<authors>
+<author>
+<id>62659</id>
+<name>William Gay</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1316108313p5/62659.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1316108313p2/62659.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/62659.William_Gay]]></link>
+<average_rating>4.01</average_rating>
+<ratings_count>14709</ratings_count>
+<text_reviews_count>1908</text_reviews_count>
+</author>
+</authors>
+  <published>2001</published>
+<work>  <id>285985</id>
+  <uri>kca://work/amzn1.gr.work.v1.AughX0ZC8N30pYNwMRzRfw</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='932484322' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Mon Mar 09 18:24:17 -0700 2015</date_added>
+  <date_updated>Mon Mar 09 18:24:17 -0700 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1223274084]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1223274084]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1206032090</id>
+  <book_id>24013151</book_id>
+      <book>
+  <id type="integer">24013151</id>
+  <isbn>1473203945</isbn>
+  <isbn13>9781473203945</isbn13>
+  <text_reviews_count type="integer">106</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.X435rE27816CJ-rvz5p2Cw</uri>
+  <title>Something Coming Through (Jackaroo, #1)</title>
+  <title_without_series>Something Coming Through</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1420479191l/24013151._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1420479191l/24013151._SY75_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/24013151-something-coming-through</link>
+  <num_pages></num_pages>
+  <format>Paperback</format>
+  <edition_information/>
+  <publisher>Gollancz</publisher>
+  <publication_day>19</publication_day>
+  <publication_year>2015</publication_year>
+  <publication_month>2</publication_month>
+  <average_rating>3.60</average_rating>
+  <ratings_count>1329</ratings_count>
+  <description>One of our finest SF writers moves closer to home. London is devastated. New worlds are being explored. And the aliens have arrived...&lt;br /&gt;&lt;br /&gt;The aliens are here. And they want to help. The extraordinary new project from one of the country's most acclaimed and consistently brilliantly SF novelists of the last 30 years.&lt;br /&gt;&lt;br /&gt;The Jackaroo have given humanity 15 worlds and the means to reach them. They're a chance to start over, but they're also littered with ruins and artifacts left by the Jackaroo's previous clients.&lt;br /&gt;&lt;br /&gt;Miracles that could reverse the damage caused by war, climate change, and rising sea levels. Nightmares that could for ever alter humanity - or even destroy it.&lt;br /&gt;&lt;br /&gt;Chloe Millar works in London, mapping changes caused by imported scraps of alien technology. When she stumbles across a pair of orphaned kids possessed by an ancient ghost, she must decide whether to help them or to hand them over to the authorities. Authorities who believe that their visions point towards a new kind of danger.&lt;br /&gt;&lt;br /&gt;And on one of the Jackaroo's gift-worlds, the murder of a man who has just arrived from Earth leads policeman Vic Gayle to a war between rival gangs over possession of a remote excavation site.&lt;br /&gt;&lt;br /&gt;Something is coming through. Something linked to the visions of Chloe's orphans, and Vic Gayle's murder investigation. Something that will challenge the limits of the Jackaroo's benevolence...</description>
+<authors>
+<author>
+<id>20433</id>
+<name>Paul McAuley</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1367680738p5/20433.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1367680738p2/20433.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/20433.Paul_McAuley]]></link>
+<average_rating>3.72</average_rating>
+<ratings_count>30405</ratings_count>
+<text_reviews_count>3465</text_reviews_count>
+</author>
+</authors>
+  <published>2015</published>
+<work>  <id>42850628</id>
+  <uri>kca://work/amzn1.gr.work.v1.GYIHabieSjmi-uFwYAXs1A</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='917273564' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Fri Feb 20 00:39:37 -0800 2015</date_added>
+  <date_updated>Fri Feb 20 00:39:38 -0800 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1206032090]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1206032090]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1166692623</id>
+  <book_id>10822774</book_id>
+      <book>
+  <id type="integer">10822774</id>
+  <isbn>1439170428</isbn>
+  <isbn13>9781439170427</isbn13>
+  <text_reviews_count type="integer">235</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.hgQu3_icnRDS754ZpypM2g</uri>
+  <title>Little Bets: How Breakthrough Ideas Emerge from Small Discoveries</title>
+  <title_without_series>Little Bets: How Breakthrough Ideas Emerge from Small Discoveries</title_without_series>
+  <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+  <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/10822774-little-bets</link>
+  <num_pages></num_pages>
+  <format></format>
+  <edition_information>unknown</edition_information>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>3.78</average_rating>
+  <ratings_count>4201</ratings_count>
+  <description></description>
+<authors>
+<author>
+<id>62124</id>
+<name>Peter Sims</name>
+<role></role>
+<image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png]]>
+</image_url>
+<small_image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_50x66-632230dc9882b4352d753eedf9396530.png]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/62124.Peter_Sims]]></link>
+<average_rating>3.78</average_rating>
+<ratings_count>7254</ratings_count>
+<text_reviews_count>445</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>15736525</id>
+  <uri>kca://work/amzn1.gr.work.v1.Wk9vqQTXntITOEPC94Hadw</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='883233331' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Mon Jan 12 21:58:44 -0800 2015</date_added>
+  <date_updated>Mon Jan 12 21:58:44 -0800 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1166692623]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1166692623]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1149552756</id>
+  <book_id>18080434</book_id>
+      <book>
+  <id type="integer">18080434</id>
+  <isbn>1471131459</isbn>
+  <isbn13>9781471131455</isbn13>
+  <text_reviews_count type="integer">7</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.wpSsDKIzNVxMf3KJF8pyYA</uri>
+  <title>A Thousand Shards of Glass</title>
+  <title_without_series>A Thousand Shards of Glass</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1385915384l/18080434._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1385915384l/18080434._SY75_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/18080434-a-thousand-shards-of-glass</link>
+  <num_pages></num_pages>
+  <format></format>
+  <edition_information/>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.10</average_rating>
+  <ratings_count>112</ratings_count>
+  <description></description>
+<authors>
+<author>
+<id>1080466</id>
+<name>Michael Katakis</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1375624843p5/1080466.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1375624843p2/1080466.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/1080466.Michael_Katakis]]></link>
+<average_rating>4.16</average_rating>
+<ratings_count>475</ratings_count>
+<text_reviews_count>98</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>25388312</id>
+  <uri>kca://work/amzn1.gr.work.v1.4Uw27b5x_HH8fe0MMDBPLQ</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='869519762' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Thu Jan 01 09:55:21 -0800 2015</date_added>
+  <date_updated>Thu Jan 01 09:55:23 -0800 2015</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1149552756]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1149552756]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1128085824</id>
+  <book_id>21008559</book_id>
+      <book>
+  <id type="integer">21008559</id>
+  <isbn>0007326572</isbn>
+  <isbn13>9780007326570</isbn13>
+  <text_reviews_count type="integer">19</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.ak-17btmX3d8UpAsCfcM6g</uri>
+  <title>Midnight's Descendants</title>
+  <title_without_series>Midnight's Descendants</title_without_series>
+  <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+  <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/21008559-midnight-s-descendants</link>
+  <num_pages>416</num_pages>
+  <format></format>
+  <edition_information>UK ed.</edition_information>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>3.74</average_rating>
+  <ratings_count>155</ratings_count>
+  <description>An epic narrative history that compares and contrasts the fortunes of all the countries that make up South Asia.&lt;br /&gt; If British India had not been partitioned in 1947, its population would today be comfortably the world’s largest. At c1.5 billion, Midnight’s Descendants (the offspring of those affected by ‘the midnight hour’ Partition) already outnumber Europeans and Chinese; and they are growing faster than either. By 2020 they will constitute a quarter of the world’s entire population. As well as comprising the peoples of what is now called ‘South Asia’ (the preferred term for the partitioned subcontinent of modern India, Pakistan and Bangladesh, plus Nepal and Sri Lanka) they are widely established across the globe.&lt;br /&gt;&lt;br /&gt;Midnight’s Descendants is the first general history ever published to treat the region as a whole. Correlating and contrasting the fortunes of all the constituent nations over the last six decades affords unique insights into the tensions and conflicts that divide what is being hailed as one of the world’s most dynamic regions.&lt;br /&gt;&lt;br /&gt;Written by a widely respected expert on the region, the book will be the first account to incorporate the rich story of South Asia’s transnational, or ‘diasporic’, peoples. It will examine attitudes towards their homeland of the 22 million overseas South Asians, and will assess their contributions to the self-image of the parent states, to economic survival in the case of Nepal, Pakistan and Bangladesh, and to India’s globalised achievement.&lt;br /&gt;&lt;br /&gt;Like Midnight’s Children, Midnight’s Descendants will be expansive and tumultuous in the great tradition of India’s narrative epics.</description>
+<authors>
+<author>
+<id>101857</id>
+<name>John Keay</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1376081074p5/101857.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1376081074p2/101857.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/101857.John_Keay]]></link>
+<average_rating>3.89</average_rating>
+<ratings_count>8823</ratings_count>
+<text_reviews_count>961</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>40382427</id>
+  <uri>kca://work/amzn1.gr.work.v1.l_-76GHavkEkWi4XFVsMAA</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='851302194' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Tue Dec 09 22:16:30 -0800 2014</date_added>
+  <date_updated>Tue Dec 09 22:16:31 -0800 2014</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1128085824]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1128085824]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>1103009087</id>
+  <book_id>18847750</book_id>
+      <book>
+  <id type="integer">18847750</id>
+  <isbn>0124079148</isbn>
+  <isbn13>9780124079144</isbn13>
+  <text_reviews_count type="integer">4</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.TjpyZr-uu_5XXEDbmR8ivQ</uri>
+  <title>Designing with the Mind in Mind: Simple Guide to Understanding User Interface Design Guidelines</title>
+  <title_without_series>Designing with the Mind in Mind: Simple Guide to Understanding User Interface Design Guidelines</title_without_series>
+  <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+  <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/18847750-designing-with-the-mind-in-mind</link>
+  <num_pages></num_pages>
+  <format></format>
+  <edition_information>2</edition_information>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.10</average_rating>
+  <ratings_count>1572</ratings_count>
+  <description>In this completely updated and revised edition of "Designing with the Mind in Mind," Jeff Johnson provides you with just enough background in perceptual and cognitive psychology that user interface (UI) design guidelines make intuitive sense rather than being just a list or rules to follow.&lt;br /&gt;&lt;br /&gt;Early UI practitioners were trained in cognitive psychology, and developed UI design rules based on it. But as the field has evolved since the first edition of this book, designers enter the field from many disciplines. Practitioners today have enough experience in UI design that they have been exposed to design rules, but it is essential that they understand the psychology behind the rules in order to effectively apply them.&lt;br /&gt;&lt;br /&gt;In this new edition, you'll find new chapters on human choice and decision making, hand-eye coordination and attention, as well as new examples, figures, and explanations throughout. &lt;br /&gt;Provides an essential source for user interface design rules and how, when, and why to apply themArms designers with the science behind each design rule, allowing them to make informed decisions in projects, and to explain those decisions to others Equips readers with the knowledge to make educated tradeoffs between competing rules, project deadlines, and budget pressuresCompletely updated and revised, including additional coverage on human choice and decision making, hand-eye coordination and attention, and new mobile and touch-screen examples throughout</description>
+<authors>
+<author>
+<id>16658951</id>
+<name><![CDATA[Jeff                                                 Johnson]]></name>
+<role></role>
+<image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png]]>
+</image_url>
+<small_image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_50x66-632230dc9882b4352d753eedf9396530.png]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/16658951.Jeff_Johnson]]></link>
+<average_rating>4.05</average_rating>
+<ratings_count>1858</ratings_count>
+<text_reviews_count>99</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>13432501</id>
+  <uri>kca://work/amzn1.gr.work.v1.bqiqmDlZJENBoy-zQIaP2w</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='829864030' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Mon Nov 10 16:49:19 -0800 2014</date_added>
+  <date_updated>Mon Nov 10 16:49:19 -0800 2014</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/1103009087]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/1103009087]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>875369521</id>
+  <book_id>1584227</book_id>
+      <book>
+  <id type="integer">1584227</id>
+  <isbn>0972345604</isbn>
+  <isbn13>9780972345606</isbn13>
+  <text_reviews_count type="integer">8</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.suLceyT9CbpS0DY6M5WzuA</uri>
+  <title>Gideon's Wall</title>
+  <title_without_series>Gideon's Wall</title_without_series>
+  <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+  <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/1584227.Gideon_s_Wall</link>
+  <num_pages/>
+  <format></format>
+  <edition_information/>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>3.97</average_rating>
+  <ratings_count>35</ratings_count>
+  <description></description>
+<authors>
+<author>
+<id>735531</id>
+<name>Greg Kurzawa</name>
+<role></role>
+<image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png]]>
+</image_url>
+<small_image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_50x66-632230dc9882b4352d753eedf9396530.png]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/735531.Greg_Kurzawa]]></link>
+<average_rating>3.72</average_rating>
+<ratings_count>339</ratings_count>
+<text_reviews_count>84</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>1577116</id>
+  <uri>kca://work/amzn1.gr.work.v1.mF7_9BpsZpPBEuhKAordyg</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='640340384' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Fri Mar 07 23:40:05 -0800 2014</date_added>
+  <date_updated>Fri Mar 07 23:40:05 -0800 2014</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/875369521]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/875369521]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>875369023</id>
+  <book_id>946143</book_id>
+      <book>
+  <id type="integer">946143</id>
+  <isbn>0684843285</isbn>
+  <isbn13>9780684843285</isbn13>
+  <text_reviews_count type="integer">7</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.TA6SHje8pkcXXe_M30m06A</uri>
+  <title>On Food and Cooking</title>
+  <title_without_series>On Food and Cooking</title_without_series>
+  <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+  <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/946143.On_Food_and_Cooking</link>
+  <num_pages>684</num_pages>
+  <format></format>
+  <edition_information>Reprint</edition_information>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.46</average_rating>
+  <ratings_count>16067</ratings_count>
+  <description>Harold McGee's &lt;i&gt;On Food and Cooking&lt;/i&gt; is a kitchen classic. Hailed by &lt;i&gt;Time&lt;/i&gt; magazine as "a minor masterpiece" when it first appeared in 1984, &lt;i&gt;On Food and Cooking&lt;/i&gt; is the bible to which food lovers and professional chefs worldwide turn for an understanding of where our foods come from, what exactly they're made of, and how cooking transforms them into something new and delicious. Now, for its twentieth anniversary, Harold McGee has prepared a new, fully revised and updated edition of &lt;i&gt;On Food and Cooking.&lt;/i&gt; He has rewritten the text almost completely, expanded it by two-thirds, and commissioned more than 100 new illustrations. As compulsively readable and engaging as ever, the new &lt;i&gt;On Food and Cooking&lt;/i&gt; provides countless eye-opening insights into food, its preparation, and its enjoyment.&lt;br /&gt;&lt;br /&gt;&lt;i&gt;On Food and Cooking&lt;/i&gt; pioneered the translation of technical food science into cook-friendly kitchen science and helped give birth to the inventive culinary movement known as "molecular gastronomy." Though other books have now been written about kitchen science, &lt;i&gt;On Food and Cooking&lt;/i&gt; remains unmatched in the accuracy, clarity, and thoroughness of its explanations, and the intriguing way in which it blends science with the historical evolution of foods and cooking techniques.&lt;br /&gt;&lt;br /&gt;Among the major themes addressed throughout this new edition are:&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Traditional and modern methods of food production and their influences on food quality&lt;br /&gt;The great diversity of methods by which people in different places and times have prepared the same ingredients&lt;br /&gt;Tips for selecting the best ingredients and preparing them successfully&lt;br /&gt;The particular substances that give foods their flavors and that give us pleasure&lt;br /&gt;Our evolving knowledge of the health benefits and risks of foods&lt;br /&gt;&lt;i&gt;On Food and Cooking&lt;/i&gt; is an invaluable and monumental compendium of basic information about ingredients, cooking methods, and the pleasures of eating. It will delight and fascinate anyone who has ever cooked, savored, or wondered about food.</description>
+<authors>
+<author>
+<id>58484</id>
+<name>Harold McGee</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1496684217p5/58484.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1496684217p2/58484.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/58484.Harold_McGee]]></link>
+<average_rating>4.42</average_rating>
+<ratings_count>18257</ratings_count>
+<text_reviews_count>683</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>1164036</id>
+  <uri>kca://work/amzn1.gr.work.v1.7McE-zPIe4HZpzl1lKLVkA</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='640339982' sortable='true'></shelf>
+
+    <shelf exclusive='false' id='563965698' name='bookstore-check' review_shelf_id='5673164889' sortable='false'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Fri Mar 07 23:39:00 -0800 2014</date_added>
+  <date_updated>Fri Mar 07 23:39:00 -0800 2014</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/875369023]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/875369023]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>816391714</id>
+  <book_id>114550</book_id>
+      <book>
+  <id type="integer">114550</id>
+  <isbn>1593760108</isbn>
+  <isbn13>9781593760106</isbn13>
+  <text_reviews_count type="integer">170</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.AhtJq3XNS676uJVnoClHvQ</uri>
+  <title>Vanishing Point</title>
+  <title_without_series>Vanishing Point</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327937400l/114550._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327937400l/114550._SX50_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/114550.Vanishing_Point</link>
+  <num_pages>191</num_pages>
+  <format></format>
+  <edition_information/>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>3.89</average_rating>
+  <ratings_count>1441</ratings_count>
+  <description>In the literary world, there is little that can match the excitement of opening a new book by David Markson. From Wittgenstein’s Mistress to Reader’s Block to Springer’s Progress to This Is Not a Novel, he has delighted and amazed readers for decades. And now comes his latest masterwork, Vanishing Point, wherein an elderly writer (identified only as "Author") sets out to transform shoeboxes crammed with notecards into a novel — and in so doing will dazzle us with an astonishing parade of revelations about the trials and calamities and absurdities and often even tragedies of the creative life — all the while trying his best (he says) to keep himself out of the tale. Naturally he will fail to do the latter, frequently managing to stand aside and yet remaining undeniably central throughout — until he is swept inevitably into the narrative’s startling and shattering climax. A novel of death and laughter both — and of extraordinary intellectual richness.</description>
+<authors>
+<author>
+<id>10747</id>
+<name>David Markson</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1238041034p5/10747.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1238041034p2/10747.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/10747.David_Markson]]></link>
+<average_rating>3.96</average_rating>
+<ratings_count>13772</ratings_count>
+<text_reviews_count>1954</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>110297</id>
+  <uri>kca://work/amzn1.gr.work.v1.E9EMBMU9LJBM7g1FCRPcHA</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='592935422' sortable='true'></shelf>
+
+    <shelf exclusive='false' id='563965698' name='bookstore-check' review_shelf_id='5673163793' sortable='false'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Tue Jan 07 20:34:45 -0800 2014</date_added>
+  <date_updated>Tue Jan 07 20:34:45 -0800 2014</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/816391714]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/816391714]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>746451945</id>
+  <book_id>18431567</book_id>
+      <book>
+  <id type="integer">18431567</id>
+  <isbn>0133133915</isbn>
+  <isbn13>9780133133912</isbn13>
+  <text_reviews_count type="integer">4</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.H3o8lR8Kg4P88g_GLh5ing</uri>
+  <title>In Line Behind a Billion People: How Scarcity Will Define China's Ascent in the Next Decade</title>
+  <title_without_series>In Line Behind a Billion People: How Scarcity Will Define China's Ascent in the Next Decade</title_without_series>
+  <image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1400888857l/18431567._SX98_.jpg</image_url>
+  <small_image_url>https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1400888857l/18431567._SY75_.jpg</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/18431567-in-line-behind-a-billion-people</link>
+  <num_pages>343</num_pages>
+  <format>Kindle Edition</format>
+  <edition_information>1</edition_information>
+  <publisher>Pearson FT Press</publisher>
+  <publication_day>26</publication_day>
+  <publication_year>2013</publication_year>
+  <publication_month>8</publication_month>
+  <average_rating>3.96</average_rating>
+  <ratings_count>71</ratings_count>
+  <description>Nearly everything you know about China is wrong! Yes, within a decade, China will have the world’s largest economy. But that is the least important thing to know about China. In this enlightening book &lt;b&gt;,&lt;/b&gt; two of the world’s leading China experts turn the conventional wisdom on its head, showing why China’s economic growth will constrain rather than empower it. Pioneering political analyst Damien Ma and global economist Bill Adams reveal why, having 35 years of ferocious economic growth, China’s future will be shaped by the same fundamental reality that has shaped it for scarcity. Ma and Adams drill deep into Chinese society, illuminating all the scarcities that will limit its power and progress. Beyond scarcities of natural resources and public goods, they illuminate China’s persistent poverties of individual freedoms, cultural appeal, and ideological legitimacy — and the corrosive loss of values and beliefs amongst a growing middle class shackled by a parochial and inflexible political system. Everyone knows “the 21st century is China’s to lose” — but, as with so many things that “everyone knows,” that’s just wrong. Ma and Adams get beyond cheerleading and fearmongering to tell the complex truth about China today. This is a truth you need to hear — whether you’re an investor, business decision-maker, policymaker, or citizen.</description>
+<authors>
+<author>
+<id>6910226</id>
+<name>Damien Ma</name>
+<role></role>
+<image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png]]>
+</image_url>
+<small_image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_50x66-632230dc9882b4352d753eedf9396530.png]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/6910226.Damien_Ma]]></link>
+<average_rating>3.93</average_rating>
+<ratings_count>72</ratings_count>
+<text_reviews_count>5</text_reviews_count>
+</author>
+</authors>
+  <published>2013</published>
+<work>  <id>26073666</id>
+  <uri>kca://work/amzn1.gr.work.v1.flkR5U5FAuKv4y3uYObW8w</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='535756474' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Mon Oct 21 21:20:33 -0700 2013</date_added>
+  <date_updated>Mon Oct 21 21:20:33 -0700 2013</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/746451945]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/746451945]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>733094300</id>
+  <book_id>217329</book_id>
+      <book>
+  <id type="integer">217329</id>
+  <isbn>0195140494</isbn>
+  <isbn13>9780195140491</isbn13>
+  <text_reviews_count type="integer">202</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.R75MSgmN1UPUutHHIdTP2g</uri>
+  <title>Gotham: A History of New York City to 1898</title>
+  <title_without_series>Gotham: A History of New York City to 1898</title_without_series>
+  <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+  <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/217329.Gotham</link>
+  <num_pages>1383</num_pages>
+  <format></format>
+  <edition_information>First Paperback Edition, First Edition</edition_information>
+  <publisher>Oxford University Press, USA</publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.30</average_rating>
+  <ratings_count>2753</ratings_count>
+  <description>To European explorers, it was Eden, a paradise of waist-high grasses, towering stands of walnut, maple, chestnut, and oak, and forests that teemed with bears, wolves, raccoons, beavers, otters, and foxes. Today, it is the site of Broadway and Wall Street, the Empire State Building and the Statue of Liberty, and the home of millions of people, who have come from every corner of the nation and the globe.&lt;br /&gt;&lt;br /&gt;In &lt;em&gt;Gotham&lt;/em&gt;, Edwin G. Burrows and Mike Wallace have produced a monumental work of history, one that ranges from the Indian tribes that settled in and around the island of Manna-hata, to the consolidation of the five boroughs into Greater New York in 1898. It is an epic narrative, a story as vast and as varied as the city it chronicles, and it underscores that the history of New York is the story of our nation. Readers will relive the tumultuous early years of New Amsterdam under the Dutch West India Company, Peter Stuyvesant's despotic regime, Indian wars, slave resistance and revolt, the Revolutionary War and the defeat of Washington's army on Brooklyn Heights, the destructive seven years of British occupation, New York as the nation's first capital, the duel between Aaron Burr and Alexander Hamilton, the Erie Canal and the coming of the railroads, the growth of the city as a port and financial center, the infamous draft riots of the Civil War, the great flood of immigrants, the rise of mass entertainment such as vaudeville and Coney Island, the building of the Brooklyn Bridge and the birth of the skyscraper. Here too is a cast of thousands--the rebel Jacob Leisler and the reformer Joanna Bethune; Clement Moore, who saved Greenwich Village from the city's street-grid plan; Herman Melville, who painted disillusioned portraits of city life; and Walt Whitman, who happily celebrated that same life. We meet the rebel Jacob Leisler and the reformer Joanna Bethune; Boss Tweed and his nemesis, cartoonist Thomas Nast; Emma Goldman and Nellie Bly; Jacob Riis and Horace Greeley; police commissioner Theodore Roosevelt; Colonel Waring and his "white angels" (who revolutionized the sanitation department); millionaires John Jacob Astor, Cornelius Vanderbilt, August Belmont, and William Randolph Hearst; and hundreds more who left their mark on this great city.&lt;br /&gt;&lt;br /&gt;The events and people who crowd these pages guarantee that this is no mere local history. It is in fact a portrait of the heart and soul of America, and a book that will mesmerize everyone interested in the peaks and valleys of American life as found in the greatest city on earth. &lt;em&gt;Gotham&lt;/em&gt; is a dazzling read, a fast-paced, brilliant narrative that carries the reader along as it threads hundreds of stories into one great blockbuster of a book.</description>
+<authors>
+<author>
+<id>127374</id>
+<name>Edwin G. Burrows</name>
+<role></role>
+<image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png]]>
+</image_url>
+<small_image_url nophoto='true'>
+<![CDATA[https://s.gr-assets.com/assets/nophoto/user/u_50x66-632230dc9882b4352d753eedf9396530.png]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/127374.Edwin_G_Burrows]]></link>
+<average_rating>4.25</average_rating>
+<ratings_count>3043</ratings_count>
+<text_reviews_count>274</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>1529180</id>
+  <uri>kca://work/amzn1.gr.work.v1.0cMeAgTSpZO-BSSEfoYJ-w</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='524006505' sortable='true'></shelf>
+
+    <shelf exclusive='false' id='563965698' name='bookstore-check' review_shelf_id='5673163571' sortable='false'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Wed Oct 02 23:37:10 -0700 2013</date_added>
+  <date_updated>Wed Oct 02 23:37:10 -0700 2013</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/733094300]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/733094300]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>733093694</id>
+  <book_id>4015864</book_id>
+      <book>
+  <id type="integer">4015864</id>
+  <isbn>0061579025</isbn>
+  <isbn13>9780061579028</isbn13>
+  <text_reviews_count type="integer">508</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.o9AjgN0wKSX2pO-gtMaYyg</uri>
+  <title>Tunneling to the Center of the Earth: Stories</title>
+  <title_without_series>Tunneling to the Center of the Earth: Stories</title_without_series>
+  <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+  <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/4015864-tunneling-to-the-center-of-the-earth</link>
+  <num_pages>224</num_pages>
+  <format></format>
+  <edition_information>1st, First Edition</edition_information>
+  <publisher></publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.05</average_rating>
+  <ratings_count>4317</ratings_count>
+  <description>Kevin Wilson's characters inhabit a world that moves seamlessly between the real and the imagined, the mundane and the fantastic. "Grand Stand-In" is narrated by an employee of a Nuclear Family Supplemental Provider—a company that supplies "stand-ins" for families with deceased, ill, or just plain mean grandparents. And in "Blowing Up On the Spot," a young woman works sorting tiles at a Scrabble factory after her parents have spontaneously combusted.&lt;br /&gt;&lt;br /&gt;Southern gothic at its best, laced with humor and pathos, these wonderfully inventive stories explore the relationship between loss and death and the many ways we try to cope with both.</description>
+<authors>
+<author>
+<id>73187</id>
+<name>Kevin    Wilson</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1651505988p5/73187.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1651505988p2/73187.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/73187.Kevin_Wilson]]></link>
+<average_rating>3.86</average_rating>
+<ratings_count>328939</ratings_count>
+<text_reviews_count>42636</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>4062333</id>
+  <uri>kca://work/amzn1.gr.work.v1.BdTuGrVpJrGEKvT0iZ8dbw</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='524005958' sortable='true'></shelf>
+
+    <shelf exclusive='false' id='563965698' name='bookstore-check' review_shelf_id='5673164154' sortable='false'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Wed Oct 02 23:34:57 -0700 2013</date_added>
+  <date_updated>Wed Oct 02 23:34:58 -0700 2013</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/733093694]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/733093694]]></link>
+    <owned>0</owned>
+</review>
+
+    <review>
+  <id>723554854</id>
+  <book_id>764627</book_id>
+      <book>
+  <id type="integer">764627</id>
+  <isbn>0688176496</isbn>
+  <isbn13>9780688176495</isbn13>
+  <text_reviews_count type="integer">58</text_reviews_count>
+  <uri>kca://book/amzn1.gr.book.v1.A9_tITGVa8ex1obhdwEDKA</uri>
+  <title>Blood: An Epic History of Medicine and Commerce</title>
+  <title_without_series>Blood: An Epic History of Medicine and Commerce</title_without_series>
+  <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+  <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  <large_image_url/>
+  <link>https://www.goodreads.com/book/show/764627.Blood</link>
+  <num_pages></num_pages>
+  <format></format>
+  <edition_information>1</edition_information>
+  <publisher>Harper Perennial</publisher>
+  <publication_day></publication_day>
+  <publication_year></publication_year>
+  <publication_month></publication_month>
+  <average_rating>4.06</average_rating>
+  <ratings_count>656</ratings_count>
+  <description>Powerfully involving narrative and incisive detail, clarity and inherent drama: &lt;em&gt;Blood&lt;/em&gt; offers in abundance the qualities that define the best popular science writing. Here is the sweeping story of a substance that has been feared, revered, mythologized, and used in magic and medicine from earliest times--a substance that has become the center of a huge, secretive, and often dangerous worldwide commerce.&lt;br /&gt;&lt;br /&gt;Winner of the &lt;em&gt;Los Angeles Times Book&lt;/em&gt; Prize, &lt;em&gt;Blood&lt;/em&gt; was described by judges as "a gripping page-turner, a significant contribution to the history of medicine and technology and a cautionary tale. Meticulously reported and exhaustively documented."</description>
+<authors>
+<author>
+<id>403230</id>
+<name>Douglas Starr</name>
+<role></role>
+<image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1438734915p5/403230.jpg]]>
+</image_url>
+<small_image_url nophoto='false'>
+<![CDATA[https://images.gr-assets.com/authors/1438734915p2/403230.jpg]]>
+</small_image_url>
+<link><![CDATA[https://www.goodreads.com/author/show/403230.Douglas_Starr]]></link>
+<average_rating>3.89</average_rating>
+<ratings_count>5935</ratings_count>
+<text_reviews_count>601</text_reviews_count>
+</author>
+</authors>
+  <published></published>
+<work>  <id>750701</id>
+  <uri>kca://work/amzn1.gr.work.v1.8n8mLKbPFC7Drh2BRbGNuA</uri>
+</work></book>
+
+
+  <rating>0</rating>
+  <votes>0</votes>
+  <spoiler_flag>false</spoiler_flag>
+  <spoilers_state>none</spoilers_state>
+  
+
+<shelves>
+
+    <shelf exclusive='true' id='18314222' name='to-read' review_shelf_id='515559797' sortable='true'></shelf>
+
+</shelves>
+
+  <started_at></started_at>
+  <read_at></read_at>
+  <date_added>Thu Sep 19 11:37:05 -0700 2013</date_added>
+  <date_updated>Thu Sep 19 11:37:05 -0700 2013</date_updated>
+  <read_count>0</read_count>
+  <body>
+  </body>
+
+  
+
+  <comments_count>0</comments_count>
+    <url><![CDATA[https://www.goodreads.com/review/show/723554854]]></url>
+  <link><![CDATA[https://www.goodreads.com/review/show/723554854]]></link>
+    <owned>0</owned>
+</review>
+
+</reviews>
+
+</GoodreadsResponse>
