@@ -67,7 +67,13 @@ export async function getDatabase(): Promise<Database.Database | null> {
         
         const dbBuffer = await response.arrayBuffer()
         console.log('Database buffer size:', dbBuffer.byteLength)
-        db = new Database(Buffer.from(dbBuffer))
+        
+        // Write buffer to temporary file for SQLite to open
+        const tmpPath = '/tmp/books.db'
+        const fs = await import('fs')
+        fs.writeFileSync(tmpPath, Buffer.from(dbBuffer))
+        
+        db = new Database(tmpPath)
         db.pragma('journal_mode = WAL')
         db.pragma('foreign_keys = ON')
         console.log('✅ Database loaded from public URL')
