@@ -57,8 +57,8 @@ export async function getDatabase(): Promise<Database.Database | null> {
         // Fallback: fetch from public URL (for Vercel)
         console.log('Local database not found, fetching from public URL...')
         
-        // Use relative URL for same-origin requests
-        const response = await fetch('/books.db')
+        // Use absolute URL for reliable server-side fetch
+        const response = await fetch('https://bechols.com/books.db')
         console.log('Fetch response status:', response.status, response.statusText)
         
         if (!response.ok) {
