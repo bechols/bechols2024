@@ -19,7 +19,7 @@ type AnalyticsData = {
 const getAnalyticsData = createServerFn({
   method: 'GET',
 }).handler(async (): Promise<AnalyticsData> => {
-  const db = getDatabase()
+  const db = await getDatabase()
   
   // If database is not available, return empty data
   if (!db) {

@@ -1,8 +1,8 @@
 import { getDatabase, type BookWithReview } from './database'
 
-export function getCurrentlyReadingFromDB(): BookWithReview[] {
+export async function getCurrentlyReadingFromDB(): Promise<BookWithReview[]> {
   try {
-    const db = getDatabase()
+    const db = await getDatabase()
     if (!db) {
       console.warn('Database not available, returning empty currently reading list')
       return []
@@ -32,9 +32,9 @@ export function getCurrentlyReadingFromDB(): BookWithReview[] {
   }
 }
 
-export function getRecentlyReadFromDB(limit: number = 10): BookWithReview[] {
+export async function getRecentlyReadFromDB(limit: number = 10): Promise<BookWithReview[]> {
   try {
-    const db = getDatabase()
+    const db = await getDatabase()
     if (!db) {
       console.warn('Database not available, returning empty recently read list')
       return []

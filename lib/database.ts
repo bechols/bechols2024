@@ -40,23 +40,40 @@ export type BookWithReview = Book & {
 
 let db: Database.Database | null = null
 
-export function getDatabase(): Database.Database | null {
+export async function getDatabase(): Promise<Database.Database | null> {
   if (!db) {
     try {
+      // Try local file first (for development)
       const dbPath = resolve(process.cwd(), 'public', 'books.db')
       db = new Database(dbPath)
       db.pragma('journal_mode = WAL')
       db.pragma('foreign_keys = ON')
     } catch (error) {
-      console.warn('Database not available:', error)
-      return null
+      try {
+        // Fallback: fetch from public URL (for Vercel)
+        console.log('Local database not found, fetching from public URL...')
+        const response = await fetch(new URL('/books.db', process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'))
+        
+        if (!response.ok) {
+          throw new Error(`Failed to fetch database: ${response.statusText}`)
+        }
+        
+        const dbBuffer = await response.arrayBuffer()
+        db = new Database(Buffer.from(dbBuffer))
+        db.pragma('journal_mode = WAL')
+        db.pragma('foreign_keys = ON')
+        console.log('✅ Database loaded from public URL')
+      } catch (fetchError) {
+        console.warn('Database not available via file or URL:', fetchError)
+        return null
+      }
     }
   }
   return db
 }
 
-export function initDatabase(): void {
-  const database = getDatabase()
+export async function initDatabase(): Promise<void> {
+  const database = await getDatabase()
   
   if (!database) {
     console.warn('Database not available, skipping initialization')
@@ -107,8 +124,8 @@ export function initDatabase(): void {
   `)
 }
 
-export function insertBook(book: Omit<Book, 'id' | 'created_at'>): number {
-  const database = getDatabase()
+export async function insertBook(book: Omit<Book, 'id' | 'created_at'>): Promise<number> {
+  const database = await getDatabase()
   
   if (!database) {
     console.warn('Database not available, cannot insert book')
@@ -134,8 +151,8 @@ export function insertBook(book: Omit<Book, 'id' | 'created_at'>): number {
   return result.lastInsertRowid as number
 }
 
-export function insertReview(review: Omit<Review, 'id' | 'created_at'>): number {
-  const database = getDatabase()
+export async function insertReview(review: Omit<Review, 'id' | 'created_at'>): Promise<number> {
+  const database = await getDatabase()
   
   if (!database) {
     console.warn('Database not available, cannot insert review')
@@ -162,8 +179,8 @@ export function insertReview(review: Omit<Review, 'id' | 'created_at'>): number 
   return result.lastInsertRowid as number
 }
 
-export function getBookByGoodreadsId(goodreadsId: string): Book | null {
-  const database = getDatabase()
+export async function getBookByGoodreadsId(goodreadsId: string): Promise<Book | null> {
+  const database = await getDatabase()
   
   if (!database) {
     console.warn('Database not available, cannot get book by Goodreads ID')
@@ -174,8 +191,8 @@ export function getBookByGoodreadsId(goodreadsId: string): Book | null {
   return stmt.get(goodreadsId) as Book | null
 }
 
-export function getBooksByShelf(shelf: string): BookWithReview[] {
-  const database = getDatabase()
+export async function getBooksByShelf(shelf: string): Promise<BookWithReview[]> {
+  const database = await getDatabase()
   
   if (!database) {
     console.warn('Database not available, cannot get books by shelf')
@@ -202,12 +219,12 @@ export function getBooksByShelf(shelf: string): BookWithReview[] {
   return stmt.all(shelf) as BookWithReview[]
 }
 
-export function getCurrentlyReading(): BookWithReview[] {
-  return getBooksByShelf('currently-reading')
+export async function getCurrentlyReading(): Promise<BookWithReview[]> {
+  return await getBooksByShelf('currently-reading')
 }
 
-export function getRecentlyRead(limit: number = 10): BookWithReview[] {
-  const database = getDatabase()
+export async function getRecentlyRead(limit: number = 10): Promise<BookWithReview[]> {
+  const database = await getDatabase()
   
   if (!database) {
     console.warn('Database not available, cannot get recently read books')

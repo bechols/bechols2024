@@ -98,7 +98,7 @@ const getCurrentBooks = createServerFn({
 }).handler(async (): Promise<BookInfo[]> => {
   try {
     // Try database first
-    const dbBooks = getCurrentlyReadingFromDB()
+    const dbBooks = await getCurrentlyReadingFromDB()
     if (dbBooks.length > 0) {
       return dbBooks.map(transformDBBookToBookInfo)
     }
@@ -117,7 +117,7 @@ const getRecentBooks = createServerFn({
 }).handler(async (): Promise<BookInfo[]> => {
   try {
     // Try database first
-    const dbBooks = getRecentlyReadFromDB(5)
+    const dbBooks = await getRecentlyReadFromDB(5)
     if (dbBooks.length > 0) {
       return dbBooks.map(transformDBBookToBookInfo)
     }
