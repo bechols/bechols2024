@@ -7,9 +7,9 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Link } from "@tanstack/react-router";
 
-import { SiLinkedin } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
 import { SiGmail } from "react-icons/si";
+import { SiLinkedin } from "react-icons/si";
 
 export default function Nav() {
   return (

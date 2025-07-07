@@ -20,16 +20,32 @@ export default tseslint.config(
       globals: {
         console: 'readonly',
         process: 'readonly',
-        __GIT_COMMIT_SHA__: 'readonly'
+        __GIT_COMMIT_SHA__: 'readonly',
+        fetch: 'readonly',
+        Buffer: 'readonly'
       }
     },
     rules: {
-      '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-unnecessary-type-assertion': 'error',
+      '@typescript-eslint/no-unsafe-argument': 'error',
+      '@typescript-eslint/no-unsafe-assignment': 'error',
+      '@typescript-eslint/no-unsafe-call': 'error',
+      '@typescript-eslint/no-unsafe-member-access': 'error',
+      '@typescript-eslint/no-unsafe-return': 'error',
+      '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/prefer-nullish-coalescing': 'error',
       '@typescript-eslint/prefer-optional-chain': 'error',
+      'no-debugger': 'error',
+      'no-undef': 'error',
+      'no-unreachable': 'error',
+      'no-unused-expressions': 'error',
+      'no-unused-labels': 'error',
+      'no-unused-vars': 'error',
+      'no-var': 'error',
       'prefer-const': 'error',
-      'no-var': 'error'
+      'strict': 'error',
+      'sort-imports': 'error'
     }
   }),
 

@@ -1,10 +1,11 @@
-import {
-    Outlet,
-    createRootRoute,
-    HeadContent,
-    Scripts,
-  } from "@tanstack/react-router"
 import "./globals.css"
+import {
+    HeadContent,
+    Outlet,
+    Scripts,
+    createRootRoute,
+  } from "@tanstack/react-router"
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import Nav from "@/components/Nav"
 
 const commitSha = __GIT_COMMIT_SHA__;
@@ -49,24 +50,38 @@ export const Route = createRootRoute({
     ]
   }),
   component: RootLayout,
+  context: () => ({
+    queryClient: new QueryClient({
+      defaultOptions: {
+        queries: {
+          staleTime: 5 * 60 * 1000, // 5 minutes
+          gcTime: 10 * 60 * 1000, // 10 minutes
+        },
+      },
+    }),
+  }),
 })
 
 function RootLayout() {
+  const { queryClient } = Route.useRouteContext()
+  
   return (
     <html lang="en" className="antialiased">
       <head>
         <HeadContent />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
-        <div className="relative flex min-h-screen flex-col">
-          <div className="flex-1 px-2 sm:px-4 md:px-8 lg:px-16">
-            <Nav />
-            <main className="flex justify-center pt-4 sm:pt-6 md:pt-8">
-              <Outlet />
-            </main>
+        <QueryClientProvider client={queryClient}>
+          <div className="relative flex min-h-screen flex-col">
+            <div className="flex-1 px-2 sm:px-4 md:px-8 lg:px-16">
+              <Nav />
+              <main className="flex justify-center pt-4 sm:pt-6 md:pt-8">
+                <Outlet />
+              </main>
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
+        </QueryClientProvider>
         <Scripts />
       </body>
     </html>

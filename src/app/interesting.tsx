@@ -1,4 +1,3 @@
-import { createFileRoute } from '@tanstack/react-router'
 import {
   Card,
   CardContent,
@@ -6,6 +5,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import Markdown from "react-markdown"
+import { createFileRoute } from '@tanstack/react-router'
 
 const interesting = [
   {

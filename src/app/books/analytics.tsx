@@ -1,10 +1,10 @@
+import { Bar, BarChart, CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import { Book, CalendarDays, Star } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import React, { useState } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, LineChart, Line } from 'recharts'
 import { getDatabase } from '@/lib/database'
-import { CalendarDays, Book, Star } from 'lucide-react'
-import React, { useState } from 'react'
 
 type AnalyticsData = {
   totalBooks: number

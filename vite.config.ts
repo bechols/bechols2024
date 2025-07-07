@@ -1,11 +1,9 @@
-// vite.config.ts
+import { defineConfig } from 'vite'
+import { execSync } from 'child_process'
 import tailwindcss from '@tailwindcss/vite'
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
-import { defineConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
-import { execSync } from 'child_process'
 
-// Get git commit SHA at build time
 const getGitCommitSha = () => {
   try {
     return execSync('git rev-parse --short HEAD').toString().trim()

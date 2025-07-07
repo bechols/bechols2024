@@ -1,5 +1,5 @@
-import { createFileRoute } from '@tanstack/react-router'
 import Markdown from "react-markdown"
+import { createFileRoute } from '@tanstack/react-router'
 
 const manualMarkdown = `
 ## How I think about the world:

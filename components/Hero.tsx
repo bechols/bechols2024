@@ -1,6 +1,6 @@
-import { Button } from "./ui/button";
-import { AspectRatio } from "./ui/aspect-ratio";
 import { LibraryBig, Lightbulb, Rocket } from "lucide-react";
+import { AspectRatio } from "./ui/aspect-ratio";
+import { Button } from "./ui/button";
 import { Link } from "@tanstack/react-router"
 
 export default function Hero() {
