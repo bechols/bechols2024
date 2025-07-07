@@ -19,7 +19,6 @@ const getCurrentBooks = createServerFn({
       return dbBooks.map(transformDBBookToBookInfo)
     }
     
-    // Fallback to API if database is empty
     console.log('Database empty, falling back to Goodreads API for currently reading')
     return fetchGoodreadsShelf({ shelf: 'currently-reading' })
   } catch (error: unknown) {
@@ -39,19 +38,16 @@ const getRecentBooksPaginated = createServerFn({
   })
   .handler(async ({ data: pageParam }): Promise<{ books: BookInfo[], nextCursor: number | null }> => {
   try {
-    const limit = 10
+    const limit = 20
     const offset = pageParam * limit
     
-    console.log(`Fetching page ${pageParam}, limit ${limit}, offset ${offset}`)
-    
     // Try database first
-    const { books: dbBooks, hasMore } = await getRecentlyReadPaginatedFromDB(limit, offset)
-    console.log(`Found ${dbBooks.length} books from database, hasMore: ${hasMore}`)
+    const result = await getRecentlyReadPaginatedFromDB(limit, offset)
     
-    if (dbBooks.length > 0) {
+    if (result.books.length > 0) {
       return {
-        books: dbBooks.map(transformDBBookToBookInfo),
-        nextCursor: hasMore ? pageParam + 1 : null
+        books: result.books.map(transformDBBookToBookInfo),
+        nextCursor: result.hasMore ? pageParam + 1 : null
       }
     }
     
@@ -94,12 +90,10 @@ function Books() {
   } = useInfiniteQuery({
     queryKey: ['recentBooks'],
     queryFn: async ({ pageParam }: { pageParam: number }) => {
-      console.log('Query function called with pageParam:', pageParam)
       return await getRecentBooksPaginated({ data: pageParam })
     },
     initialPageParam: 0,
     getNextPageParam: (lastPage) => {
-      console.log('getNextPageParam called with:', lastPage)
       return lastPage.nextCursor
     },
   })

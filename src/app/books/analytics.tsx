@@ -111,10 +111,6 @@ const getAnalyticsData = createServerFn({
     .map(row => parseInt(row.year))
     .filter(year => !isNaN(year))
   
-  console.log('Top authors data:', topAuthors)
-  console.log('Rating distribution:', ratingDistribution)
-  console.log('Available years:', availableYears)
-  
   return {
     totalBooks: totalBooksResult.count,
     averageRating: avgRatingResult.avg_rating ?? 0,
