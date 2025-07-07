@@ -1,7 +1,7 @@
 import { Link, createFileRoute } from '@tanstack/react-router';
 import { getCurrentlyReadingFromDB, getRecentlyReadPaginatedFromDB, transformDBBookToBookInfo } from '@/lib/database-queries';
 import { useEffect, useRef } from 'react';
-import { BarChart3 } from 'lucide-react';
+import { BarChart3, BookOpen } from 'lucide-react';
 import { BookCard } from '@/src/components/BookCard';
 import type { BookInfo } from '@/src/types/book-types';
 import { Button } from '@/components/ui/button';
@@ -122,12 +122,20 @@ function Books() {
     <div className="w-full max-w-4xl mx-auto px-4 md:px-8">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-6">
         <h1 className="text-2xl md:text-3xl font-bold">Currently reading</h1>
-        <Button asChild variant="outline" className="flex items-center gap-2">
-          <Link to="/books/analytics">
-            <BarChart3 className="h-4 w-4" />
-            Reading Analytics
-          </Link>
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-2">
+          <Button asChild variant="outline" className="flex items-center gap-2">
+            <Link to="/books/want-to-read">
+              <BookOpen className="h-4 w-4" />
+              Want to Read
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="flex items-center gap-2">
+            <Link to="/books/analytics">
+              <BarChart3 className="h-4 w-4" />
+              Reading Analytics
+            </Link>
+          </Button>
+        </div>
       </div>
       <div className="space-y-6">
         {currentBooks.map((bookInfo: BookInfo) => (
