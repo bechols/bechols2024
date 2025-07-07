@@ -54,7 +54,7 @@ export async function getRecentlyReadFromDB(limit: number = 10): Promise<BookWit
       FROM books b
       INNER JOIN reviews r ON b.id = r.book_id
       WHERE r.shelf = 'read' 
-      ORDER BY r.date_added DESC
+      ORDER BY r.date_read DESC
       LIMIT ?
     `)
     
@@ -97,7 +97,7 @@ export async function getRecentlyReadPaginatedFromDB(
       FROM books b
       INNER JOIN reviews r ON b.id = r.book_id
       WHERE r.shelf = 'read' 
-      ORDER BY r.date_added DESC
+      ORDER BY r.date_read DESC
       LIMIT ? OFFSET ?
     `)
     
@@ -120,6 +120,8 @@ export function transformDBBookToBookInfo(dbBook: BookWithReview): {
   imageURL: string
   rating?: number
   review?: string
+  dateStarted?: string
+  dateRead?: string
 } {
   return {
     title: dbBook.title,
@@ -128,5 +130,7 @@ export function transformDBBookToBookInfo(dbBook: BookWithReview): {
     imageURL: dbBook.image_url ?? '',
     rating: dbBook.rating && dbBook.rating > 0 ? dbBook.rating : undefined,
     review: dbBook.review ?? undefined,
+    dateStarted: dbBook.date_started ?? undefined,
+    dateRead: dbBook.date_read ?? undefined,
   }
 }

@@ -36,6 +36,8 @@ export interface BookInfo {
   imageURL: string;
   rating?: number;
   review?: string;
+  dateStarted?: string;
+  dateRead?: string;
 }
 
 export interface ShelfConfig {
