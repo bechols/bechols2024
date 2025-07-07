@@ -1,7 +1,7 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { Link, createFileRoute } from '@tanstack/react-router';
 import { getWantToReadPaginatedFromDB, transformDBBookToBookInfo } from '@/lib/database-queries';
 import { useEffect, useRef, useState } from 'react';
-import { Search, SortAsc, SortDesc, Filter } from 'lucide-react';
+import { Search, SortAsc, SortDesc, Filter, BookOpen, BarChart3 } from 'lucide-react';
 import type { BookInfo } from '@/src/types/book-types';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -159,7 +159,23 @@ function WantToRead() {
   return (
     <div className="w-full max-w-4xl mx-auto px-4 md:px-8">
       <div className="flex flex-col gap-4 pb-6">
-        <h1 className="text-2xl md:text-3xl font-bold">Want to Read</h1>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <h1 className="text-2xl md:text-3xl font-bold">Want to Read</h1>
+          <div className="flex flex-col sm:flex-row gap-2">
+            <Button asChild variant="outline" size="sm" className="flex items-center gap-2">
+              <Link to="/books/">
+                <BookOpen className="h-4 w-4" />
+                Currently Reading
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="sm" className="flex items-center gap-2">
+              <Link to="/books/analytics">
+                <BarChart3 className="h-4 w-4" />
+                Analytics
+              </Link>
+            </Button>
+          </div>
+        </div>
         
         {/* Mobile-optimized search and filters */}
         <div className="space-y-4">

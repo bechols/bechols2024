@@ -152,3 +152,6 @@ Required for full functionality:
 - **State Management**: Local useState for UI controls, server functions for data
 - **Error Handling**: Graceful fallbacks from database to API with console logging
 - **Accessibility**: Proper ARIA labels, semantic HTML, and keyboard navigation
+
+## Shadcn UI Components Notes
+- When using shadcn UI components, make sure they're actually installed in @components/ui/ . it's ok to add new components from https://ui.shadcn.com/, just follow the installation steps. https://ui.shadcn.com/docs/installation/tanstack
