@@ -1,5 +1,5 @@
 {
-  "name": "bechols2024",
+  "name": "bechols-dotcom",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -48,12 +48,10 @@
     "@types/react": "19.0.2",
     "@types/react-dom": "19.0.2",
     "@types/xml2js": "^0.4.14",
-    "@typescript-eslint/eslint-plugin": "^8.35.1",
-    "@typescript-eslint/parser": "^8.35.1",
+    "typescript-eslint": "^8.35.1",
     "autoprefixer": "^10.0.1",
     "dotenv": "^17.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "15.1.3",
+    "eslint": "^9.30.1",
     "postcss": "^8",
     "typescript": "^5",
     "vite-tsconfig-paths": "^5.1.4"

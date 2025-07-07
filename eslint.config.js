@@ -1,17 +1,21 @@
 import js from '@eslint/js';
-import ts from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
+import tseslint from 'typescript-eslint';
 
-export default [
-  js.configs.recommended,
+export default tseslint.config(
+  // Global ignores and base JS config
   {
+    ignores: ['dist', 'node_modules']
+  },
+  js.configs.recommended,
+
+  // TypeScript files
+  ...tseslint.config({
     files: ['**/*.ts', '**/*.tsx'],
+    extends: tseslint.configs.recommendedTypeChecked,
     languageOptions: {
-      parser: tsParser,
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        project: './tsconfig.json'
+        project: true,
+        tsconfigRootDir: import.meta.dirname
       },
       globals: {
         console: 'readonly',
@@ -19,11 +23,7 @@ export default [
         __GIT_COMMIT_SHA__: 'readonly'
       }
     },
-    plugins: {
-      '@typescript-eslint': ts
-    },
     rules: {
-      ...ts.configs.recommended.rules,
       '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/prefer-nullish-coalescing': 'error',
@@ -31,12 +31,12 @@ export default [
       'prefer-const': 'error',
       'no-var': 'error'
     }
-  },
+  }),
+
+  // JavaScript files
   {
-    files: ['**/*.js'],
+    files: ['**/*.js', '**/*.cjs'],
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
       globals: {
         console: 'readonly',
         process: 'readonly',
@@ -48,4 +48,4 @@ export default [
       'no-var': 'error'
     }
   }
-];
+);

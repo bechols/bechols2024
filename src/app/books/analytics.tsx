@@ -386,8 +386,8 @@ function Analytics() {
                 />
                 <YAxis />
                 <Tooltip 
-                  labelFormatter={(value) => value}
-                  formatter={(value: number) => [value, 'Books']}
+                  labelFormatter={(label: string | number) => label}
+                  formatter={(value: number): [number, string] => [value, 'Books']}
                 />
                 <Line type="monotone" dataKey="books" stroke="#8884d8" strokeWidth={2} dot={{ fill: '#8884d8' }} />
               </LineChart>

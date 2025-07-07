@@ -12,6 +12,38 @@ import { getCurrentlyReadingFromDB, getRecentlyReadFromDB, transformDBBookToBook
 import axios from "axios"
 import { parseString } from "xml2js"
 
+// Types for Goodreads API response from xml2js
+interface GoodreadsReviewElement {
+  book: [
+    {
+      title: [string];
+      link: [string];
+      image_url: [string];
+      authors: [
+        {
+          author: [
+            {
+              name: [string];
+            }
+          ];
+        }
+      ];
+    }
+  ];
+  rating: [string];
+  body: [string];
+}
+
+interface GoodreadsResult {
+  GoodreadsResponse: {
+    reviews: [
+      {
+        review?: GoodreadsReviewElement[];
+      }
+    ];
+  };
+}
+
 type BookInfo = {
   title: string
   author: string
@@ -43,7 +75,7 @@ async function fetchGoodreadsShelf(config: ShelfConfig): Promise<BookInfo[]> {
   }
   
   try {
-    const response = await axios(options)
+    const response = await axios<string>(options)
     return parseGoodreadsXML(response.data, config)
   } catch (error) {
     console.error(`Error fetching ${config.shelf} books:`, error)
@@ -53,36 +85,41 @@ async function fetchGoodreadsShelf(config: ShelfConfig): Promise<BookInfo[]> {
 
 function parseGoodreadsXML(xmlData: string, config: ShelfConfig): Promise<BookInfo[]> {
   return new Promise((resolve) => {
-    parseString(xmlData, function (err, result) {
+    parseString(xmlData, function (err, result: GoodreadsResult) {
       if (err) {
+        console.error('Error parsing Goodreads XML:', err);
         resolve([])
         return
       }
       
-      if (
-        !result["GoodreadsResponse"]["reviews"][0]["review"] ||
-        Object.keys(result["GoodreadsResponse"]["reviews"][0]["review"]).length === 0
-      ) {
+      const reviews = result?.GoodreadsResponse?.reviews?.[0]?.review;
+
+      if (!reviews || reviews.length === 0) {
         resolve([])
         return
       }
       
-      const books = result["GoodreadsResponse"]["reviews"][0]["review"].map(
-        // @ts-expect-error - Goodreads API response structure is complex and untyped
+      const books: BookInfo[] = reviews.map(
         (element) => {
+          const book = element.book[0];
+          const author = book.authors[0].author[0];
+
           const bookInfo: BookInfo = {
-            author: element["book"][0]["authors"][0]["author"][0]["name"],
-            link: element["book"][0]["link"][0],
-            title: element["book"][0]["title"][0],
-            imageURL: element["book"][0]["image_url"][0],
+            author: author.name[0],
+            link: book.link[0],
+            title: book.title[0],
+            imageURL: book.image_url[0],
           }
           
           if (config.includeRating) {
-            bookInfo.rating = element["rating"][0]
+            bookInfo.rating = parseInt(element.rating[0], 10);
           }
           
           if (config.includeReview) {
-            bookInfo.review = element["body"][0]
+            const reviewText = element.body[0]?.trim();
+            if (reviewText) {
+              bookInfo.review = reviewText;
+            }
           }
           
           return bookInfo
