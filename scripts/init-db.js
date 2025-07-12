@@ -42,7 +42,7 @@ async function main() {
     db.exec(`
       CREATE TABLE IF NOT EXISTS reviews (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        book_id INTEGER NOT NULL,
+        goodreads_id TEXT NOT NULL,
         shelf TEXT NOT NULL,
         rating INTEGER,
         review TEXT,
@@ -52,15 +52,15 @@ async function main() {
         read_count INTEGER DEFAULT 1,
         owned INTEGER DEFAULT 0,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-        FOREIGN KEY (book_id) REFERENCES books(id),
-        UNIQUE(book_id, shelf)
+        FOREIGN KEY (goodreads_id) REFERENCES books(goodreads_id),
+        UNIQUE(goodreads_id, shelf)
       )
     `)
     
     // Create indexes for better performance
     db.exec(`
       CREATE INDEX IF NOT EXISTS idx_books_goodreads_id ON books(goodreads_id);
-      CREATE INDEX IF NOT EXISTS idx_reviews_book_id ON reviews(book_id);
+      CREATE INDEX IF NOT EXISTS idx_reviews_goodreads_id ON reviews(goodreads_id);
       CREATE INDEX IF NOT EXISTS idx_reviews_shelf ON reviews(shelf);
       CREATE INDEX IF NOT EXISTS idx_reviews_date_read ON reviews(date_read);
     `)

@@ -29,8 +29,10 @@ jobs:
         run: |
           # Initialize database (creates if doesn't exist)
           npm run db:init
-          # Run full scrape to ensure complete data
-          npm run scrape:goodreads
+          # Check and sync each shelf individually for better accuracy
+          npm run check:shelf to-read
+          npm run check:shelf read
+          npm run check:shelf currently-reading
 
       - name: Commit updated database
         run: |

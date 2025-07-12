@@ -20,7 +20,7 @@ export async function getCurrentlyReadingFromDB(): Promise<BookWithReview[]> {
         r.read_count,
         r.owned
       FROM books b
-      INNER JOIN reviews r ON b.id = r.book_id
+      INNER JOIN reviews r ON b.goodreads_id = r.goodreads_id
       WHERE r.shelf = 'currently-reading'
       ORDER BY r.date_added DESC
     `)
@@ -52,7 +52,7 @@ export async function getRecentlyReadFromDB(limit: number = 10): Promise<BookWit
         r.read_count,
         r.owned
       FROM books b
-      INNER JOIN reviews r ON b.id = r.book_id
+      INNER JOIN reviews r ON b.goodreads_id = r.goodreads_id
       WHERE r.shelf = 'read' 
       ORDER BY r.date_read DESC
       LIMIT ?
@@ -95,7 +95,7 @@ export async function getRecentlyReadPaginatedFromDB(
         r.read_count,
         r.owned
       FROM books b
-      INNER JOIN reviews r ON b.id = r.book_id
+      INNER JOIN reviews r ON b.goodreads_id = r.goodreads_id
       WHERE r.shelf = 'read' 
       ORDER BY r.date_read DESC
       LIMIT ? OFFSET ?
@@ -132,7 +132,7 @@ export async function getWantToReadFromDB(): Promise<BookWithReview[]> {
         r.read_count,
         r.owned
       FROM books b
-      INNER JOIN reviews r ON b.id = r.book_id
+      INNER JOIN reviews r ON b.goodreads_id = r.goodreads_id
       WHERE r.shelf = 'to-read'
       ORDER BY r.date_added DESC
     `)
@@ -205,7 +205,7 @@ export async function getWantToReadPaginatedFromDB(
         r.read_count,
         r.owned
       FROM books b
-      INNER JOIN reviews r ON b.id = r.book_id
+      INNER JOIN reviews r ON b.goodreads_id = r.goodreads_id
       ${whereClause}
       ${orderClause}
       LIMIT ? OFFSET ?
