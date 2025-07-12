@@ -36,7 +36,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add data/books.db
+          git add public/books.db
           git diff --staged --quiet || git commit -m "📚 Update Goodreads database - $(date -u '+%Y-%m-%d %H:%M UTC')
 
           🤖 Generated with [Claude Code](https://claude.ai/code)

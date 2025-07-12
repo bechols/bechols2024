@@ -1,7 +1,7 @@
+import { BarChart3, BookOpen } from 'lucide-react';
 import { Link, createFileRoute } from '@tanstack/react-router';
 import { getCurrentlyReadingFromDB, getRecentlyReadPaginatedFromDB, transformDBBookToBookInfo } from '@/lib/database-queries';
 import { useEffect, useRef } from 'react';
-import { BarChart3, BookOpen } from 'lucide-react';
 import { BookCard } from '@/src/components/BookCard';
 import type { BookInfo } from '@/src/types/book-types';
 import { Button } from '@/components/ui/button';
