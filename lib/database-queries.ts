@@ -54,7 +54,7 @@ export async function getRecentlyReadFromDB(limit: number = 10): Promise<BookWit
       FROM books b
       INNER JOIN reviews r ON b.goodreads_id = r.goodreads_id
       WHERE r.shelf = 'read' 
-      ORDER BY r.date_read DESC
+      ORDER BY r.date_read IS NULL, r.date_read DESC
       LIMIT ?
     `)
     
@@ -97,7 +97,7 @@ export async function getRecentlyReadPaginatedFromDB(
       FROM books b
       INNER JOIN reviews r ON b.goodreads_id = r.goodreads_id
       WHERE r.shelf = 'read' 
-      ORDER BY r.date_read DESC
+      ORDER BY r.date_read IS NULL, r.date_read DESC
       LIMIT ? OFFSET ?
     `)
     
