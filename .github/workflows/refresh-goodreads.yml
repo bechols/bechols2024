@@ -52,8 +52,8 @@ jobs:
           else
             echo "📊 Changes detected, creating commit..."
             git commit -m "📚 Update Goodreads database - $(date -u '+%Y-%m-%d %H:%M UTC')
-
-🤖 Generated with [Claude Code](https://claude.ai/code)
-
-Co-Authored-By: Claude <noreply@anthropic.com>"
+            
+            🤖 Generated with [Claude Code](https://claude.ai/code)
+            
+            Co-Authored-By: Claude <noreply@anthropic.com>"
           fi
