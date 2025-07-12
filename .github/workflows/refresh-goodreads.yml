@@ -36,11 +36,24 @@ jobs:
 
       - name: Commit updated database
         run: |
+          echo "📊 Checking database file status..."
+          ls -la public/books.db
+          echo "📊 Git status before add:"
+          git status --porcelain
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add public/books.db
-          git diff --staged --quiet || git commit -m "📚 Update Goodreads database - $(date -u '+%Y-%m-%d %H:%M UTC')
+          echo "📊 Git status after add:"
+          git status --porcelain
+          echo "📊 Git diff staged:"
+          git diff --staged --stat
+          if git diff --staged --quiet; then
+            echo "📊 No changes detected in database file"
+          else
+            echo "📊 Changes detected, creating commit..."
+            git commit -m "📚 Update Goodreads database - $(date -u '+%Y-%m-%d %H:%M UTC')
 
-          🤖 Generated with [Claude Code](https://claude.ai/code)
+🤖 Generated with [Claude Code](https://claude.ai/code)
 
-          Co-Authored-By: Claude <noreply@anthropic.com>"
+Co-Authored-By: Claude <noreply@anthropic.com>"
+          fi
