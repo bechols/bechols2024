@@ -56,4 +56,6 @@ jobs:
             🤖 Generated with [Claude Code](https://claude.ai/code)
             
             Co-Authored-By: Claude <noreply@anthropic.com>"
+            echo "📊 Pushing changes to repository..."
+            git push
           fi
